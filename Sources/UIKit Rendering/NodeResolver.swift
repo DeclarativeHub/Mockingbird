@@ -50,11 +50,11 @@ public class NodeResolver {
         switch node {
         case let node as _VerticalStack:
             let controller = take(firstOrNew: StackController())
-            controller.update(node, axis: .vertical, context: context)
+            controller.update(node, axis: .vertical, alignment: node.alignment.stackViewAlignment, context: context)
             return controller.nodes
         case let node as _HorizontalStack:
             let controller = take(firstOrNew: StackController())
-            controller.update(node, axis: .horizontal, context: context)
+            controller.update(node, axis: .horizontal, alignment: node.alignment.stackViewAlignment, context: context)
             return controller.nodes
         case let node as Text:
             let controller = take(firstOrNew: TextController())
@@ -66,6 +66,10 @@ public class NodeResolver {
             return controller.nodes
         case let node as _Repeated:
             let controller = take(firstOrNew: ForEachController())
+            controller.update(node, context: context)
+            return controller.nodes
+        case let node as FlexibleSpace:
+            let controller = take(firstOrNew: FlexibleSpaceNodeController())
             controller.update(node, context: context)
             return controller.nodes
         case let node as AnyNode:
@@ -82,6 +86,10 @@ public class NodeResolver {
                 return controller.nodes
             case let modifier as Framed:
                 let controller = take(firstOrNew: TransformModifierNodeController<FramedNodeModifier>())
+                controller.update(node._node, modifier: modifier, context: context)
+                return controller.nodes
+            case let modifier as Sized:
+                let controller = take(firstOrNew: TransformModifierNodeController<SizedNodeModifier>())
                 controller.update(node._node, modifier: modifier, context: context)
                 return controller.nodes
             case let modifier as Hugged:

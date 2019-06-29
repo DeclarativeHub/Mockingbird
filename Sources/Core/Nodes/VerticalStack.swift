@@ -26,17 +26,23 @@ import Foundation
 
 public protocol _Stack: _Node {
     var _child: _Node { get }
+    var spacing: CGFloat? { get }
 }
 
 public protocol _VerticalStack: _Stack {
+    var alignment: HorizontalAlignment { get }
 }
 
 public struct VerticalStack<ChildNode: Node>: Node, _VerticalStack {
 
     let child: ChildNode
+    public let alignment: HorizontalAlignment
+    public let spacing: CGFloat?
 
-    public init(@LayoutBuilder _ makeChild: () -> ChildNode) {
+    public init(alignment: HorizontalAlignment = .center, spacing: CGFloat? = nil, @LayoutBuilder _ makeChild: () -> ChildNode) {
         self.child = makeChild()
+        self.alignment = alignment
+        self.spacing = spacing
     }
 
     public var content: Never {

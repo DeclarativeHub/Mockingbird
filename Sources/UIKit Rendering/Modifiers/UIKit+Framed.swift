@@ -38,7 +38,7 @@ class FramedNodeModifier: TransformModifier {
         override func layoutSubviews() {
             super.layoutSubviews()
             let center = CGPoint(x: bounds.midX, y: bounds.midY)
-            let size = view.systemLayoutSizeFitting(bounds.size)
+            let size = view.frame.size
             view.frame.size = size
             switch alignment.vertical {
             case .top, .firstTextBaseline:
@@ -87,8 +87,10 @@ class FramedNodeModifier: TransformModifier {
         let view = container.view
         container.alignment = modifier.alignment
         if let width = modifier.width {
-            constraint.leading?.isActive = false
-            constraint.trailing?.isActive = false
+            constraint.leading = constraint.leading ?? view.leadingAnchor.constraint(greaterThanOrEqualTo: container.leadingAnchor)
+            constraint.leading!.isActive = true
+            constraint.trailing = constraint.trailing ?? view.trailingAnchor.constraint(lessThanOrEqualTo: container.trailingAnchor)
+            constraint.trailing!.isActive = true
             constraint.width = constraint.width ?? container.widthAnchor.constraint(equalToConstant: width)
             constraint.width!.constant = width
             constraint.width!.isActive = true
@@ -100,8 +102,10 @@ class FramedNodeModifier: TransformModifier {
             constraint.trailing!.isActive = true
         }
         if let height = modifier.height {
-            constraint.top?.isActive = false
-            constraint.bottom?.isActive = false
+            constraint.top = constraint.top ?? view.topAnchor.constraint(greaterThanOrEqualTo: container.topAnchor)
+            constraint.top!.isActive = true
+            constraint.bottom = constraint.bottom ?? view.bottomAnchor.constraint(lessThanOrEqualTo: container.bottomAnchor)
+            constraint.bottom!.isActive = true
             constraint.height = constraint.height ?? container.heightAnchor.constraint(equalToConstant: height)
             constraint.height!.constant = height
             constraint.height!.isActive = true

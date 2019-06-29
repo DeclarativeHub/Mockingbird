@@ -64,6 +64,11 @@
 		ECD2F73622B2DFFE007519C8 /* NodeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2F73522B2DFFE007519C8 /* NodeModifier.swift */; };
 		ECD2F73822B2E01F007519C8 /* ModifiedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2F73722B2E01F007519C8 /* ModifiedNode.swift */; };
 		ECD2F73C22B2E067007519C8 /* Colored.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2F73B22B2E067007519C8 /* Colored.swift */; };
+		ECE6141522C78C010060AFCE /* UIStackView+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6141422C78C010060AFCE /* UIStackView+Alignment.swift */; };
+		ECF3235522C54141002B6138 /* FlexibleSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3235422C54141002B6138 /* FlexibleSpace.swift */; };
+		ECF3235722C54173002B6138 /* UIKit+FlexibleSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3235622C54173002B6138 /* UIKit+FlexibleSpace.swift */; };
+		ECF3235922C5432E002B6138 /* Sized.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3235822C5432E002B6138 /* Sized.swift */; };
+		ECF3235B22C54378002B6138 /* UIKit+Sized.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3235A22C54378002B6138 /* UIKit+Sized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +156,11 @@
 		ECD2F73522B2DFFE007519C8 /* NodeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeModifier.swift; sourceTree = "<group>"; };
 		ECD2F73722B2E01F007519C8 /* ModifiedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedNode.swift; sourceTree = "<group>"; };
 		ECD2F73B22B2E067007519C8 /* Colored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colored.swift; sourceTree = "<group>"; };
+		ECE6141422C78C010060AFCE /* UIStackView+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Alignment.swift"; sourceTree = "<group>"; };
+		ECF3235422C54141002B6138 /* FlexibleSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleSpace.swift; sourceTree = "<group>"; };
+		ECF3235622C54173002B6138 /* UIKit+FlexibleSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+FlexibleSpace.swift"; sourceTree = "<group>"; };
+		ECF3235822C5432E002B6138 /* Sized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sized.swift; sourceTree = "<group>"; };
+		ECF3235A22C54378002B6138 /* UIKit+Sized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Sized.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +207,7 @@
 			children = (
 				ECBC6A7E22BC24F300CCC166 /* UIControl+Signal.swift */,
 				ECBC6A8022BC252C00CCC166 /* UIGestureRecognizer+Signal.swift */,
+				ECE6141422C78C010060AFCE /* UIStackView+Alignment.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +308,7 @@
 				ECB9585A22B4CD0F00E29044 /* VerticalStack.swift */,
 				EC4AE61122B4E17000E3DCFB /* HorizontalStack.swift */,
 				EC4AE61622B5221000E3DCFB /* Repeated.swift */,
+				ECF3235422C54141002B6138 /* FlexibleSpace.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 				ECBA92B222B66D8700625057 /* Padded.swift */,
 				EC87DCA922BBFFFB00BF96C2 /* Hugged.swift */,
 				EC87DCA222BBFE3300BF96C2 /* Framed.swift */,
+				ECF3235822C5432E002B6138 /* Sized.swift */,
 				EC8E7FDD22BD62E5005F945A /* Clipped.swift */,
 				EC8E7FE122BD649C005F945A /* ShadowCaster.swift */,
 				EC8E7FD322BD3C93005F945A /* ContextModifier.swift */,
@@ -325,6 +338,7 @@
 				ECCB326922B76C4F002343B3 /* UIKit+Padded.swift */,
 				EC87DCAB22BC00DD00BF96C2 /* UIKit+Hugged.swift */,
 				EC87DCAD22BC037900BF96C2 /* UIKit+Framed.swift */,
+				ECF3235A22C54378002B6138 /* UIKit+Sized.swift */,
 				EC8E7FDF22BD634D005F945A /* UIKit+Clipped.swift */,
 				EC8E7FE322BD652B005F945A /* UIKit+ShadowCaster.swift */,
 				EC423FC822BE3879003D73BD /* UIKit+Animation.swift */,
@@ -340,6 +354,7 @@
 				ECC41BAD22B69E32008857CE /* UIKit+Repeated.swift */,
 				ECC41BB122B69F6B008857CE /* UIKit+DynamicView.swift */,
 				ECBC6A7C22BC240900CCC166 /* UIKit+Button.swift */,
+				ECF3235622C54173002B6138 /* UIKit+FlexibleSpace.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -486,17 +501,20 @@
 				ECD2F72522B2DBF0007519C8 /* BindableObject.swift in Sources */,
 				EC8E7FE022BD634D005F945A /* UIKit+Clipped.swift in Sources */,
 				EC4AE61522B4F3EA00E3DCFB /* LayoutBuilder.swift in Sources */,
+				ECF3235522C54141002B6138 /* FlexibleSpace.swift in Sources */,
 				EC8E7FE422BD652B005F945A /* UIKit+ShadowCaster.swift in Sources */,
 				ECC41BA822B69DAB008857CE /* NodeController.swift in Sources */,
 				ECCB326622B76805002343B3 /* UIKit+Colored.swift in Sources */,
 				ECCB326822B76BED002343B3 /* TransformModifierNodeController.swift in Sources */,
 				ECBC6A7B22BC22D500CCC166 /* Button.swift in Sources */,
+				ECF3235B22C54378002B6138 /* UIKit+Sized.swift in Sources */,
 				EC4AE61222B4E17000E3DCFB /* HorizontalStack.swift in Sources */,
 				ECD2F71A22B2D97A007519C8 /* ObservableProperty.swift in Sources */,
 				ECC41BA622B69D95008857CE /* UIKit+Text.swift in Sources */,
 				ECBC6A7D22BC240900CCC166 /* UIKit+Button.swift in Sources */,
 				ECCB326A22B76C4F002343B3 /* UIKit+Padded.swift in Sources */,
 				EC8E7FDE22BD62E5005F945A /* Clipped.swift in Sources */,
+				ECF3235722C54173002B6138 /* UIKit+FlexibleSpace.swift in Sources */,
 				EC8E7FD422BD3C93005F945A /* ContextModifier.swift in Sources */,
 				ECD2F73822B2E01F007519C8 /* ModifiedNode.swift in Sources */,
 				EC4AE61022B4D8F300E3DCFB /* TupleNode.swift in Sources */,
@@ -516,6 +534,7 @@
 				EC87DCAE22BC037900BF96C2 /* UIKit+Framed.swift in Sources */,
 				EC423FC922BE3879003D73BD /* UIKit+Animation.swift in Sources */,
 				ECD2F73622B2DFFE007519C8 /* NodeModifier.swift in Sources */,
+				ECF3235922C5432E002B6138 /* Sized.swift in Sources */,
 				ECC41BB222B69F6B008857CE /* UIKit+DynamicView.swift in Sources */,
 				ECD2F73C22B2E067007519C8 /* Colored.swift in Sources */,
 				EC87DCAA22BBFFFB00BF96C2 /* Hugged.swift in Sources */,
@@ -524,6 +543,7 @@
 				ECD2F72322B2DB07007519C8 /* State.swift in Sources */,
 				EC423FC722BE379C003D73BD /* Animation.swift in Sources */,
 				ECB9585B22B4CD0F00E29044 /* VerticalStack.swift in Sources */,
+				ECE6141522C78C010060AFCE /* UIStackView+Alignment.swift in Sources */,
 				ECBA92B322B66D8700625057 /* Padded.swift in Sources */,
 				ECC41BB422B6A541008857CE /* UIKit+Stack.swift in Sources */,
 				ECBC6A7F22BC24F300CCC166 /* UIControl+Signal.swift in Sources */,

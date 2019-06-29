@@ -27,10 +27,32 @@ import ReactiveKit
 
 class StackController: NodeController {
 
+    class StackView: UIStackView {
+
+        override func layoutSubviews() {
+            super.layoutSubviews()
+
+            ///Fix layout so that each flexible space takes the same amount of space
+            let flexibles = arrangedSubviews.compactMap { $0 as? FlexibleSpaceNodeController.View }
+            guard flexibles.count > 1 else { return }
+            let origin = axis == .horizontal ? \CGPoint.x : \CGPoint.y
+            let length = axis == .horizontal ? \CGSize.width : \CGSize.height
+            let spacing = flexibles.reduce(0) { $0 + $1.frame.size[keyPath: length] } / CGFloat(flexibles.count)
+            var position: CGFloat = arrangedSubviews.first!.frame.origin[keyPath: origin]
+            for view in arrangedSubviews {
+                if view is FlexibleSpaceNodeController.View {
+                    view.frame.size[keyPath: length] = spacing
+                }
+                view.frame.origin[keyPath: origin] = position
+                position += view.frame.size[keyPath: length] + self.spacing
+            }
+        }
+    }
+
     private let resolver = NodeResolver()
 
-    private let stackView: UIStackView = {
-        let stackView = UIStackView()
+    private let stackView: StackView = {
+        let stackView = StackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -41,10 +63,12 @@ class StackController: NodeController {
         nodes = Signal(just: [stackView])
     }
 
-    func update(_ stack: _Stack, axis: NSLayoutConstraint.Axis, context: Context) {
+    func update(_ stack: _Stack, axis: NSLayoutConstraint.Axis, alignment: UIStackView.Alignment, context: Context) {
         stackView.bag.dispose()
         stackView.axis = axis
-        stackView.spacing = 10
+        stackView.spacing = stack.spacing ?? 10
+        stackView.distribution = .fill
+        stackView.alignment = alignment
 
         resolver.resolve(stack._child.flattened, context: context)
             .bind(to: stackView, context: .main) { (stackView, newViews) in

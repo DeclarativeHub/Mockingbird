@@ -25,20 +25,21 @@
 import Foundation
 
 public protocol _HorizontalStack: _Stack {
+    var alignment: VerticalAlignment { get }
 }
 
 public struct HorizontalStack<ChildNode: Node>: Node, _HorizontalStack {
 
     let child: ChildNode
+    public let alignment: VerticalAlignment
+    public let spacing: CGFloat?
 
-    public init(@LayoutBuilder _ makeChild: () -> ChildNode) {
+    public init(alignment: VerticalAlignment = .center, spacing: CGFloat? = nil, @LayoutBuilder _ makeChild: () -> ChildNode) {
         self.child = makeChild()
+        self.alignment = alignment
+        self.spacing = spacing
     }
-
-    public init<T>(@LayoutBuilder _ makeChild: () -> TupleNode<T>) where ChildNode == TupleNode<T> {
-        self.child = makeChild()
-    }
-
+    
     public var content: Never {
         fatalError()
     }
