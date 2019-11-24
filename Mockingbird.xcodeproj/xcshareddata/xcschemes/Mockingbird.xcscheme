@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ECD2F70822B2D8C8007519C8"
+               BlueprintIdentifier = "EC9F94B52370BE6E00E418F9"
                BuildableName = "Mockingbird.framework"
                BlueprintName = "Mockingbird"
                ReferencedContainer = "container:Mockingbird.xcodeproj">
@@ -50,7 +50,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ECD2F70822B2D8C8007519C8"
+            BlueprintIdentifier = "EC9F94B52370BE6E00E418F9"
             BuildableName = "Mockingbird.framework"
             BlueprintName = "Mockingbird"
             ReferencedContainer = "container:Mockingbird.xcodeproj">
