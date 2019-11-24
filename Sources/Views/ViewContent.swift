@@ -28,7 +28,7 @@ protocol ViewList {
 
 extension View {
 
-    var flattened: [View] {
+    public var flattened: [View] {
         if let view = self as? ViewList {
             return view.makeViews()
         } else {

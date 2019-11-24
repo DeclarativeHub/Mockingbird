@@ -12,12 +12,12 @@ public struct Font: Hashable {
     public enum Descriptor: Hashable {
 
         public struct Attributes: Hashable {
-            var isItalic: Bool = false
-            var isSsmallCaps: Bool = false
-            var isLowercaseSmallCaps: Bool = false
-            var isUppercaseSmallCaps: Bool = false
-            var isMonospacedDigit: Bool = false
-            var isBold: Bool = false
+            public var isItalic: Bool = false
+            public var isSsmallCaps: Bool = false
+            public var isLowercaseSmallCaps: Bool = false
+            public var isUppercaseSmallCaps: Bool = false
+            public var isMonospacedDigit: Bool = false
+            public var isBold: Bool = false
         }
 
         case system(size: CGFloat, weight: Weight, design: Design, attributes: Attributes)
