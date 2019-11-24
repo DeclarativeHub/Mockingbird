@@ -17,6 +17,15 @@ public struct Color: View {
         self.rgba = (white, white, white, opacity)
     }
 
+    public init(rgb: Int32, alpha: Double = 1.0) {
+        self.init(
+            red: Double((rgb >> 16) & 0xff) / 255.0,
+            green: Double((rgb >> 8) & 0xff) / 255.0,
+            blue: Double(rgb & 0xff) / 255.0,
+            alpha: Double(alpha)
+        )
+    }
+
     public var body: View {
         fatalError()
     }
