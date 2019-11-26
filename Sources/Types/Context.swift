@@ -10,6 +10,9 @@ import CoreGraphics
 public struct Context {
 
     public var environment: EnvironmentValues = .init()
+    
+    public var environmentObjects: [String: Any] = [:]
+
     public var transaction: Transaction = .init()
 
     public init() {}

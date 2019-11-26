@@ -10,4 +10,12 @@ import CoreGraphics
 public struct Transaction {
 
     public init() {}
+
+    public init(animation: Animation?) {
+        self.animation = animation
+    }
+
+    public var animation: Animation?
+
+    public var disablesAnimations: Bool = false
 }

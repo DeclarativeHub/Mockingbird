@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		EC10027B23786A4C00AD8BF2 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */; };
 		EC10027D23786B1900AD8BF2 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC10027C23786B1900AD8BF2 /* Shape.swift */; };
+		EC2441B5238DD16100135660 /* DynamicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B4238DD16100135660 /* DynamicProperty.swift */; };
+		EC2441B7238DD17100135660 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B6238DD17100135660 /* Binding.swift */; };
+		EC2441B9238DD1B900135660 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B8238DD1B900135660 /* Animation.swift */; };
+		EC2441BB238DD29300135660 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BA238DD29300135660 /* State.swift */; };
+		EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BC238DD49E00135660 /* EnvironmentObject.swift */; };
+		EC2441BF238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */; };
 		EC30A37C2370D5FC00D40848 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC30A37B2370D5FC00D40848 /* Never.swift */; };
 		EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533AC82378453F007EA560 /* CoordinateSpace.swift */; };
 		EC533ACB237845B2007EA560 /* GeometryProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533ACA237845B2007EA560 /* GeometryProxy.swift */; };
@@ -56,6 +62,12 @@
 /* Begin PBXFileReference section */
 		EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 		EC10027C23786B1900AD8BF2 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		EC2441B4238DD16100135660 /* DynamicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProperty.swift; sourceTree = "<group>"; };
+		EC2441B6238DD17100135660 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		EC2441B8238DD1B900135660 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		EC2441BA238DD29300135660 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		EC2441BC238DD49E00135660 /* EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject.swift; sourceTree = "<group>"; };
+		EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentObject.swift; sourceTree = "<group>"; };
 		EC30A37B2370D5FC00D40848 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
 		EC533AC82378453F007EA560 /* CoordinateSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSpace.swift; sourceTree = "<group>"; };
 		EC533ACA237845B2007EA560 /* GeometryProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryProxy.swift; sourceTree = "<group>"; };
@@ -120,6 +132,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC2441B3238DD14500135660 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				EC2441B4238DD16100135660 /* DynamicProperty.swift */,
+				EC2441BC238DD49E00135660 /* EnvironmentObject.swift */,
+				EC2441B6238DD17100135660 /* Binding.swift */,
+				EC2441BA238DD29300135660 /* State.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
 		EC9F94AC2370BE6E00E418F9 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +178,7 @@
 				EC9F94C82370BF9B00E418F9 /* Types */,
 				EC9F94CF2370C1A900E418F9 /* Views */,
 				ECC7DFCD23783540007B0AF5 /* Modifiers */,
+				EC2441B3238DD14500135660 /* Properties */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -172,6 +196,7 @@
 				ECA23300237C96C50044F12F /* Font.swift */,
 				EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */,
 				ECA5D6FD2389C18500239A89 /* Transaction.swift */,
+				EC2441B8238DD1B900135660 /* Animation.swift */,
 				ECA5D6FB2389C14F00239A89 /* Context.swift */,
 			);
 			path = Types;
@@ -216,6 +241,7 @@
 				ECE461362379FC9600A21198 /* ViewModifiers.FixedSize.swift */,
 				ECE406B62389F60000F7B020 /* ViewModifiers.Offset.swift */,
 				ECE406CA238A86DC00F7B020 /* ViewModifiers.Shadow.swift */,
+				EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -322,13 +348,18 @@
 				EC9F94C52370BEBA00E418F9 /* Text.swift in Sources */,
 				ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */,
 				EC9F94CA2370BFA700E418F9 /* Alignment.swift in Sources */,
+				EC2441B9238DD1B900135660 /* Animation.swift in Sources */,
+				EC2441B7238DD17100135660 /* Binding.swift in Sources */,
 				EC90E6DE237824D500A9B7E0 /* ViewContent.swift in Sources */,
 				ECE406D4238ACBD400F7B020 /* Modified.swift in Sources */,
+				EC2441BF238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift in Sources */,
 				EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */,
 				EC9F94D12370C1DB00E418F9 /* Spacer.swift in Sources */,
 				ECE461372379FC9600A21198 /* ViewModifiers.FixedSize.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
 				ECE406CB238A86DC00F7B020 /* ViewModifiers.Shadow.swift in Sources */,
+				EC2441BB238DD29300135660 /* State.swift in Sources */,
+				EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */,
 				ECE406B72389F60000F7B020 /* ViewModifiers.Offset.swift in Sources */,
 				ECEBB5C0238154EB006230B7 /* Axis.swift in Sources */,
 				EC30A37C2370D5FC00D40848 /* Never.swift in Sources */,
@@ -356,6 +387,7 @@
 				EC9F94D72370C53700E418F9 /* ForEach.swift in Sources */,
 				EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */,
 				EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */,
+				EC2441B5238DD16100135660 /* DynamicProperty.swift in Sources */,
 				ECC7DFCF23783551007B0AF5 /* ViewModifier.swift in Sources */,
 				ECDFA45B237F3517001C0238 /* EnvironmentValueModifier.swift in Sources */,
 				ECE0DC282380759800105B93 /* Layoutable.swift in Sources */,
