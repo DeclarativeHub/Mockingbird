@@ -13,7 +13,7 @@ public protocol EnvironmentObjectProperty: DynamicProperty {
 }
 
 @propertyWrapper
-public struct EnvironmentObject<ObjectType> {
+public struct EnvironmentObject<ObjectType>: EnvironmentObjectProperty {
 
     public let storage = EnvironmentObjectStorage(
         objectTypeIdentifier: String(reflecting: ObjectType.self),
