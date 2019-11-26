@@ -17,3 +17,10 @@ public struct Context {
 
     public init() {}
 }
+
+extension Context {
+
+    @inlinable public func environmentObject<B>(_ object: B) -> Context {
+        return modified(self) { $0.environmentObjects[String(reflecting: B.self)] = object }
+    }
+}
