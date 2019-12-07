@@ -16,9 +16,9 @@ public struct ViewBuilder {
         return c0
     }
 
-//    public static func buildIf<Content>(_ content: Content?) -> Content? where Content: View {
-//        return content
-//    }
+    public static func buildIf<Content>(_ content: Content?) -> Content? where Content: View {
+        return content
+    }
 
 //    public static func buildEither<TrueContent, FalseContent>(first: TrueContent) -> _ConditionalContent<TrueContent, FalseContent> where TrueContent: View, FalseContent: View {
 //        return .init(storage: .trueContent(first))
