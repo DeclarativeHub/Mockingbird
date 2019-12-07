@@ -21,6 +21,7 @@
 		EC533ACF2378469F007EA560 /* GeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533ACE2378469F007EA560 /* GeometryReader.swift */; };
 		EC533AD923785517007EA560 /* ViewModifiers.LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533AD823785517007EA560 /* ViewModifiers.LayoutPriority.swift */; };
 		EC693D1323783F9E00C78CAB /* ViewModifiers.Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC693D1223783F9E00C78CAB /* ViewModifiers.Frame.swift */; };
+		EC6F1372239BD721002FE2E4 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
 		EC90E6D32377504300A9B7E0 /* ViewModifiers.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */; };
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
 		EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */; };
@@ -74,6 +75,7 @@
 		EC533ACE2378469F007EA560 /* GeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReader.swift; sourceTree = "<group>"; };
 		EC533AD823785517007EA560 /* ViewModifiers.LayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.LayoutPriority.swift; sourceTree = "<group>"; };
 		EC693D1223783F9E00C78CAB /* ViewModifiers.Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Frame.swift; sourceTree = "<group>"; };
+		EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
 		EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Padding.swift; sourceTree = "<group>"; };
 		EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
 		EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6F1372239BD721002FE2E4 /* ReactiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +131,7 @@
 		EC100278237866FD00AD8BF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -528,6 +532,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Mockingbird/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -554,6 +562,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Mockingbird/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
