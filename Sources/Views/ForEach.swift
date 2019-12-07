@@ -10,7 +10,7 @@ public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollecti
     public var data: Data
     public var content: (Data.Element) -> View
 
-    public init(_ data: Data, id: KeyPath<Data.Element, ID>, content: @escaping (Data.Element) -> View) {
+    public init(_ data: Data, id: KeyPath<Data.Element, ID>, @ViewBuilder content: @escaping (Data.Element) -> View) {
         self.data = data
         self.content = content
     }
@@ -30,7 +30,7 @@ public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollecti
 
 extension ForEach where Data == Range<Int>, ID == Int {
 
-    public init(_ data: Range<Int>, content: @escaping (Int) -> View) {
+    public init(_ data: Range<Int>, @ViewBuilder content: @escaping (Int) -> View) {
         self.data = data
         self.content = content
     }
