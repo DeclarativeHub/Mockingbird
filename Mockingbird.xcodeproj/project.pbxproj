@@ -22,6 +22,7 @@
 		EC533AD923785517007EA560 /* ViewModifiers.LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533AD823785517007EA560 /* ViewModifiers.LayoutPriority.swift */; };
 		EC693D1323783F9E00C78CAB /* ViewModifiers.Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC693D1223783F9E00C78CAB /* ViewModifiers.Frame.swift */; };
 		EC6F1372239BD721002FE2E4 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
+		EC6F1374239BD770002FE2E4 /* ObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F1373239BD770002FE2E4 /* ObservedObject.swift */; };
 		EC90E6D32377504300A9B7E0 /* ViewModifiers.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */; };
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
 		EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */; };
@@ -76,6 +77,7 @@
 		EC533AD823785517007EA560 /* ViewModifiers.LayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.LayoutPriority.swift; sourceTree = "<group>"; };
 		EC693D1223783F9E00C78CAB /* ViewModifiers.Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Frame.swift; sourceTree = "<group>"; };
 		EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
+		EC6F1373239BD770002FE2E4 /* ObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObject.swift; sourceTree = "<group>"; };
 		EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Padding.swift; sourceTree = "<group>"; };
 		EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
 		EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				EC2441B4238DD16100135660 /* DynamicProperty.swift */,
 				EC2441BC238DD49E00135660 /* EnvironmentObject.swift */,
+				EC6F1373239BD770002FE2E4 /* ObservedObject.swift */,
 				EC2441B6238DD17100135660 /* Binding.swift */,
 				EC2441BA238DD29300135660 /* State.swift */,
 			);
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6F1374239BD770002FE2E4 /* ObservedObject.swift in Sources */,
 				ECE0DC2A2380762000105B93 /* StackLayout.swift in Sources */,
 				EC9F94C52370BEBA00E418F9 /* Text.swift in Sources */,
 				ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */,
