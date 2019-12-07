@@ -24,6 +24,11 @@ public struct LongPressGesture: Gesture {
 extension View {
 
     public func onLongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10, perform action: @escaping () -> Void) -> ModifiedContent {
-        return gesture(LongPressGesture(minimumDuration: minimumDuration, maximumDistance: maximumDistance).onEnded { _ in  action() })
+        return gesture(LongPressGesture(minimumDuration: minimumDuration, maximumDistance: maximumDistance)
+            .onEnded { pressing in
+                if !pressing {
+                    action()
+                }
+            })
     }
 }
