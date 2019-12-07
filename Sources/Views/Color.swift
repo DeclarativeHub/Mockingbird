@@ -5,16 +5,23 @@
 //  Created by Srdan Rasic on 04/11/2019.
 //
 
+import Foundation
+
 public struct Color: View {
 
-    public let rgba: (red: Double, green: Double, blue: Double, alpha: Double)
+    public enum Storage: Hashable {
+        case rgba(red: Double, green: Double, blue: Double, alpha: Double)
+        case asset(name: String, bundle: Bundle?)
+    }
+
+    public let storage: Storage
 
     public init(red: Double, green: Double, blue: Double, alpha: Double) {
-        self.rgba = (red, green, blue, alpha)
+        self.storage = .rgba(red: red, green: green, blue: blue, alpha: alpha)
     }
 
     public init(white: Double, opacity: Double) {
-        self.rgba = (white, white, white, opacity)
+        self.init(red: white, green: white, blue: white, alpha: opacity)
     }
 
     public init(rgb: Int32, alpha: Double = 1.0) {
@@ -24,6 +31,10 @@ public struct Color: View {
             blue: Double(rgb & 0xff) / 255.0,
             alpha: Double(alpha)
         )
+    }
+
+    public init(_ name: String, bundle: Bundle? = nil) {
+        self.storage = .asset(name: name, bundle: bundle)
     }
 
     public var body: View {
@@ -53,20 +64,38 @@ public struct Color: View {
     public static let purple: Color = .init(red: 1, green: 0, blue: 1, alpha: 1)
 
     public func opacity(_ alpha: Double) -> Color {
-        return Color(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: alpha)
+        switch storage {
+        case .rgba(let red, let green, let blue, let oldAlpha):
+            return Color(red: red, green: green, blue: blue, alpha: oldAlpha * alpha)
+        default:
+            return self // TODO
+        }
     }
 }
 
 extension Color: Hashable {
 
     public static func == (lhs: Color, rhs: Color) -> Bool {
-        return lhs.rgba == rhs.rgba
+        switch (lhs.storage, rhs.storage) {
+        case (.rgba(let lr, let lg, let lb, let la), .rgba(let rr, let rg, let rb, let ra)):
+            return lr == rr && lg == rg && lb == rb && la == ra
+        case (.asset(let lName, let lBundle), .asset(let rName, let rBundle)):
+            return lName == rName && lBundle == rBundle
+        default:
+            return false
+        }
     }
 
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(rgba.red)
-        hasher.combine(rgba.green)
-        hasher.combine(rgba.blue)
-        hasher.combine(rgba.alpha)
+        switch storage {
+        case .rgba(let red, let green, let blue, let alpha):
+            hasher.combine(red)
+            hasher.combine(green)
+            hasher.combine(blue)
+            hasher.combine(alpha)
+        case .asset(let name, let bundle):
+            hasher.combine(name)
+            hasher.combine(bundle)
+        }
     }
 }
