@@ -16,8 +16,8 @@ public struct ViewBuilder {
         return c0
     }
 
-    public static func buildIf<Content>(_ content: Content?) -> Content? where Content: View {
-        return content
+    public static func buildIf<Content>(_ content: Content?) -> ViewContent where Content: View {
+        return ViewContent(content.map { [$0] } ?? [])
     }
 
 //    public static func buildEither<TrueContent, FalseContent>(first: TrueContent) -> _ConditionalContent<TrueContent, FalseContent> where TrueContent: View, FalseContent: View {
