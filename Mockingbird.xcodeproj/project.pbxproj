@@ -23,6 +23,11 @@
 		EC693D1323783F9E00C78CAB /* ViewModifiers.Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC693D1223783F9E00C78CAB /* ViewModifiers.Frame.swift */; };
 		EC6F1372239BD721002FE2E4 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
 		EC6F1374239BD770002FE2E4 /* ObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F1373239BD770002FE2E4 /* ObservedObject.swift */; };
+		EC7469E1239C3423009A4102 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E0239C3423009A4102 /* Gesture.swift */; };
+		EC7469E4239C3458009A4102 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E3239C3458009A4102 /* TapGesture.swift */; };
+		EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E5239C3469009A4102 /* LongPressGesture.swift */; };
+		EC7469E8239C3541009A4102 /* EndedGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E7239C3541009A4102 /* EndedGesture.swift */; };
+		EC7469EA239C35F1009A4102 /* ViewModifiers.Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */; };
 		EC90E6D32377504300A9B7E0 /* ViewModifiers.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */; };
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
 		EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */; };
@@ -78,6 +83,11 @@
 		EC693D1223783F9E00C78CAB /* ViewModifiers.Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Frame.swift; sourceTree = "<group>"; };
 		EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveKit.framework; path = Carthage/Build/iOS/ReactiveKit.framework; sourceTree = "<group>"; };
 		EC6F1373239BD770002FE2E4 /* ObservedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObject.swift; sourceTree = "<group>"; };
+		EC7469E0239C3423009A4102 /* Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		EC7469E3239C3458009A4102 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
+		EC7469E5239C3469009A4102 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
+		EC7469E7239C3541009A4102 /* EndedGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndedGesture.swift; sourceTree = "<group>"; };
+		EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Gesture.swift; sourceTree = "<group>"; };
 		EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Padding.swift; sourceTree = "<group>"; };
 		EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
 		EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
@@ -150,6 +160,17 @@
 			path = Properties;
 			sourceTree = "<group>";
 		};
+		EC7469E2239C342C009A4102 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				EC7469E0239C3423009A4102 /* Gesture.swift */,
+				EC7469E3239C3458009A4102 /* TapGesture.swift */,
+				EC7469E5239C3469009A4102 /* LongPressGesture.swift */,
+				EC7469E7239C3541009A4102 /* EndedGesture.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 		EC9F94AC2370BE6E00E418F9 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +204,7 @@
 				ECE406D0238ACB3B00F7B020 /* Shared */,
 				ECE0DC262380758800105B93 /* Layout */,
 				EC9F94C82370BF9B00E418F9 /* Types */,
+				EC7469E2239C342C009A4102 /* Gestures */,
 				EC9F94CF2370C1A900E418F9 /* Views */,
 				ECC7DFCD23783540007B0AF5 /* Modifiers */,
 				EC2441B3238DD14500135660 /* Properties */,
@@ -249,6 +271,7 @@
 				ECE406B62389F60000F7B020 /* ViewModifiers.Offset.swift */,
 				ECE406CA238A86DC00F7B020 /* ViewModifiers.Shadow.swift */,
 				EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */,
+				EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -367,8 +390,12 @@
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
 				ECE406CB238A86DC00F7B020 /* ViewModifiers.Shadow.swift in Sources */,
 				EC2441BB238DD29300135660 /* State.swift in Sources */,
+				EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */,
 				EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */,
+				EC7469E8239C3541009A4102 /* EndedGesture.swift in Sources */,
 				ECE406B72389F60000F7B020 /* ViewModifiers.Offset.swift in Sources */,
+				EC7469EA239C35F1009A4102 /* ViewModifiers.Gesture.swift in Sources */,
+				EC7469E1239C3423009A4102 /* Gesture.swift in Sources */,
 				ECEBB5C0238154EB006230B7 /* Axis.swift in Sources */,
 				EC30A37C2370D5FC00D40848 /* Never.swift in Sources */,
 				EC9F94CE2370C15400E418F9 /* ZStack.swift in Sources */,
@@ -393,6 +420,7 @@
 				EC9F94D52370C45E00E418F9 /* Button.swift in Sources */,
 				ECE406BB2389F94400F7B020 /* ViewModifiers.Overlay.swift in Sources */,
 				EC9F94D72370C53700E418F9 /* ForEach.swift in Sources */,
+				EC7469E4239C3458009A4102 /* TapGesture.swift in Sources */,
 				EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */,
 				EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */,
 				EC2441B5238DD16100135660 /* DynamicProperty.swift in Sources */,
