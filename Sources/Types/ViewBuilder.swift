@@ -20,13 +20,13 @@ public struct ViewBuilder {
         return ViewContent(content.map { [$0] } ?? [])
     }
 
-//    public static func buildEither<TrueContent, FalseContent>(first: TrueContent) -> _ConditionalContent<TrueContent, FalseContent> where TrueContent: View, FalseContent: View {
-//        return .init(storage: .trueContent(first))
-//    }
-//
-//    public static func buildEither<TrueContent, FalseContent>(second: FalseContent) -> _ConditionalContent<TrueContent, FalseContent> where TrueContent: View, FalseContent: View {
-//        return .init(storage: .falseContent(second))
-//    }
+    public static func buildEither<TrueContent>(first: TrueContent) -> ViewContent where TrueContent: View {
+        return ViewContent([first])
+    }
+
+    public static func buildEither<FalseContent>(second: FalseContent) -> ViewContent where FalseContent: View {
+        return ViewContent([second])
+    }
 
     public static func buildBlock<C0, C1>(_ c0: C0, _ c1: C1) -> ViewContent where C0: View, C1: View {
         return ViewContent([c0, c1])
