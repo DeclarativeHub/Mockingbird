@@ -38,7 +38,7 @@ public struct StackLayout {
     ///     6. Distribute nodes along the minor axis using nodes heights and the given alignment.
 
     public func contentLayout(fittingSize targetSize: CGSize, alignment: VerticalAlignment) -> ContentLayout {
-        let epsilon: CGFloat = 0.00001
+        let epsilon: CGFloat = 0.0000001
         let availableHeight = targetSize.height
         var frames = Array(repeating: CGRect.zero, count: nodes.count)
 
