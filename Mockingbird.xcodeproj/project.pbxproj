@@ -28,6 +28,7 @@
 		EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E5239C3469009A4102 /* LongPressGesture.swift */; };
 		EC7469E8239C3541009A4102 /* EndedGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E7239C3541009A4102 /* EndedGesture.swift */; };
 		EC7469EA239C35F1009A4102 /* ViewModifiers.Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */; };
+		EC7A0F5B239D41A6008E7AF4 /* Mockingbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9F94B62370BE6E00E418F9 /* Mockingbird.framework */; };
 		EC90E6D32377504300A9B7E0 /* ViewModifiers.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */; };
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
 		EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */; };
@@ -51,6 +52,9 @@
 		ECA5D7042389D55100239A89 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D7032389D55100239A89 /* Image.swift */; };
 		ECC7DFCF23783551007B0AF5 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */; };
 		ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */; };
+		ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
+		ECDF0F1A239D422100675977 /* StackLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */; };
+		ECDF0F1C239D428600675977 /* ReactiveKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECDFA45B237F3517001C0238 /* EnvironmentValueModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */; };
 		ECE0DC282380759800105B93 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC272380759800105B93 /* Layoutable.swift */; };
 		ECE0DC2A2380762000105B93 /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC292380762000105B93 /* StackLayout.swift */; };
@@ -66,9 +70,34 @@
 		ECEBB5C22381B17A006230B7 /* ViewModifiers.FlexFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB5C12381B17A006230B7 /* ViewModifiers.FlexFrame.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EC7A0F5C239D41A6008E7AF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC9F94AD2370BE6E00E418F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC9F94B52370BE6E00E418F9;
+			remoteInfo = Mockingbird;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECDF0F1B239D428100675977 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ECDF0F1C239D428600675977 /* ReactiveKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 		EC10027C23786B1900AD8BF2 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayoutTests.swift; sourceTree = "<group>"; };
 		EC2441B4238DD16100135660 /* DynamicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProperty.swift; sourceTree = "<group>"; };
 		EC2441B6238DD17100135660 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		EC2441B8238DD1B900135660 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
@@ -88,6 +117,8 @@
 		EC7469E5239C3469009A4102 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
 		EC7469E7239C3541009A4102 /* EndedGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndedGesture.swift; sourceTree = "<group>"; };
 		EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Gesture.swift; sourceTree = "<group>"; };
+		EC7A0F56239D41A5008E7AF4 /* MockingbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7A0F5A239D41A6008E7AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Padding.swift; sourceTree = "<group>"; };
 		EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
 		EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
@@ -129,6 +160,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC7A0F53239D41A5008E7AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */,
+				EC7A0F5B239D41A6008E7AF4 /* Mockingbird.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC9F94B32370BE6E00E418F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,11 +211,21 @@
 			path = Gestures;
 			sourceTree = "<group>";
 		};
+		EC7A0F57239D41A6008E7AF4 /* MockingbirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */,
+				EC7A0F5A239D41A6008E7AF4 /* Info.plist */,
+			);
+			path = MockingbirdTests;
+			sourceTree = "<group>";
+		};
 		EC9F94AC2370BE6E00E418F9 = {
 			isa = PBXGroup;
 			children = (
 				EC9F94C12370BE9000E418F9 /* Sources */,
 				EC9F94B82370BE6E00E418F9 /* Mockingbird */,
+				EC7A0F57239D41A6008E7AF4 /* MockingbirdTests */,
 				EC9F94B72370BE6E00E418F9 /* Products */,
 				EC100278237866FD00AD8BF2 /* Frameworks */,
 			);
@@ -185,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				EC9F94B62370BE6E00E418F9 /* Mockingbird.framework */,
+				EC7A0F56239D41A5008E7AF4 /* MockingbirdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,6 +358,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EC7A0F55239D41A5008E7AF4 /* MockingbirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC7A0F60239D41A6008E7AF4 /* Build configuration list for PBXNativeTarget "MockingbirdTests" */;
+			buildPhases = (
+				EC7A0F52239D41A5008E7AF4 /* Sources */,
+				EC7A0F53239D41A5008E7AF4 /* Frameworks */,
+				EC7A0F54239D41A5008E7AF4 /* Resources */,
+				ECDF0F1B239D428100675977 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC7A0F5D239D41A6008E7AF4 /* PBXTargetDependency */,
+			);
+			name = MockingbirdTests;
+			productName = MockingbirdTests;
+			productReference = EC7A0F56239D41A5008E7AF4 /* MockingbirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EC9F94B52370BE6E00E418F9 /* Mockingbird */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC9F94BE2370BE6E00E418F9 /* Build configuration list for PBXNativeTarget "Mockingbird" */;
@@ -331,10 +401,13 @@
 		EC9F94AD2370BE6E00E418F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Declarative Hub";
 				TargetAttributes = {
+					EC7A0F55239D41A5008E7AF4 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					EC9F94B52370BE6E00E418F9 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
@@ -355,11 +428,19 @@
 			projectRoot = "";
 			targets = (
 				EC9F94B52370BE6E00E418F9 /* Mockingbird */,
+				EC7A0F55239D41A5008E7AF4 /* MockingbirdTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC7A0F54239D41A5008E7AF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC9F94B42370BE6E00E418F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +451,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC7A0F52239D41A5008E7AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECDF0F1A239D422100675977 /* StackLayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC9F94B22370BE6E00E418F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,7 +523,61 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EC7A0F5D239D41A6008E7AF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC9F94B52370BE6E00E418F9 /* Mockingbird */;
+			targetProxy = EC7A0F5C239D41A6008E7AF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EC7A0F5E239D41A6008E7AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MockingbirdTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DeclarativeHub.MockingbirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC7A0F5F239D41A6008E7AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MockingbirdTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DeclarativeHub.MockingbirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EC9F94BC2370BE6E00E418F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,6 +760,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC7A0F60239D41A6008E7AF4 /* Build configuration list for PBXNativeTarget "MockingbirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7A0F5E239D41A6008E7AF4 /* Debug */,
+				EC7A0F5F239D41A6008E7AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EC9F94B02370BE6E00E418F9 /* Build configuration list for PBXProject "Mockingbird" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

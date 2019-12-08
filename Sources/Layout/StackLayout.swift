@@ -9,7 +9,7 @@ import CoreGraphics
 
 public struct StackLayout {
 
-    public struct ContentLayout {
+    public struct ContentLayout: Equatable {
         public let frames: [CGRect]
         public let fittingSize: CGSize
     }
@@ -145,7 +145,7 @@ public struct StackLayout {
             availableWidth -= groupWidth
         }
 
-        // Distribute any remaining space among nodes
+        // Distribute any remaining space among nodes, respecting priority groups
         if availableWidth > epsilon {
             for (index, var priorityGroup) in priorityGroups.enumerated().reversed() {
                 while availableWidth > epsilon {
@@ -161,6 +161,7 @@ public struct StackLayout {
                         break
                     }
                     let expansionToSuggest = availableWidth / CGFloat(expandableNodes.count)
+                    var numberOfExpansions = 0
                     for (index, var item) in expandableNodes {
                         let targetSize = CGSize(width: item.size.width + expansionToSuggest, height: availableHeight)
                         let nodeSize = item.node.layoutSize(fitting: targetSize)
@@ -169,6 +170,12 @@ public struct StackLayout {
                         item.needsHeightUpdate = false
                         priorityGroup.items[index] = item
                         availableWidth -= expandedWidth
+                        if expandedWidth > epsilon {
+                            numberOfExpansions += 1
+                        }
+                    }
+                    if numberOfExpansions == 0 {
+                        break
                     }
                 }
                 priorityGroups[index] = priorityGroup
