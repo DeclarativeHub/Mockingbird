@@ -16,10 +16,12 @@ public struct StackLayout {
 
     public let nodes: [Layoutable]
     public let interItemSpacing: CGFloat
+    public let screenScale: CGFloat
 
-    public init(node: [Layoutable], interItemSpacing: CGFloat) {
+    public init(node: [Layoutable], interItemSpacing: CGFloat, screenScale: CGFloat = 2) {
         self.nodes = node
         self.interItemSpacing = interItemSpacing
+        self.screenScale = screenScale
     }
 
     /// Stack layout is calculated using the algorithm below.
@@ -227,7 +229,7 @@ public struct StackLayout {
             case .firstTextBaseline, .lastTextBaseline:
                 fatalError("Not implemented.")
             }
-            frames[index] = frame
+            frames[index] = frame.roundedToScale(scale: screenScale)
             if nodes[index].isSpacer() || (index < nodes.count - 1 && nodes[index + 1].isSpacer()) {
                 movingOrigin.x += frame.width
             } else {
@@ -252,5 +254,26 @@ extension StackLayout.ContentLayout {
             },
             fittingSize: CGSize(width: fittingSize.height, height: fittingSize.width)
         )
+    }
+}
+
+extension CGFloat {
+
+    @inlinable
+    func roundedToScale(scale: CGFloat, rule: FloatingPointRoundingRule) -> CGFloat {
+        let scale: CGFloat = 1.0 / scale
+        return scale * (self / scale).rounded(rule)
+    }
+}
+
+extension CGRect {
+
+    @inlinable
+    func roundedToScale(scale: CGFloat) -> CGRect {
+        return CGRect(
+            x: origin.x.roundedToScale(scale: scale, rule: .towardZero),
+            y: origin.y.roundedToScale(scale: scale, rule: .towardZero),
+            width: size.width.roundedToScale(scale: scale, rule: .awayFromZero),
+            height: size.height.roundedToScale(scale: scale, rule: .awayFromZero))
     }
 }
