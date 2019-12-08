@@ -241,7 +241,7 @@ public struct StackLayout {
             )
         }
 
-        return ContentLayout(frames: frames, fittingSize: fittingSize)
+        return ContentLayout(frames: frames, fittingSize: fittingSize.roundedToScale(scale: screenScale))
     }
 }
 
@@ -254,26 +254,5 @@ extension StackLayout.ContentLayout {
             },
             fittingSize: CGSize(width: fittingSize.height, height: fittingSize.width)
         )
-    }
-}
-
-extension CGFloat {
-
-    @inlinable
-    func roundedToScale(scale: CGFloat, rule: FloatingPointRoundingRule) -> CGFloat {
-        let scale: CGFloat = 1.0 / scale
-        return scale * (self / scale).rounded(rule)
-    }
-}
-
-extension CGRect {
-
-    @inlinable
-    func roundedToScale(scale: CGFloat) -> CGRect {
-        return CGRect(
-            x: origin.x.roundedToScale(scale: scale, rule: .towardZero),
-            y: origin.y.roundedToScale(scale: scale, rule: .towardZero),
-            width: size.width.roundedToScale(scale: scale, rule: .awayFromZero),
-            height: size.height.roundedToScale(scale: scale, rule: .awayFromZero))
     }
 }

@@ -55,6 +55,7 @@
 		ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
 		ECDF0F1A239D422100675977 /* StackLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */; };
 		ECDF0F1C239D428600675977 /* ReactiveKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ECDF0F1E239D627F00675977 /* CoreGraphics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */; };
 		ECDFA45B237F3517001C0238 /* EnvironmentValueModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */; };
 		ECE0DC282380759800105B93 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC272380759800105B93 /* Layoutable.swift */; };
 		ECE0DC2A2380762000105B93 /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC292380762000105B93 /* StackLayout.swift */; };
@@ -144,6 +145,7 @@
 		ECA5D7032389D55100239A89 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierContent.swift; sourceTree = "<group>"; };
+		ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Extensions.swift"; sourceTree = "<group>"; };
 		ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueModifier.swift; sourceTree = "<group>"; };
 		ECE0DC272380759800105B93 /* Layoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layoutable.swift; sourceTree = "<group>"; };
 		ECE0DC292380762000105B93 /* StackLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayout.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				ECE406D1238ACB4800F7B020 /* MutableCollection+Extensions.swift */,
+				ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */,
 				ECE406D3238ACBD400F7B020 /* Modified.swift */,
 			);
 			path = Shared;
@@ -518,6 +521,7 @@
 				ECE0DC282380759800105B93 /* Layoutable.swift in Sources */,
 				EC533AD923785517007EA560 /* ViewModifiers.LayoutPriority.swift in Sources */,
 				EC9F94C72370BF3E00E418F9 /* VStack.swift in Sources */,
+				ECDF0F1E239D627F00675977 /* CoreGraphics+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
