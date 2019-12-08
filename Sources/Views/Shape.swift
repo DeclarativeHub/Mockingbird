@@ -118,3 +118,18 @@ public struct RoundedRectangle: Shape, Equatable {
     }
 }
 
+public struct Capsule: Shape, Equatable {
+
+    public var style: RoundedCornerStyle
+
+    public init(style: RoundedCornerStyle = .circular) {
+        self.style = style
+    }
+
+    public func path(in rect: CGRect) -> CGPath {
+        let radius = min(rect.width, rect.height) / 2
+        guard rect.width >= radius * 2 else { return CGPath(rect: .zero, transform: nil) }
+        guard rect.height >= radius * 2 else { return CGPath(rect: .zero, transform: nil) }
+        return CGPath(roundedRect: rect, cornerWidth: radius, cornerHeight: radius, transform: nil)
+    }
+}
