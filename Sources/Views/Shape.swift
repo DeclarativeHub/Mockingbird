@@ -112,7 +112,8 @@ public struct RoundedRectangle: Shape, Equatable {
     }
 
     public func path(in rect: CGRect) -> CGPath {
-        guard !rect.isEmpty else { return CGPath(rect: .zero, transform: nil) }
+        guard rect.width >= cornerSize.width * 2 else { return CGPath(rect: .zero, transform: nil) }
+        guard rect.height >= cornerSize.height * 2 else { return CGPath(rect: .zero, transform: nil) }
         return CGPath(roundedRect: rect, cornerWidth: cornerSize.width, cornerHeight: cornerSize.height, transform: nil)
     }
 }
