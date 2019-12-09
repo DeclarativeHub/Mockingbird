@@ -12,6 +12,7 @@ public struct Image: View, Hashable {
     public let name: String
     public let bundle: Bundle?
 
+    @inlinable
     public init(_ name: String, bundle: Bundle? = nil) {
         self.name = name
         self.bundle = bundle

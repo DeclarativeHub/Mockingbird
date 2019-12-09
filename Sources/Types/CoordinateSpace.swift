@@ -14,6 +14,7 @@ public enum CoordinateSpace {
 
 extension CoordinateSpace {
 
+    @inlinable
     public var isGlobal: Bool {
         switch self {
         case .global:
@@ -23,6 +24,7 @@ extension CoordinateSpace {
         }
     }
 
+    @inlinable
     public var isLocal: Bool {
         switch self {
         case .local:

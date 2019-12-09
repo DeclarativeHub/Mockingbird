@@ -12,6 +12,7 @@ public struct HStack: View {
     public let alignment: VerticalAlignment
     public let spacing: CGFloat?
 
+    @inlinable
     public init(alignment: VerticalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder makeContent: () -> View) {
         self.content = makeContent().flattened
         self.alignment = alignment
@@ -25,6 +26,7 @@ public struct HStack: View {
 
 extension HStack: Equatable {
 
+    @inlinable
     public static func == (lhs: HStack, rhs: HStack) -> Bool {
         return lhs.spacing == rhs.spacing && lhs.alignment == rhs.alignment
     }

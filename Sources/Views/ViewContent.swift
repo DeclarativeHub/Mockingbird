@@ -9,6 +9,7 @@ public struct ViewContent: View, ViewList {
 
     public let content: [View]
 
+    @inlinable
     public init(_ content: [View]) {
         self.content = content
     }
@@ -17,17 +18,18 @@ public struct ViewContent: View, ViewList {
         fatalError()
     }
 
-    func makeViews() -> [View] {
+    public func makeViews() -> [View] {
         return content
     }
 }
 
-protocol ViewList {
+public protocol ViewList {
     func makeViews() -> [View]
 }
 
 extension View {
 
+    @inlinable
     public var flattened: [View] {
         if let view = self as? ViewList {
             return view.makeViews()

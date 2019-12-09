@@ -10,6 +10,7 @@ public struct ModifiedContent: View {
     public var content: View
     public var modifier: ViewModifier
 
+    @inlinable
     public init(content: View, modifier: ViewModifier) {
         self.content = content
         self.modifier = modifier
@@ -22,6 +23,7 @@ public struct ModifiedContent: View {
 
 extension View {
 
+    @inlinable
     public func modifier(_ modifier: ViewModifier) -> ModifiedContent {
         return ModifiedContent(content: self, modifier: modifier)
     }

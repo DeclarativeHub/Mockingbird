@@ -12,6 +12,7 @@ public enum Axis {
 
 extension Axis {
 
+    @inlinable
     public var flipped: Axis {
         switch self {
         case .horizontal:

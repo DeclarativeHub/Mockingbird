@@ -16,14 +16,17 @@ public struct Color: View {
 
     public let storage: Storage
 
+    @inlinable
     public init(red: Double, green: Double, blue: Double, alpha: Double) {
         self.storage = .rgba(red: red, green: green, blue: blue, alpha: alpha)
     }
+    @inlinable
 
     public init(white: Double, opacity: Double) {
         self.init(red: white, green: white, blue: white, alpha: opacity)
     }
 
+    @inlinable
     public init(rgb: Int32, alpha: Double = 1.0) {
         self.init(
             red: Double((rgb >> 16) & 0xff) / 255.0,
@@ -33,6 +36,7 @@ public struct Color: View {
         )
     }
 
+    @inlinable
     public init(_ name: String, bundle: Bundle? = nil) {
         self.storage = .asset(name: name, bundle: bundle)
     }
@@ -63,6 +67,7 @@ public struct Color: View {
 
     public static let purple: Color = .init(red: 1, green: 0, blue: 1, alpha: 1)
 
+    @inlinable
     public func opacity(_ alpha: Double) -> Color {
         switch storage {
         case .rgba(let red, let green, let blue, let oldAlpha):
@@ -75,6 +80,7 @@ public struct Color: View {
 
 extension Color: Hashable {
 
+    @inlinable
     public static func == (lhs: Color, rhs: Color) -> Bool {
         switch (lhs.storage, rhs.storage) {
         case (.rgba(let lr, let lg, let lb, let la), .rgba(let rr, let rg, let rb, let ra)):
@@ -86,6 +92,7 @@ extension Color: Hashable {
         }
     }
 
+    @inlinable
     public func hash(into hasher: inout Hasher) {
         switch storage {
         case .rgba(let red, let green, let blue, let alpha):

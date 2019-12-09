@@ -20,8 +20,14 @@ public struct ObservedObject<ObjectType>: ObservedObjectProperty where ObjectTyp
     @dynamicMemberLookup
     public struct Wrapper {
 
-        var value: ObjectType
+        public var value: ObjectType
 
+        @inlinable
+        public init(value: ObjectType) {
+            self.value = value
+        }
+
+        @inlinable
         public subscript<Subject>(dynamicMember keyPath: ReferenceWritableKeyPath<ObjectType, Subject>) -> Binding<Subject> {
             get {
                 return Binding(
@@ -32,14 +38,17 @@ public struct ObservedObject<ObjectType>: ObservedObjectProperty where ObjectTyp
         }
     }
 
+    @inlinable
     public init(initialValue: ObjectType) {
         self.projectedValue = Wrapper(value: initialValue)
     }
 
+    @inlinable
     public init(wrappedValue: ObjectType) {
         self.projectedValue = Wrapper(value: wrappedValue)
     }
 
+    @inlinable
     public var wrappedValue: ObjectType {
         get {
             return projectedValue.value
@@ -51,6 +60,7 @@ public struct ObservedObject<ObjectType>: ObservedObjectProperty where ObjectTyp
 
     public var projectedValue: ObservedObject<ObjectType>.Wrapper
 
+    @inlinable
     public var objectWillChange: Signal<Void, Never> {
         return wrappedValue.objectWillChange.eraseType().toSignal()
     }

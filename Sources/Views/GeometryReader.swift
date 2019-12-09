@@ -9,6 +9,7 @@ public struct GeometryReader: View {
 
     public var content: (GeometryProxy) -> View
 
+    @inlinable
     public init(@ViewBuilder content: @escaping (GeometryProxy) -> View) {
         self.content = content
     }

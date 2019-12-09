@@ -15,6 +15,7 @@ public struct LongPressGesture: Gesture {
     public var minimumDuration: Double
     public var maximumDistance: CGFloat
 
+    @inlinable
     public init(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10) {
         self.minimumDuration = minimumDuration
         self.maximumDistance = maximumDistance
@@ -23,6 +24,7 @@ public struct LongPressGesture: Gesture {
 
 extension View {
 
+    @inlinable
     public func onLongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10, perform action: @escaping () -> Void) -> ModifiedContent {
         return gesture(LongPressGesture(minimumDuration: minimumDuration, maximumDistance: maximumDistance)
             .onEnded { pressing in

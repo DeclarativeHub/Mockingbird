@@ -11,6 +11,7 @@ public struct Spacer: View, Equatable {
 
     public let minLength: CGFloat?
 
+    @inlinable
     public init(minLength: CGFloat? = nil) {
         self.minLength = minLength
     }

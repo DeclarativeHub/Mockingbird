@@ -12,6 +12,7 @@ extension ViewModifiers {
         public let horizontal: Bool
         public let vertical: Bool
 
+        @inlinable
         public init(horizontal: Bool, vertical: Bool) {
             self.horizontal = horizontal
             self.vertical = vertical
@@ -21,6 +22,7 @@ extension ViewModifiers {
 
 extension View {
 
+    @inlinable
     public func fixedSize(horizontal: Bool = true, vertical: Bool = false) -> ModifiedContent {
         return modifier(ViewModifiers.FixedSize(horizontal: horizontal, vertical: vertical))
     }

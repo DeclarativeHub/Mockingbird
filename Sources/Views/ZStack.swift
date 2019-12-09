@@ -10,6 +10,7 @@ public struct ZStack: View {
     public let content: [View]
     public let alignment: Alignment
 
+    @inlinable
     public init(alignment: Alignment = .center, @ViewBuilder makeContent: () -> View) {
         self.content = makeContent().flattened
         self.alignment = alignment
@@ -22,6 +23,7 @@ public struct ZStack: View {
 
 extension ZStack: Equatable {
 
+    @inlinable
     public static func == (lhs: ZStack, rhs: ZStack) -> Bool {
         return lhs.alignment == rhs.alignment
     }

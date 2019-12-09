@@ -13,6 +13,7 @@ extension ViewModifiers {
 
         public let background: View
 
+        @inlinable
         public init(_ background: View) {
             self.background = background
         }
@@ -21,6 +22,7 @@ extension ViewModifiers {
 
 extension View {
 
+    @inlinable
     public func background(_ view: View) -> ModifiedContent {
         return modifier(ViewModifiers.Background(view))
     }

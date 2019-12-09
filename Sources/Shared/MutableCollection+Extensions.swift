@@ -7,9 +7,10 @@
 
 extension MutableCollection {
 
-   mutating func mutableForEach(_ body: (inout Element) throws -> ()) rethrows {
-       for index in indices {
-           try body(&self[index])
-       }
-   }
+    @inlinable
+    mutating func mutableForEach(_ body: (inout Element) throws -> ()) rethrows {
+        for index in indices {
+            try body(&self[index])
+        }
+    }
 }

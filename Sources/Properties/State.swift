@@ -13,10 +13,12 @@ public protocol StateProperty: DynamicProperty {
 
     public let storage: StateStorage
 
+    @inlinable
     public init(wrappedValue value: Value) {
         self.storage = StateStorage(initialValue: value, get: { value }, set: { _ in })
     }
 
+    @inlinable
     public var wrappedValue: Value {
         get {
             storage.get() as! Value
@@ -26,6 +28,7 @@ public protocol StateProperty: DynamicProperty {
         }
     }
 
+    @inlinable
     public var projectedValue: Binding<Value> {
         return Binding(get: { self.wrappedValue }, set: { (value, transaction) in self.wrappedValue = value })
     }
@@ -33,7 +36,8 @@ public protocol StateProperty: DynamicProperty {
 
 extension State where Value: ExpressibleByNilLiteral {
 
-    @inlinable public init() {
+    @inlinable
+    public init() {
         self.init(wrappedValue: nil)
     }
 }
@@ -44,6 +48,7 @@ public class StateStorage {
     public var get: () -> Any
     public var set: (Any) -> Void
 
+    @inlinable
     public init(initialValue: Any, get: @escaping () -> Any, set: @escaping (Any) -> Void) {
         self.initialValue = initialValue
         self.get = get

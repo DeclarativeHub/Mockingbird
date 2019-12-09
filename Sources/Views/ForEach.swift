@@ -10,6 +10,7 @@ public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollecti
     public var data: Data
     public var content: (Data.Element) -> View
 
+    @inlinable
     public init(_ data: Data, id: KeyPath<Data.Element, ID>, @ViewBuilder content: @escaping (Data.Element) -> View) {
         self.data = data
         self.content = content
@@ -19,7 +20,8 @@ public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollecti
         fatalError()
     }
 
-    func makeViews() -> [View] {
+    @inlinable
+    public func makeViews() -> [View] {
         return data.map { content($0) }
     }
 }
@@ -30,6 +32,7 @@ public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollecti
 
 extension ForEach where Data == Range<Int>, ID == Int {
 
+    @inlinable
     public init(_ data: Range<Int>, @ViewBuilder content: @escaping (Int) -> View) {
         self.data = data
         self.content = content

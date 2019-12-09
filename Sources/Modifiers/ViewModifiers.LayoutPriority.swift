@@ -13,6 +13,7 @@ extension ViewModifiers {
 
         public let value: Double
 
+        @inlinable
         public init(_ value: Double) {
             self.value = value
         }
@@ -21,6 +22,7 @@ extension ViewModifiers {
 
 extension View {
 
+    @inlinable
     public func layoutPriority(_ value: Double) -> ModifiedContent {
         return modifier(ViewModifiers.LayoutPriority(value))
     }

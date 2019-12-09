@@ -15,6 +15,7 @@ extension ViewModifiers {
         public let object: Any
         public let objectTypeIdentifier: String
 
+        @inlinable
         public init(_ object: Any, objectTypeIdentifier: String) {
             self.object = object
             self.objectTypeIdentifier = objectTypeIdentifier
@@ -24,7 +25,8 @@ extension ViewModifiers {
 
 extension View {
 
-    @inlinable public func environmentObject<B>(_ object: B) -> ModifiedContent {
+    @inlinable
+    public func environmentObject<B>(_ object: B) -> ModifiedContent {
         return modifier(ViewModifiers.EnvironmentObject(object, objectTypeIdentifier: String(reflecting: B.self)))
     }
 

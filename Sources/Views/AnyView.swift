@@ -9,15 +9,18 @@ public struct AnyView: View, ViewList {
 
     public let content: View
 
+    @inlinable
     public init(_ content: View) {
         self.content = content
     }
 
+    @inlinable
     public var body: View {
         return content.body
     }
 
-    func makeViews() -> [View] {
+    @inlinable
+    public func makeViews() -> [View] {
         return [content]
     }
 }

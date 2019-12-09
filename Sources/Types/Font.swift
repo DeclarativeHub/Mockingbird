@@ -18,6 +18,9 @@ public struct Font: Hashable {
             public var isUppercaseSmallCaps: Bool = false
             public var isMonospacedDigit: Bool = false
             public var isBold: Bool = false
+
+            @inlinable
+            public init() {}
         }
 
         case system(size: CGFloat, weight: Weight, design: Design, attributes: Attributes)
@@ -26,30 +29,42 @@ public struct Font: Hashable {
 
     public var descriptor: Descriptor
 
+    @inlinable
+    public init(descriptor: Descriptor) {
+        self.descriptor = descriptor
+    }
+
+    @inlinable
     public func italic() -> Font {
         return Font(descriptor: descriptor.modifyingAttributes { $0.isItalic = true })
     }
 
+    @inlinable
     public func smallCaps() -> Font {
         return Font(descriptor: descriptor.modifyingAttributes { $0.isSsmallCaps = true })
     }
 
+    @inlinable
     public func lowercaseSmallCaps() -> Font {
         return Font(descriptor: descriptor.modifyingAttributes { $0.isLowercaseSmallCaps = true })
     }
 
+    @inlinable
     public func uppercaseSmallCaps() -> Font {
         return Font(descriptor: descriptor.modifyingAttributes { $0.isUppercaseSmallCaps = true })
     }
 
+    @inlinable
     public func monospacedDigit() -> Font {
         return Font(descriptor: descriptor.modifyingAttributes { $0.isMonospacedDigit = true })
     }
 
+    @inlinable
     public func weight(_ weight: Font.Weight) -> Font {
         return Font(descriptor: descriptor.modifyingWeight(weight))
     }
 
+    @inlinable
     public func bold() -> Font {
         return Font(descriptor: descriptor.modifyingAttributes { $0.isBold = true })
     }
@@ -85,6 +100,7 @@ extension Font {
 
     public static var caption: Font = .system(.caption)
 
+    @inlinable
     public static func system(_ style: Font.TextStyle, design: Font.Design = .default) -> Font {
         switch style {
         case .largeTitle:
@@ -106,16 +122,17 @@ extension Font {
         }
     }
 
+    @inlinable
     public static func system(size: CGFloat, weight: Font.Weight = .regular, design: Font.Design = .default) -> Font {
         return Font(descriptor: .system(size: size, weight: weight, design: design, attributes: .init()))
     }
 
+    @inlinable
     public static func custom(_ name: String, size: CGFloat) -> Font {
         return Font(descriptor: .custom(name: name, size: size))
     }
 
     public enum TextStyle: CaseIterable {
-
         case largeTitle
         case title
         case headline
@@ -134,9 +151,10 @@ extension Font {
     }
 }
 
-private extension Font.Descriptor {
+extension Font.Descriptor {
 
-    func modifyingAttributes(_ modify: (inout Attributes) -> Void) -> Font.Descriptor {
+    @inlinable
+    public func modifyingAttributes(_ modify: (inout Attributes) -> Void) -> Font.Descriptor {
         switch self {
         case .system(let size, let weight, let design, var attributes):
             modify(&attributes)
@@ -146,7 +164,8 @@ private extension Font.Descriptor {
         }
     }
 
-    func modifyingWeight(_ newWeight: Font.Weight) -> Font.Descriptor {
+    @inlinable
+    public func modifyingWeight(_ newWeight: Font.Weight) -> Font.Descriptor {
         switch self {
         case .system(let size, _, let design, let attributes):
             return .system(size: size, weight: newWeight, design: design, attributes: attributes)

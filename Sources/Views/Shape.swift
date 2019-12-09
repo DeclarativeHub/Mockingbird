@@ -24,6 +24,7 @@ public struct FillShapeView: View {
     public let color: Color
     public let shape: Shape
 
+    @inlinable
     public init(_ color: Color, shape: Shape) {
         self.color = color
         self.shape = shape
@@ -40,6 +41,7 @@ public struct StrokeShapeView: View {
     public let shape: Shape
     public let lineWidth: CGFloat
 
+    @inlinable
     public init(_ color: Color, shape: Shape, lineWidth: CGFloat) {
         self.color = color
         self.shape = shape
@@ -53,10 +55,12 @@ public struct StrokeShapeView: View {
 
 extension Shape {
 
+    @inlinable
     public func fill(_ color: Color) -> FillShapeView {
         return FillShapeView(color, shape: self)
     }
-    
+
+    @inlinable
     public func stroke(_ color: Color, lineWidth: CGFloat = 1) -> StrokeShapeView {
         return StrokeShapeView(color, shape: self, lineWidth: lineWidth)
     }
@@ -67,6 +71,7 @@ public struct Circle: Shape, Equatable {
     public init() {
     }
 
+    @inlinable
     public func path(in rect: CGRect) -> CGPath {
         guard !rect.isEmpty else { return CGPath(rect: .zero, transform: nil) }
         var rect = rect
@@ -86,6 +91,7 @@ public struct Rectangle: Shape, Equatable {
     public init() {
     }
 
+    @inlinable
     public func path(in rect: CGRect) -> CGPath {
         return CGPath(rect: rect, transform: nil)
     }
@@ -101,16 +107,19 @@ public struct RoundedRectangle: Shape, Equatable {
     public var cornerSize: CGSize
     public var style: RoundedCornerStyle
 
+    @inlinable
     public init(cornerSize: CGSize, style: RoundedCornerStyle = .circular) {
         self.cornerSize = cornerSize
         self.style = style
     }
 
+    @inlinable
     public init(cornerRadius: CGFloat, style: RoundedCornerStyle = .circular) {
         self.cornerSize = CGSize(width: cornerRadius, height: cornerRadius)
         self.style = style
     }
 
+    @inlinable
     public func path(in rect: CGRect) -> CGPath {
         guard rect.width >= cornerSize.width * 2 else { return CGPath(rect: .zero, transform: nil) }
         guard rect.height >= cornerSize.height * 2 else { return CGPath(rect: .zero, transform: nil) }
@@ -122,10 +131,12 @@ public struct Capsule: Shape, Equatable {
 
     public var style: RoundedCornerStyle
 
+    @inlinable
     public init(style: RoundedCornerStyle = .circular) {
         self.style = style
     }
 
+    @inlinable
     public func path(in rect: CGRect) -> CGPath {
         let radius = min(rect.width, rect.height) / 2
         guard rect.width >= radius * 2 else { return CGPath(rect: .zero, transform: nil) }

@@ -11,6 +11,7 @@ public struct Transaction {
 
     public init() {}
 
+    @inlinable
     public init(animation: Animation?) {
         self.animation = animation
     }

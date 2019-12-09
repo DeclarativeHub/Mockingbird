@@ -14,6 +14,7 @@ public struct EdgeInsets {
     public var bottom: CGFloat
     public var trailing: CGFloat
 
+    @inlinable
     public init(top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) {
         self.top = top
         self.leading = leading
@@ -21,6 +22,7 @@ public struct EdgeInsets {
         self.trailing = trailing
     }
 
+    @inlinable
     public init(_ value: CGFloat) {
         self.top = value
         self.leading = value
@@ -28,6 +30,7 @@ public struct EdgeInsets {
         self.trailing = value
     }
 
+    @inlinable
     public init() {
         self.top = 0
         self.leading = 0
@@ -35,6 +38,7 @@ public struct EdgeInsets {
         self.trailing = 0
     }
 
+    @inlinable
     public static var zero: EdgeInsets {
         return .init()
     }

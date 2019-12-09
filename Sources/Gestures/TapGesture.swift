@@ -12,6 +12,7 @@ public struct TapGesture: Gesture {
 
     public var count: Int
 
+    @inlinable
     public init(count: Int = 1) {
         self.count = count
     }
@@ -19,6 +20,7 @@ public struct TapGesture: Gesture {
 
 extension View {
 
+    @inlinable
     public func onTapGesture(count: Int = 1, perform action: @escaping () -> Void) -> ModifiedContent {
         return gesture(TapGesture(count: count).onEnded(action))
     }

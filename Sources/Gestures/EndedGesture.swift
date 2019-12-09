@@ -15,6 +15,7 @@ public struct EndedGesture<G: Gesture>: Gesture {
     public let gesture: G
     public let action: (Value) -> Void
 
+    @inlinable
     public init(_ gesture: G, action: @escaping (Value) -> Void) {
         self.gesture = gesture
         self.action = action

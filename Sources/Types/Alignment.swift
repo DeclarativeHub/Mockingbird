@@ -24,7 +24,8 @@ public struct Alignment: Equatable {
     public var horizontal: HorizontalAlignment
     public var vertical: VerticalAlignment
 
-    @inlinable public init(horizontal: HorizontalAlignment, vertical: VerticalAlignment) {
+    @inlinable
+    public init(horizontal: HorizontalAlignment, vertical: VerticalAlignment) {
         self.horizontal = horizontal
         self.vertical = vertical
     }
@@ -42,6 +43,7 @@ public struct Alignment: Equatable {
 
 extension HorizontalAlignment {
 
+    @inlinable
     public var flipped: VerticalAlignment {
         switch self {
         case .leading:

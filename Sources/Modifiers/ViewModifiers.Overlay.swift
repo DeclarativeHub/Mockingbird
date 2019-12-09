@@ -13,6 +13,7 @@ extension ViewModifiers {
 
         public let overlay: View
 
+        @inlinable
         public init(_ overlay: View) {
             self.overlay = overlay
         }
@@ -21,6 +22,7 @@ extension ViewModifiers {
 
 extension View {
 
+    @inlinable
     public func overlay(_ view: View) -> ModifiedContent {
         return modifier(ViewModifiers.Overlay(view))
     }

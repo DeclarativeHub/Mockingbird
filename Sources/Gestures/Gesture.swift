@@ -16,6 +16,7 @@ public protocol Gesture: AnyGesture {
 
 extension Gesture {
 
+    @inlinable
     public func onEnded(_ action: @escaping (Self.Value) -> Void) -> EndedGesture<Self> {
         return EndedGesture(self, action: action)
     }

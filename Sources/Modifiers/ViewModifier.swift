@@ -12,6 +12,7 @@ public protocol ViewModifier {
 
 extension ViewModifier {
 
+    @inlinable
     public func body(content: View) -> View {
         return ModifiedContent(content: content, modifier: self)
     }

@@ -11,10 +11,12 @@ public struct Text: View, Equatable {
 
     public let storage: Storage
 
+    @inlinable
     public init(_ text: String) {
         self.storage = .plain(text)
     }
 
+    @inlinable
     public init(_ storage: Storage) {
         self.storage = storage
     }
@@ -23,6 +25,7 @@ public struct Text: View, Equatable {
         fatalError()
     }
 
+    @inlinable
     public static func +(lhs: Text, rhs: Text) -> Text {
         return Text(Storage.concatenated(lhs.storage, rhs.storage))
     }
@@ -49,42 +52,52 @@ extension Text {
         case concatenated(Storage, Storage)
     }
 
+    @inlinable
     public func foregroundColor(_ color: Color?) -> Text {
         return Text(.attributed(storage, .foregroundColor(color)))
     }
 
+    @inlinable
     public func font(_ font: Font?) -> Text {
         return Text(.attributed(storage, .font(font)))
     }
 
+    @inlinable
     public func fontWeight(_ weight: Font.Weight?) -> Text {
         return Text(.attributed(storage, .fontWeight(weight)))
     }
 
+    @inlinable
     public func bold() -> Text {
         return Text(.attributed(storage, .bold))
     }
 
+    @inlinable
     public func italic() -> Text {
         return Text(.attributed(storage, .italic))
     }
 
+    @inlinable
     public func strikethrough(_ active: Bool = true, color: Color? = nil) -> Text {
         return Text(.attributed(storage, .strikethrough(active: active, color: color)))
     }
 
+    @inlinable
     public func underline(_ active: Bool = true, color: Color? = nil) -> Text {
         return Text(.attributed(storage, .underline(active: active, color: color)))
     }
 
+    @inlinable
     public func kerning(_ kerning: CGFloat) -> Text {
         return Text(.attributed(storage, .kerning(kerning)))
     }
 
+    @inlinable
     public func tracking(_ tracking: CGFloat) -> Text {
         return Text(.attributed(storage, .tracking(tracking)))
     }
 
+    @inlinable
     public func baselineOffset(_ baselineOffset: CGFloat) -> Text {
         return Text(.attributed(storage, .baselineOffset(baselineOffset)))
     }
