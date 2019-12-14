@@ -15,7 +15,7 @@ public struct Context {
 
     public var transaction: Transaction = .init()
 
-    public var rendered: Renderer? = nil
+    public var setNeedsRendering: () -> Void = {}
 
     public init() {}
 }

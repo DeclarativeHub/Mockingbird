@@ -16,7 +16,6 @@
 		EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BC238DD49E00135660 /* EnvironmentObject.swift */; };
 		EC2441BF238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */; };
 		EC30A37C2370D5FC00D40848 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC30A37B2370D5FC00D40848 /* Never.swift */; };
-		EC38159123A5291E00F643A5 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38159023A5291E00F643A5 /* Renderer.swift */; };
 		EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533AC82378453F007EA560 /* CoordinateSpace.swift */; };
 		EC533ACB237845B2007EA560 /* GeometryProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533ACA237845B2007EA560 /* GeometryProxy.swift */; };
 		EC533ACF2378469F007EA560 /* GeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533ACE2378469F007EA560 /* GeometryReader.swift */; };
@@ -107,7 +106,6 @@
 		EC2441BC238DD49E00135660 /* EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject.swift; sourceTree = "<group>"; };
 		EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentObject.swift; sourceTree = "<group>"; };
 		EC30A37B2370D5FC00D40848 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
-		EC38159023A5291E00F643A5 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC533AC82378453F007EA560 /* CoordinateSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSpace.swift; sourceTree = "<group>"; };
 		EC533ACA237845B2007EA560 /* GeometryProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryProxy.swift; sourceTree = "<group>"; };
 		EC533ACE2378469F007EA560 /* GeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReader.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */,
 				ECA5D6FD2389C18500239A89 /* Transaction.swift */,
 				EC2441B8238DD1B900135660 /* Animation.swift */,
-				EC38159023A5291E00F643A5 /* Renderer.swift */,
 				ECA5D6FB2389C14F00239A89 /* Context.swift */,
 			);
 			path = Types;
@@ -500,7 +497,6 @@
 				EC9F94D32370C2BE00E418F9 /* Color.swift in Sources */,
 				EC10027D23786B1900AD8BF2 /* Shape.swift in Sources */,
 				ECEBB5C22381B17A006230B7 /* ViewModifiers.FlexFrame.swift in Sources */,
-				EC38159123A5291E00F643A5 /* Renderer.swift in Sources */,
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
 				ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */,
 				ECE406BF2389FC5E00F7B020 /* ViewModifiers.Background.swift in Sources */,
