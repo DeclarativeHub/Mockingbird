@@ -15,6 +15,8 @@ public struct Context {
 
     public var transaction: Transaction = .init()
 
+    public var rendered: Renderer? = nil
+
     public init() {}
 }
 
