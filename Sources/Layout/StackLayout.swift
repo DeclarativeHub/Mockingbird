@@ -7,24 +7,26 @@
 
 import CoreGraphics
 
-public struct StackLayout {
+public struct ContainerLayoutState: Equatable {
 
-    public struct ContentLayout: Equatable {
-        public let size: CGSize
-        public let frames: [CGRect]
-        @inlinable
-        public init(size: CGSize, frames: [CGRect]) {
-            self.size = size
-            self.frames = frames
-        }
+    public let size: CGSize
+    public let frames: [CGRect]
+
+    @inlinable
+    public init(size: CGSize, frames: [CGRect]) {
+        self.size = size
+        self.frames = frames
     }
+}
+
+public struct HStackLayout {
 
     public let nodes: [Layoutable]
     public let interItemSpacing: CGFloat
     public let screenScale: CGFloat
 
-    public init(node: [Layoutable], interItemSpacing: CGFloat, screenScale: CGFloat = 2) {
-        self.nodes = node
+    public init(nodes: [Layoutable], interItemSpacing: CGFloat, screenScale: CGFloat = 2) {
+        self.nodes = nodes
         self.interItemSpacing = interItemSpacing
         self.screenScale = screenScale
     }
@@ -44,7 +46,7 @@ public struct StackLayout {
     ///     5. Distribute nodes along the major axis using nodes widths and spacing.
     ///     6. Distribute nodes along the minor axis using nodes heights and the given alignment.
 
-    public func contentLayout(fittingSize targetSize: CGSize, alignment: VerticalAlignment) -> ContentLayout {
+    public func contentLayout(fittingSize targetSize: CGSize, alignment: VerticalAlignment) -> ContainerLayoutState {
         let epsilon: CGFloat = 0.0000001
         let availableHeight = targetSize.height
         var frames = Array(repeating: CGRect.zero, count: nodes.count)
@@ -246,14 +248,45 @@ public struct StackLayout {
             )
         }
 
-        return ContentLayout(size: fittingSize.roundedToScale(scale: screenScale), frames: frames)
+        return ContainerLayoutState(size: fittingSize.roundedToScale(scale: screenScale), frames: frames)
     }
 }
 
-extension StackLayout.ContentLayout {
+public struct VStackLayout {
 
-    @inlinable
-    public func flipped() -> StackLayout.ContentLayout {
+    private var hStackLayout: HStackLayout
+
+    public var nodes: [Layoutable] {
+        hStackLayout.nodes
+    }
+
+    public var interItemSpacing: CGFloat {
+        hStackLayout.interItemSpacing
+    }
+
+    public var screenScale: CGFloat {
+        hStackLayout.screenScale
+    }
+
+    public init(nodes: [Layoutable], interItemSpacing: CGFloat, screenScale: CGFloat = 2) {
+        hStackLayout = HStackLayout(
+            nodes: nodes.map { $0.axisFlipped() },
+            interItemSpacing: interItemSpacing,
+            screenScale: screenScale
+        )
+    }
+
+    public func contentLayout(fittingSize targetSize: CGSize, alignment: HorizontalAlignment) -> ContainerLayoutState {
+        hStackLayout.contentLayout(
+            fittingSize: CGSize(width: targetSize.height, height: targetSize.width),
+            alignment: alignment.flipped
+        ).flipped()
+    }
+}
+
+private extension ContainerLayoutState {
+
+    func flipped() -> ContainerLayoutState {
         return .init(
             size: CGSize(width: size.height, height: size.width),
             frames: frames.map {
