@@ -10,8 +10,13 @@ import CoreGraphics
 public struct StackLayout {
 
     public struct ContentLayout: Equatable {
+        public let size: CGSize
         public let frames: [CGRect]
-        public let fittingSize: CGSize
+        @inlinable
+        public init(size: CGSize, frames: [CGRect]) {
+            self.size = size
+            self.frames = frames
+        }
     }
 
     public let nodes: [Layoutable]
@@ -241,18 +246,19 @@ public struct StackLayout {
             )
         }
 
-        return ContentLayout(frames: frames, fittingSize: fittingSize.roundedToScale(scale: screenScale))
+        return ContentLayout(size: fittingSize.roundedToScale(scale: screenScale), frames: frames)
     }
 }
 
 extension StackLayout.ContentLayout {
 
+    @inlinable
     public func flipped() -> StackLayout.ContentLayout {
         return .init(
+            size: CGSize(width: size.height, height: size.width),
             frames: frames.map {
                 CGRect(x: $0.minY, y: $0.minX, width: $0.height, height: $0.width)
-            },
-            fittingSize: CGSize(width: fittingSize.height, height: fittingSize.width)
+            }
         )
     }
 }
