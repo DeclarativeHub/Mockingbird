@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EC10027B23786A4C00AD8BF2 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */; };
 		EC10027D23786B1900AD8BF2 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC10027C23786B1900AD8BF2 /* Shape.swift */; };
+		EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CAAC723A6A6DC0073C826 /* Edge.swift */; };
+		EC1CAACA23A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CAAC923A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift */; };
 		EC2441B5238DD16100135660 /* DynamicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B4238DD16100135660 /* DynamicProperty.swift */; };
 		EC2441B7238DD17100135660 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B6238DD17100135660 /* Binding.swift */; };
 		EC2441B9238DD1B900135660 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B8238DD1B900135660 /* Animation.swift */; };
@@ -100,6 +102,8 @@
 		EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 		EC10027C23786B1900AD8BF2 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayoutTests.swift; sourceTree = "<group>"; };
+		EC1CAAC723A6A6DC0073C826 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		EC1CAAC923A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EdgesIgnoringSafeArea.swift; sourceTree = "<group>"; };
 		EC2441B4238DD16100135660 /* DynamicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProperty.swift; sourceTree = "<group>"; };
 		EC2441B6238DD17100135660 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		EC2441B8238DD1B900135660 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 				EC533ACA237845B2007EA560 /* GeometryProxy.swift */,
 				EC9F94C92370BFA700E418F9 /* Alignment.swift */,
 				EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */,
+				EC1CAAC723A6A6DC0073C826 /* Edge.swift */,
 				ECA23300237C96C50044F12F /* Font.swift */,
 				EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */,
 				ECA5D6FD2389C18500239A89 /* Transaction.swift */,
@@ -328,6 +333,7 @@
 				ECE406CA238A86DC00F7B020 /* ViewModifiers.Shadow.swift */,
 				EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */,
 				EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */,
+				EC1CAAC923A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				EC2441BF238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift in Sources */,
 				EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */,
 				EC9F94D12370C1DB00E418F9 /* Spacer.swift in Sources */,
+				EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */,
 				ECE461372379FC9600A21198 /* ViewModifiers.FixedSize.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
 				ECE406CB238A86DC00F7B020 /* ViewModifiers.Shadow.swift in Sources */,
@@ -502,6 +509,7 @@
 				ECEBB5C22381B17A006230B7 /* ViewModifiers.FlexFrame.swift in Sources */,
 				EC38159123A5291E00F643A5 /* Renderer.swift in Sources */,
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
+				EC1CAACA23A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift in Sources */,
 				ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */,
 				ECE406BF2389FC5E00F7B020 /* ViewModifiers.Background.swift in Sources */,
 				ECA23301237C96C50044F12F /* Font.swift in Sources */,
