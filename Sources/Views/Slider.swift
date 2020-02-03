@@ -14,10 +14,10 @@ public struct Slider: View {
     public let bounds: ClosedRange<Float>
     public let step: Float
 
-    public init(value: Binding<Float>, in bounds: ClosedRange<Float> = 0...1, step: Float = 1) {
-        self.value = value
-        self.bounds = bounds
-        self.step = step
+    public init<V>(value: Binding<V>, in bounds: ClosedRange<V> = 0...1, step: V = 1) where V: BinaryFloatingPoint, V.Stride: BinaryFloatingPoint {
+        self.value = Binding(get: { Float(value.get()) }, set: { value.set(V($0), $1) })
+        self.bounds = Float(bounds.lowerBound)...Float(bounds.upperBound)
+        self.step = Float(step)
     }
 
     public var body: View {
