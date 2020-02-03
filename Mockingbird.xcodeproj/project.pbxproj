@@ -31,6 +31,7 @@
 		EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E5239C3469009A4102 /* LongPressGesture.swift */; };
 		EC7469E8239C3541009A4102 /* EndedGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E7239C3541009A4102 /* EndedGesture.swift */; };
 		EC7469EA239C35F1009A4102 /* ViewModifiers.Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */; };
+		EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77FD0323E8B44D00EE3D1C /* Slider.swift */; };
 		EC7A0F5B239D41A6008E7AF4 /* Mockingbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9F94B62370BE6E00E418F9 /* Mockingbird.framework */; };
 		EC90E6D32377504300A9B7E0 /* ViewModifiers.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */; };
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
@@ -124,6 +125,7 @@
 		EC7469E5239C3469009A4102 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
 		EC7469E7239C3541009A4102 /* EndedGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndedGesture.swift; sourceTree = "<group>"; };
 		EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Gesture.swift; sourceTree = "<group>"; };
+		EC77FD0323E8B44D00EE3D1C /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		EC7A0F56239D41A5008E7AF4 /* MockingbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7A0F5A239D41A6008E7AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Padding.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				EC9F94D22370C2BE00E418F9 /* Color.swift */,
 				ECA5D7032389D55100239A89 /* Image.swift */,
 				EC9F94C42370BEBA00E418F9 /* Text.swift */,
+				EC77FD0323E8B44D00EE3D1C /* Slider.swift */,
 				ECEBB5BD23814FA1006230B7 /* AnyView.swift */,
 				EC90E6DB2378208200A9B7E0 /* EmptyView.swift */,
 				EC90E6DD237824D500A9B7E0 /* ViewContent.swift */,
@@ -509,6 +512,7 @@
 				ECEBB5C22381B17A006230B7 /* ViewModifiers.FlexFrame.swift in Sources */,
 				EC38159123A5291E00F643A5 /* Renderer.swift in Sources */,
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
+				EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */,
 				EC1CAACA23A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift in Sources */,
 				ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */,
 				ECE406BF2389FC5E00F7B020 /* ViewModifiers.Background.swift in Sources */,
