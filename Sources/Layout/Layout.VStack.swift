@@ -11,7 +11,7 @@ import CoreGraphics
 extension Layout {
 
     /// A VStack layout is just an HStack layout flipped in axis :)
-    public struct VStackLayout {
+    public struct VStack {
 
         private var hStackLayout: Layout.HStack
 
