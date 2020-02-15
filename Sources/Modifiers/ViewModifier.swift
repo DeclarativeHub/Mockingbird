@@ -17,5 +17,3 @@ extension ViewModifier {
         return ModifiedContent(content: content, modifier: self)
     }
 }
-
-public enum ViewModifiers {}

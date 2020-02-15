@@ -11,7 +11,7 @@ import Mockingbird
 
 class StackLayoutTests: XCTestCase {
 
-    struct TestNode: Layoutable {
+    struct TestNode: LayoutNode {
 
         let _isSpacer: Bool
         let _layoutPriority: Double

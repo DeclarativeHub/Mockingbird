@@ -7,34 +7,34 @@
 
 import CoreGraphics
 
-public protocol Layoutable {
+public protocol LayoutNode {
     func isSpacer() -> Bool
     func layoutPriority() -> Double
     func layoutSize(fitting targetSize: CGSize) -> CGSize
 }
 
-extension Layoutable {
+extension LayoutNode {
 
-    public func axisFlipped() -> Layoutable {
-        return AxisFlippedLayoutable(layoutable: self)
+    public func axisFlipped() -> LayoutNode {
+        return AxisFlippedLayoutNode(layoutNode: self)
     }
 }
 
-private struct AxisFlippedLayoutable: Layoutable {
+private struct AxisFlippedLayoutNode: LayoutNode {
 
-    let layoutable: Layoutable
+    let layoutNode: LayoutNode
 
     func isSpacer() -> Bool {
-        return layoutable.isSpacer()
+        return layoutNode.isSpacer()
     }
 
     func layoutPriority() -> Double {
-        return layoutable.layoutPriority()
+        return layoutNode.layoutPriority()
     }
 
     func layoutSize(fitting targetSize: CGSize) -> CGSize {
         let targetSize = CGSize(width: targetSize.height, height: targetSize.width)
-        let size = layoutable.layoutSize(fitting: targetSize)
+        let size = layoutNode.layoutSize(fitting: targetSize)
         return CGSize(width: size.height, height: size.width)
     }
 }
