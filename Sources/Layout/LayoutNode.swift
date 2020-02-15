@@ -8,8 +8,10 @@
 import CoreGraphics
 
 public protocol LayoutNode {
-    func isSpacer() -> Bool
-    func layoutPriority() -> Double
+
+    var isSpacer: Bool { get }
+    var layoutPriority: Double { get }
+
     func layoutSize(fitting targetSize: CGSize) -> CGSize
 }
 
@@ -24,12 +26,12 @@ private struct AxisFlippedLayoutNode: LayoutNode {
 
     let layoutNode: LayoutNode
 
-    func isSpacer() -> Bool {
-        return layoutNode.isSpacer()
+    var isSpacer: Bool {
+        layoutNode.isSpacer
     }
 
-    func layoutPriority() -> Double {
-        return layoutNode.layoutPriority()
+    var layoutPriority: Double {
+        layoutNode.layoutPriority
     }
 
     func layoutSize(fitting targetSize: CGSize) -> CGSize {

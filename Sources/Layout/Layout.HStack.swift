@@ -48,7 +48,7 @@ extension Layout {
             var frames = Array(repeating: CGRect.zero, count: nodes.count)
 
             let sortedNodes = nodes.enumerated().sorted { (lhs, rhs) -> Bool in
-                return lhs.element.layoutPriority() > rhs.element.layoutPriority()
+                return lhs.element.layoutPriority > rhs.element.layoutPriority
             }
 
             struct PriorityGroup {
@@ -84,13 +84,13 @@ extension Layout {
                 )
                 guard let group = result.last else {
                     result.append(
-                        PriorityGroup(items: [item], priority: item.node.layoutPriority(), minWidth: item.minSize.width)
+                        PriorityGroup(items: [item], priority: item.node.layoutPriority, minWidth: item.minSize.width)
                     )
                     return
                 }
-                if pair.element.layoutPriority() != group.priority {
+                if pair.element.layoutPriority != group.priority {
                     result.append(
-                        PriorityGroup(items: [item], priority: item.node.layoutPriority(), minWidth: item.minSize.width)
+                        PriorityGroup(items: [item], priority: item.node.layoutPriority, minWidth: item.minSize.width)
                     )
                 } else {
                     result[result.count-1].items.append(item)
@@ -100,7 +100,7 @@ extension Layout {
 
             let numberOfJunctions = nodes.reduce((count: 0, prevNode: LayoutNode?.none)) { (memo, node) in
                 guard let prevNode = memo.prevNode else { return (memo.count, node) }
-                if prevNode.isSpacer() || node.isSpacer() {
+                if prevNode.isSpacer || node.isSpacer {
                     return (memo.count, node)
                 } else {
                     return (memo.count + 1, node)
@@ -190,7 +190,7 @@ extension Layout {
             // Distribute any remaining space among spacers
             if availableWidth > epsilon {
                 priorityGroups.mutableForEach { (priorityGroup) in
-                    let spacers = priorityGroup.items.enumerated().filter { $0.element.node.isSpacer() }
+                    let spacers = priorityGroup.items.enumerated().filter { $0.element.node.isSpacer }
                     let widthToAdd = availableWidth / CGFloat(spacers.count)
                     for (index, _) in spacers {
                         priorityGroup.items[index].size.width += widthToAdd
@@ -233,7 +233,7 @@ extension Layout {
                     fatalError("Not implemented.")
                 }
                 frames[index] = frame.roundedToScale(scale: screenScale)
-                if nodes[index].isSpacer() || (index < nodes.count - 1 && nodes[index + 1].isSpacer()) {
+                if nodes[index].isSpacer || (index < nodes.count - 1 && nodes[index + 1].isSpacer) {
                     movingOrigin.x += frame.width
                 } else {
                     movingOrigin.x += frame.width + interItemSpacing
