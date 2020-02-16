@@ -17,7 +17,9 @@ public struct EnvironmentValues: Hashable {
 
     public var accentColor: Color? = .blue
 
-    public var stackSpacing: CGFloat = 10
+    public var vStackSpacing: CGFloat = 0
+
+    public var hStackSpacing: CGFloat = 10
 
     public var padding: CGFloat = 10
 
