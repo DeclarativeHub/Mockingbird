@@ -8,5 +8,5 @@
 
 public protocol Renderer {
     
-    func setNeedsRendering()
+    func setNeedsRendering(source: ObjectIdentifier)
 }
