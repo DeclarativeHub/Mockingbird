@@ -27,7 +27,7 @@ public struct ZStack<Content: View>: View {
     public let tree: VariadicView.Tree<Layouts.ZStack, Content>
 
     @inlinable
-    public init(alignment: Alignment = .center, ViewBuilder content: () -> Content) {
+    public init(alignment: Alignment = .center, @ViewBuilder content: () -> Content) {
         tree = .init(root: .init(alignment: alignment), content: content())
     }
 }
