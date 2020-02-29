@@ -6,7 +6,7 @@
 //  Copyright © 2020 Declarative Hub. All rights reserved.
 //
 
-public struct TupleView<T> {
+public struct TupleView<T>: View {
 
     public typealias Body = Swift.Never
 

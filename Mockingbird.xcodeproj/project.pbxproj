@@ -90,6 +90,7 @@
 		ECF2EB5624099E4500BD5E67 /* VariadicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB5524099E4500BD5E67 /* VariadicView.swift */; };
 		ECF2EBA6240AB3DA00BD5E67 /* LayoutAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */; };
 		ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA7240AB54C00BD5E67 /* Layout.swift */; };
+		ECF2EBAA240AB96E00BD5E67 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		ECF2EB5524099E4500BD5E67 /* VariadicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariadicView.swift; sourceTree = "<group>"; };
 		ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.swift; sourceTree = "<group>"; };
 		ECF2EBA7240AB54C00BD5E67 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +334,7 @@
 		EC9F94CF2370C1A900E418F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */,
 				EC9F94C22370BEA600E418F9 /* View.swift */,
 				EC30A37B2370D5FC00D40848 /* Never.swift */,
 				ECF2EB462409889A00BD5E67 /* Optional.swift */,
@@ -599,6 +602,7 @@
 				EC9F94D52370C45E00E418F9 /* Button.swift in Sources */,
 				EC9F94D72370C53700E418F9 /* ForEach.swift in Sources */,
 				EC7469E4239C3458009A4102 /* TapGesture.swift in Sources */,
+				ECF2EBAA240AB96E00BD5E67 /* SomeView.swift in Sources */,
 				ECF2EB492409893C00BD5E67 /* TupleView.swift in Sources */,
 				EC5C600A2408662800A7C0A5 /* ViewModifiers.FixedSize.swift in Sources */,
 				EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */,

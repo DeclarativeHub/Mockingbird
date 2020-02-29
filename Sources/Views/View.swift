@@ -22,11 +22,6 @@
 
 import SwiftUI
 
-public protocol SomeView {
-
-    var body: SomeView { get }
-}
-
 public protocol View: SomeView {
 
     associatedtype Body: View
