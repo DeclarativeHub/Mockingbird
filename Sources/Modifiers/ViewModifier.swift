@@ -38,9 +38,11 @@ extension ViewModifier where Body == Never {
 public struct ViewModifierContent<VM: ViewModifier>: View {
 
     public let view: SomeView
+    public let modifier: VM
 
-    public init(_ view: SomeView) {
+    public init(_ view: SomeView, modifier: VM) {
         self.view = view
+        self.modifier = modifier
     }
 
     public var body: Never {
