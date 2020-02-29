@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol Layout {
+public protocol Layout: Equatable {
     func layoutAlgorithm(nodes: [LayoutNode], env: EnvironmentValues) -> LayoutAlgorithm
 }
