@@ -10,5 +10,5 @@ import Foundation
 
 public protocol SomeView {
 
-    var someBody: SomeView { get }
+    var body: SomeView { get }
 }

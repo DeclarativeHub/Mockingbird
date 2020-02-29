@@ -29,8 +29,8 @@ public protocol View: SomeView {
 
 extension View {
 
-    public var someBody: SomeView {
-        return body
+    public var body: SomeView {
+        return (body as Body) as SomeView
     }
 }
 
