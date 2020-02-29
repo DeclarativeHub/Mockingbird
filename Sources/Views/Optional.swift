@@ -8,7 +8,7 @@
 
 extension Optional: SomeView where Wrapped: SomeView {
 
-    public var body: SomeView {
+    public var someBody: SomeView {
         fatalError()
     }
 }
