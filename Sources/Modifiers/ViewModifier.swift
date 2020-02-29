@@ -20,17 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct _ViewModifier_Content<VM: ViewModifier>: View {
-
-    public var body: Never {
-        fatalError()
-    }
-}
-
 public protocol ViewModifier {
 
     associatedtype Body: View
-    typealias Content = _ViewModifier_Content<Self>
+    typealias Content = ViewModifierContent<Self>
     
     func body(content: Content) -> Body
 }
@@ -42,10 +35,15 @@ extension ViewModifier where Body == Never {
     }
 }
 
-//extension ViewModifier {
-//
-//    @inlinable
-//    public func body(content: Content) -> ModifiedContent {
-//        return ModifiedContent(content: content, modifier: self)
-//    }
-//}
+public struct ViewModifierContent<VM: ViewModifier>: View {
+
+    public let view: SomeView
+
+    public init(_ view: SomeView) {
+        self.view = view
+    }
+
+    public var body: Never {
+        fatalError()
+    }
+}
