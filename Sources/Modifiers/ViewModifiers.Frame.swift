@@ -24,7 +24,7 @@ import CoreGraphics
 
 extension ViewModifiers {
 
-    public struct Frame: ViewModifier {
+    public struct Frame: ViewModifier, Layout {
 
         public let width: CGFloat?
         public let height: CGFloat?
@@ -35,6 +35,10 @@ extension ViewModifiers {
             self.width = width
             self.height = height
             self.alignment = alignment
+        }
+
+        public func layoutAlgorithm(nodes: [LayoutNode], env: EnvironmentValues) -> LayoutAlgorithm {
+            return LayoutAlgorithms.Frame(frame: self, node: nodes.first!)
         }
     }
 }

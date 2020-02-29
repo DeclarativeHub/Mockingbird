@@ -24,7 +24,7 @@ import CoreGraphics
 
 extension ViewModifiers {
 
-    public struct Padding: ViewModifier {
+    public struct Padding: ViewModifier, Layout {
 
         public let top: CGFloat?
         public let bottom: CGFloat?
@@ -47,6 +47,10 @@ extension ViewModifiers {
         @inlinable
         public init(_ insets: CGFloat?) {
             (top, bottom, leading, trailing) = (insets, insets, insets, insets)
+        }
+
+        public func layoutAlgorithm(nodes: [LayoutNode], env: EnvironmentValues) -> LayoutAlgorithm {
+            return LayoutAlgorithms.Padding(padding: self, node: nodes.first!, defaultPadding: env.padding)
         }
     }
 }

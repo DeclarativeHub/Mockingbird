@@ -22,28 +22,25 @@
 
 import CoreGraphics
 
-extension LayoutAlgorithm {
+extension LayoutAlgorithms {
 
-    public struct ZStack {
+    public struct ZStack: LayoutAlgorithm {
 
-        /// Nodes in the stack
         public let nodes: [LayoutNode]
+        public let layout: Layouts.ZStack
 
-        /// Screen scale
-        public let screenScale: CGFloat
-
-        public init(nodes: [LayoutNode], screenScale: CGFloat = 2) {
+        public init(nodes: [LayoutNode], layout: Layouts.ZStack) {
             self.nodes = nodes
-            self.screenScale = screenScale
+            self.layout = layout
         }
 
-        /// Calculate the stack geometry fitting `targetSize` and aligned by `alignment`.
-        public func contentLayout(fittingSize targetSize: CGSize, alignment: Alignment) -> ContentGeometry {
+        /// Calculate the stack geometry fitting `targetSize`.
+        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
             var idealSize: CGSize = .zero
             let frames = nodes.map { (node) -> CGRect in
                 let size = node.layoutSize(fitting: targetSize)
                 var alignedBounds = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-                switch alignment.horizontal {
+                switch layout.alignment.horizontal {
                 case .leading:
                     alignedBounds.origin.x = 0
                 case .center:
@@ -51,7 +48,7 @@ extension LayoutAlgorithm {
                 case .trailing:
                     alignedBounds.origin.x = targetSize.width - size.width
                 }
-                switch alignment.vertical {
+                switch layout.alignment.vertical {
                 case .top:
                     alignedBounds.origin.y = 0
                 case .center:

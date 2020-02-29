@@ -22,9 +22,9 @@
 
 import CoreGraphics
 
-extension LayoutAlgorithm {
+extension LayoutAlgorithms {
 
-    public struct Padding {
+    public struct Padding: LayoutAlgorithm {
 
         public let padding: ViewModifiers.Padding
 
@@ -34,14 +34,17 @@ extension LayoutAlgorithm {
         /// Screen scale
         public let screenScale: CGFloat
 
-        public init(padding: ViewModifiers.Padding, node: LayoutNode, screenScale: CGFloat = 2) {
+        private let defaultPadding: CGFloat
+
+        public init(padding: ViewModifiers.Padding, node: LayoutNode, defaultPadding: CGFloat, screenScale: CGFloat = 2) {
             self.padding = padding
             self.node = node
             self.screenScale = screenScale
+            self.defaultPadding = defaultPadding
         }
 
         /// Calculate the stack geometry fitting `targetSize` and aligned by `alignment`.
-        public func contentLayout(fittingSize targetSize: CGSize, defaultPadding: CGFloat) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
 
             let insets = EdgeInsets(
                 top: padding.top ?? defaultPadding,

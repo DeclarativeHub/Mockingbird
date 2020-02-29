@@ -22,7 +22,7 @@
 
 import CoreGraphics
 
-extension LayoutAlgorithm {
+extension LayoutAlgorithms {
 
     /// Stack layout is calculated using the algorithm below.
     ///
@@ -39,25 +39,27 @@ extension LayoutAlgorithm {
     ///     5. Distribute nodes along the major axis using nodes widths and spacing.
     ///     6. Distribute nodes along the minor axis using nodes heights and the given alignment.
     ///
-    public struct HStack {
+    public struct HStack: LayoutAlgorithm {
 
-        /// Nodes in the stack
         public let nodes: [LayoutNode]
 
-        /// Spacing between nodes
-        public let interItemSpacing: CGFloat
+        public let layout: Layouts.HStack
 
-        /// Screen scale
-        public let screenScale: CGFloat
+        public let screenScale: CGFloat = 2
 
-        public init(nodes: [LayoutNode], interItemSpacing: CGFloat, screenScale: CGFloat = 2) {
+        private let alignment: VerticalAlignment
+
+        private let interItemSpacing: CGFloat
+
+        public init(nodes: [LayoutNode], layout: Layouts.HStack, defaultSpacing: CGFloat) {
             self.nodes = nodes
-            self.interItemSpacing = interItemSpacing
-            self.screenScale = screenScale
+            self.layout = layout
+            self.alignment = layout.alignment
+            self.interItemSpacing = layout.spacing ?? defaultSpacing
         }
 
         /// Calculate the stack geometry fitting `targetSize` and aligned by `alignment`.
-        public func contentLayout(fittingSize targetSize: CGSize, alignment: VerticalAlignment) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
             let epsilon: CGFloat = 0.0000001
             let availableHeight = targetSize.height
             var frames = Array(repeating: CGRect.zero, count: nodes.count)

@@ -24,7 +24,7 @@ public struct ZStack<Content: View>: View {
 
     public typealias Body = Swift.Never
 
-    public let tree: VariadicView.Tree<Layout.ZStack, Content>
+    public let tree: VariadicView.Tree<Layouts.ZStack, Content>
 
     @inlinable
     public init(alignment: Alignment = .center, ViewBuilder content: () -> Content) {

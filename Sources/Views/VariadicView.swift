@@ -12,7 +12,7 @@ public enum VariadicView: View {
 
     public typealias Body = Swift.Never
 
-    public struct Tree<Root, Content>: View {
+    public struct Tree<Root: Layout, Content: View>: View {
 
         public typealias Body = Swift.Never
 

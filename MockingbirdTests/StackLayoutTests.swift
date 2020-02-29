@@ -62,7 +62,7 @@ class StackLayoutTests: XCTestCase {
                     repeating: TestNode(isSpacer: false, layoutPriority: 0, layoutSize: CGSize(width: 1, height: 100)),
                     count: 50
                 )
-                let layout = LayoutAlgorithm.HStack(nodes: nodes, interItemSpacing: 10)
+                let layout = LayoutAlgorithms.HStack(nodes: nodes, interItemSpacing: 10)
                 _ = layout.contentLayout(fittingSize: CGSize(width: 100, height: 100), alignment: .center)
             }
         }
@@ -73,7 +73,7 @@ class StackLayoutTests: XCTestCase {
             TestNode(isSpacer: false, layoutPriority: 0, layoutSize: { $0 }),
             TestNode(isSpacer: false, layoutPriority: 0, layoutSize: { $0 })
         ]
-        let layout = LayoutAlgorithm.HStack(nodes: nodes, interItemSpacing: 10)
+        let layout = LayoutAlgorithms.HStack(nodes: nodes, interItemSpacing: 10)
         let result = layout.contentLayout(fittingSize: CGSize(width: 100, height: 100), alignment: .center)
         XCTAssertEqual(
             result.frames,
@@ -89,7 +89,7 @@ class StackLayoutTests: XCTestCase {
             TestNode(isSpacer: false, layoutPriority: 0, layoutSize: CGSize(width: 20, height: 50)),
             TestNode(isSpacer: false, layoutPriority: 0, layoutSize: CGSize(width: 30, height: 50))
         ]
-        let layout = LayoutAlgorithm.HStack(nodes: nodes, interItemSpacing: 10)
+        let layout = LayoutAlgorithms.HStack(nodes: nodes, interItemSpacing: 10)
         let result = layout.contentLayout(fittingSize: CGSize(width: 100, height: 100), alignment: .center)
         XCTAssertEqual(
             result.frames,
@@ -113,7 +113,7 @@ class StackLayoutTests: XCTestCase {
             },
             TestNode(isSpacer: false, layoutPriority: 0, layoutSize: CGSize(width: 30, height: 100))
         ]
-        let layout = LayoutAlgorithm.HStack(nodes: nodes, interItemSpacing: 10)
+        let layout = LayoutAlgorithms.HStack(nodes: nodes, interItemSpacing: 10)
         let result = layout.contentLayout(fittingSize: CGSize(width: 100, height: 100), alignment: .center)
         XCTAssertEqual(
             result.frames,
@@ -129,7 +129,7 @@ class StackLayoutTests: XCTestCase {
             TestNode(isSpacer: false, layoutPriority: 0, layoutSize: { $0 }),
             TestNode(isSpacer: false, layoutPriority: 1, layoutSize: { $0 })
         ]
-        let layout = LayoutAlgorithm.HStack(nodes: nodes, interItemSpacing: 10)
+        let layout = LayoutAlgorithms.HStack(nodes: nodes, interItemSpacing: 10)
         let result = layout.contentLayout(fittingSize: CGSize(width: 100, height: 100), alignment: .center)
         XCTAssertEqual(
             result.frames,

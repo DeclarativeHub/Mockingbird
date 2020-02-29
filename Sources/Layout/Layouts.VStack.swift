@@ -8,9 +8,9 @@
 
 import CoreGraphics
 
-extension Layout {
+extension Layouts {
 
-    public struct VStack: Equatable {
+    public struct VStack: Layout, Equatable {
 
         public let alignment: HorizontalAlignment
         public let spacing: CGFloat?
@@ -19,6 +19,10 @@ extension Layout {
         public init(alignment: HorizontalAlignment, spacing: CGFloat?) {
             self.alignment = alignment
             self.spacing = spacing
+        }
+
+        public func layoutAlgorithm(nodes: [LayoutNode], env: EnvironmentValues) -> LayoutAlgorithm {
+            return LayoutAlgorithms.VStack(nodes: nodes, layout: self, defaultSpacing: env.vStackSpacing)
         }
     }
 }

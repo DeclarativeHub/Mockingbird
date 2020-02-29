@@ -20,4 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public enum LayoutAlgorithm {}
+import CoreGraphics
+
+public protocol LayoutAlgorithm {
+
+    /// Calculate the stack geometry fitting `targetSize`.
+    func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry
+}

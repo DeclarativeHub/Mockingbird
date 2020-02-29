@@ -6,15 +6,19 @@
 //  Copyright © 2020 Declarative Hub. All rights reserved.
 //
 
-extension Layout {
+extension Layouts {
 
-    public struct ZStack: Equatable {
+    public struct ZStack: Layout, Equatable {
 
         public let alignment: Alignment
 
         @inlinable
         public init(alignment: Alignment = .center) {
             self.alignment = alignment
+        }
+
+        public func layoutAlgorithm(nodes: [LayoutNode], env: EnvironmentValues) -> LayoutAlgorithm {
+            return LayoutAlgorithms.ZStack(nodes: nodes, layout: self)
         }
     }
 }

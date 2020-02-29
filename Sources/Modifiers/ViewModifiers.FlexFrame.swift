@@ -24,7 +24,7 @@ import CoreGraphics
 
 extension ViewModifiers {
 
-    public struct FlexFrame: ViewModifier {
+    public struct FlexFrame: ViewModifier, Layout {
 
         public let minWidth: CGFloat?
         public let idealWidth: CGFloat?
@@ -45,6 +45,10 @@ extension ViewModifiers {
             self.idealHeight = idealHeight
             self.maxHeight = maxHeight
             self.alignment = alignment
+        }
+
+        public func layoutAlgorithm(nodes: [LayoutNode], env: EnvironmentValues) -> LayoutAlgorithm {
+            return LayoutAlgorithms.FlexFrame(flexFrame: self, node: nodes.first!)
         }
     }
 }

@@ -26,7 +26,7 @@ public struct HStack<Content: View>: View {
 
     public typealias Body = Swift.Never
 
-    public let tree: VariadicView.Tree<Layout.HStack, Content>
+    public let tree: VariadicView.Tree<Layouts.HStack, Content>
 
     @inlinable
     public init(alignment: VerticalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder content: () -> Content) {

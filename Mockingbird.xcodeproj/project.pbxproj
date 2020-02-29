@@ -46,12 +46,12 @@
 		EC907C1723F80A8000FF48E7 /* ContentGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1623F80A8000FF48E7 /* ContentGeometry.swift */; };
 		EC907C2823F81A7100FF48E7 /* LayoutAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C2523F819C200FF48E7 /* LayoutAlgorithm.swift */; };
 		EC907C2923F81A7100FF48E7 /* LayoutNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC272380759800105B93 /* LayoutNode.swift */; };
-		EC907C2A23F81A7100FF48E7 /* LayoutAlgorithm.Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1D23F80F6C00FF48E7 /* LayoutAlgorithm.Frame.swift */; };
-		EC907C2B23F81A7100FF48E7 /* LayoutAlgorithm.FlexFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1F23F8127500FF48E7 /* LayoutAlgorithm.FlexFrame.swift */; };
-		EC907C2C23F81A7100FF48E7 /* LayoutAlgorithm.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C2123F8152300FF48E7 /* LayoutAlgorithm.Padding.swift */; };
-		EC907C2D23F81A7100FF48E7 /* LayoutAlgorithm.ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1B23F80DCB00FF48E7 /* LayoutAlgorithm.ZStack.swift */; };
-		EC907C2E23F81A7100FF48E7 /* LayoutAlgorithm.HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC292380762000105B93 /* LayoutAlgorithm.HStack.swift */; };
-		EC907C2F23F81A7100FF48E7 /* LayoutAlgorithm.VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1823F80AE000FF48E7 /* LayoutAlgorithm.VStack.swift */; };
+		EC907C2A23F81A7100FF48E7 /* LayoutAlgorithms.Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1D23F80F6C00FF48E7 /* LayoutAlgorithms.Frame.swift */; };
+		EC907C2B23F81A7100FF48E7 /* LayoutAlgorithms.FlexFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1F23F8127500FF48E7 /* LayoutAlgorithms.FlexFrame.swift */; };
+		EC907C2C23F81A7100FF48E7 /* LayoutAlgorithms.Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C2123F8152300FF48E7 /* LayoutAlgorithms.Padding.swift */; };
+		EC907C2D23F81A7100FF48E7 /* LayoutAlgorithms.ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1B23F80DCB00FF48E7 /* LayoutAlgorithms.ZStack.swift */; };
+		EC907C2E23F81A7100FF48E7 /* LayoutAlgorithms.HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0DC292380762000105B93 /* LayoutAlgorithms.HStack.swift */; };
+		EC907C2F23F81A7100FF48E7 /* LayoutAlgorithms.VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1823F80AE000FF48E7 /* LayoutAlgorithms.VStack.swift */; };
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
 		EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */; };
 		EC90E6DC2378208200A9B7E0 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6DB2378208200A9B7E0 /* EmptyView.swift */; };
@@ -83,11 +83,13 @@
 		ECF2EB472409889A00BD5E67 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB462409889A00BD5E67 /* Optional.swift */; };
 		ECF2EB492409893C00BD5E67 /* TupleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB482409893C00BD5E67 /* TupleView.swift */; };
 		ECF2EB4B24098A0600BD5E67 /* ConditionalContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB4A24098A0600BD5E67 /* ConditionalContent.swift */; };
-		ECF2EB4E24098FD200BD5E67 /* Layout.ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB4D24098FD200BD5E67 /* Layout.ZStack.swift */; };
-		ECF2EB5024098FF600BD5E67 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB4F24098FF600BD5E67 /* Layout.swift */; };
-		ECF2EB522409903E00BD5E67 /* Layout.VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB512409903E00BD5E67 /* Layout.VStack.swift */; };
-		ECF2EB5424099BBB00BD5E67 /* Layout.HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB5324099BBB00BD5E67 /* Layout.HStack.swift */; };
+		ECF2EB4E24098FD200BD5E67 /* Layouts.ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB4D24098FD200BD5E67 /* Layouts.ZStack.swift */; };
+		ECF2EB5024098FF600BD5E67 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB4F24098FF600BD5E67 /* Layouts.swift */; };
+		ECF2EB522409903E00BD5E67 /* Layouts.VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB512409903E00BD5E67 /* Layouts.VStack.swift */; };
+		ECF2EB5424099BBB00BD5E67 /* Layouts.HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB5324099BBB00BD5E67 /* Layouts.HStack.swift */; };
 		ECF2EB5624099E4500BD5E67 /* VariadicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB5524099E4500BD5E67 /* VariadicView.swift */; };
+		ECF2EBA6240AB3DA00BD5E67 /* LayoutAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */; };
+		ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA7240AB54C00BD5E67 /* Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,11 +146,11 @@
 		EC7A0F56239D41A5008E7AF4 /* MockingbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7A0F5A239D41A6008E7AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC907C1623F80A8000FF48E7 /* ContentGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentGeometry.swift; sourceTree = "<group>"; };
-		EC907C1823F80AE000FF48E7 /* LayoutAlgorithm.VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.VStack.swift; sourceTree = "<group>"; };
-		EC907C1B23F80DCB00FF48E7 /* LayoutAlgorithm.ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.ZStack.swift; sourceTree = "<group>"; };
-		EC907C1D23F80F6C00FF48E7 /* LayoutAlgorithm.Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.Frame.swift; sourceTree = "<group>"; };
-		EC907C1F23F8127500FF48E7 /* LayoutAlgorithm.FlexFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.FlexFrame.swift; sourceTree = "<group>"; };
-		EC907C2123F8152300FF48E7 /* LayoutAlgorithm.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.Padding.swift; sourceTree = "<group>"; };
+		EC907C1823F80AE000FF48E7 /* LayoutAlgorithms.VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.VStack.swift; sourceTree = "<group>"; };
+		EC907C1B23F80DCB00FF48E7 /* LayoutAlgorithms.ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.ZStack.swift; sourceTree = "<group>"; };
+		EC907C1D23F80F6C00FF48E7 /* LayoutAlgorithms.Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.Frame.swift; sourceTree = "<group>"; };
+		EC907C1F23F8127500FF48E7 /* LayoutAlgorithms.FlexFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.FlexFrame.swift; sourceTree = "<group>"; };
+		EC907C2123F8152300FF48E7 /* LayoutAlgorithms.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.Padding.swift; sourceTree = "<group>"; };
 		EC907C2323F819A400FF48E7 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		EC907C2523F819C200FF48E7 /* LayoutAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.swift; sourceTree = "<group>"; };
 		EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Padding.swift; sourceTree = "<group>"; };
@@ -178,7 +180,7 @@
 		ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Extensions.swift"; sourceTree = "<group>"; };
 		ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueModifier.swift; sourceTree = "<group>"; };
 		ECE0DC272380759800105B93 /* LayoutNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNode.swift; sourceTree = "<group>"; };
-		ECE0DC292380762000105B93 /* LayoutAlgorithm.HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithm.HStack.swift; sourceTree = "<group>"; };
+		ECE0DC292380762000105B93 /* LayoutAlgorithms.HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.HStack.swift; sourceTree = "<group>"; };
 		ECE406B62389F60000F7B020 /* ViewModifiers.Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Offset.swift; sourceTree = "<group>"; };
 		ECE406BA2389F94400F7B020 /* ViewModifiers.Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Overlay.swift; sourceTree = "<group>"; };
 		ECE406BE2389FC5E00F7B020 /* ViewModifiers.Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Background.swift; sourceTree = "<group>"; };
@@ -192,11 +194,13 @@
 		ECF2EB462409889A00BD5E67 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		ECF2EB482409893C00BD5E67 /* TupleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleView.swift; sourceTree = "<group>"; };
 		ECF2EB4A24098A0600BD5E67 /* ConditionalContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalContent.swift; sourceTree = "<group>"; };
-		ECF2EB4D24098FD200BD5E67 /* Layout.ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.ZStack.swift; sourceTree = "<group>"; };
-		ECF2EB4F24098FF600BD5E67 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		ECF2EB512409903E00BD5E67 /* Layout.VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.VStack.swift; sourceTree = "<group>"; };
-		ECF2EB5324099BBB00BD5E67 /* Layout.HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.HStack.swift; sourceTree = "<group>"; };
+		ECF2EB4D24098FD200BD5E67 /* Layouts.ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.ZStack.swift; sourceTree = "<group>"; };
+		ECF2EB4F24098FF600BD5E67 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
+		ECF2EB512409903E00BD5E67 /* Layouts.VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.VStack.swift; sourceTree = "<group>"; };
+		ECF2EB5324099BBB00BD5E67 /* Layouts.HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.HStack.swift; sourceTree = "<group>"; };
 		ECF2EB5524099E4500BD5E67 /* VariadicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariadicView.swift; sourceTree = "<group>"; };
+		ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.swift; sourceTree = "<group>"; };
+		ECF2EBA7240AB54C00BD5E67 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,14 +383,15 @@
 		ECE0DC262380758800105B93 /* LayoutAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
-				EC907C2523F819C200FF48E7 /* LayoutAlgorithm.swift */,
 				ECE0DC272380759800105B93 /* LayoutNode.swift */,
-				EC907C1D23F80F6C00FF48E7 /* LayoutAlgorithm.Frame.swift */,
-				EC907C1F23F8127500FF48E7 /* LayoutAlgorithm.FlexFrame.swift */,
-				EC907C2123F8152300FF48E7 /* LayoutAlgorithm.Padding.swift */,
-				EC907C1B23F80DCB00FF48E7 /* LayoutAlgorithm.ZStack.swift */,
-				ECE0DC292380762000105B93 /* LayoutAlgorithm.HStack.swift */,
-				EC907C1823F80AE000FF48E7 /* LayoutAlgorithm.VStack.swift */,
+				EC907C2523F819C200FF48E7 /* LayoutAlgorithm.swift */,
+				ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */,
+				EC907C1D23F80F6C00FF48E7 /* LayoutAlgorithms.Frame.swift */,
+				EC907C1F23F8127500FF48E7 /* LayoutAlgorithms.FlexFrame.swift */,
+				EC907C2123F8152300FF48E7 /* LayoutAlgorithms.Padding.swift */,
+				EC907C1B23F80DCB00FF48E7 /* LayoutAlgorithms.ZStack.swift */,
+				ECE0DC292380762000105B93 /* LayoutAlgorithms.HStack.swift */,
+				EC907C1823F80AE000FF48E7 /* LayoutAlgorithms.VStack.swift */,
 			);
 			path = LayoutAlgorithm;
 			sourceTree = "<group>";
@@ -404,10 +409,11 @@
 		ECF2EB4C24098F6200BD5E67 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				ECF2EB4F24098FF600BD5E67 /* Layout.swift */,
-				ECF2EB4D24098FD200BD5E67 /* Layout.ZStack.swift */,
-				ECF2EB512409903E00BD5E67 /* Layout.VStack.swift */,
-				ECF2EB5324099BBB00BD5E67 /* Layout.HStack.swift */,
+				ECF2EB4F24098FF600BD5E67 /* Layouts.swift */,
+				ECF2EBA7240AB54C00BD5E67 /* Layout.swift */,
+				ECF2EB4D24098FD200BD5E67 /* Layouts.ZStack.swift */,
+				ECF2EB512409903E00BD5E67 /* Layouts.VStack.swift */,
+				ECF2EB5324099BBB00BD5E67 /* Layouts.HStack.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -532,23 +538,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5C60032408662800A7C0A5 /* ViewModifiers.Padding.swift in Sources */,
-				EC907C2C23F81A7100FF48E7 /* LayoutAlgorithm.Padding.swift in Sources */,
+				EC907C2C23F81A7100FF48E7 /* LayoutAlgorithms.Padding.swift in Sources */,
 				ECF2EB472409889A00BD5E67 /* Optional.swift in Sources */,
 				EC6F1374239BD770002FE2E4 /* ObservedObject.swift in Sources */,
 				EC9F94C52370BEBA00E418F9 /* Text.swift in Sources */,
-				ECF2EB5024098FF600BD5E67 /* Layout.swift in Sources */,
+				ECF2EB5024098FF600BD5E67 /* Layouts.swift in Sources */,
 				ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */,
 				EC9F94CA2370BFA700E418F9 /* Alignment.swift in Sources */,
 				EC2441B9238DD1B900135660 /* Animation.swift in Sources */,
 				EC5C600B2408662800A7C0A5 /* ViewModifiers.Offset.swift in Sources */,
 				EC2441B7238DD17100135660 /* Binding.swift in Sources */,
 				ECE406D4238ACBD400F7B020 /* Modified.swift in Sources */,
-				ECF2EB5424099BBB00BD5E67 /* Layout.HStack.swift in Sources */,
+				ECF2EB5424099BBB00BD5E67 /* Layouts.HStack.swift in Sources */,
 				EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */,
 				EC9F94D12370C1DB00E418F9 /* Spacer.swift in Sources */,
-				ECF2EB522409903E00BD5E67 /* Layout.VStack.swift in Sources */,
+				ECF2EB522409903E00BD5E67 /* Layouts.VStack.swift in Sources */,
 				EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
+				ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */,
 				EC2441BB238DD29300135660 /* State.swift in Sources */,
 				EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */,
 				EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */,
@@ -556,9 +563,9 @@
 				EC5C600D2408662800A7C0A5 /* ViewModifiers.EnvironmentObject.swift in Sources */,
 				EC5C60092408662800A7C0A5 /* ViewModifiers.Background.swift in Sources */,
 				EC7469E1239C3423009A4102 /* Gesture.swift in Sources */,
-				EC907C2B23F81A7100FF48E7 /* LayoutAlgorithm.FlexFrame.swift in Sources */,
+				EC907C2B23F81A7100FF48E7 /* LayoutAlgorithms.FlexFrame.swift in Sources */,
 				ECEBB5C0238154EB006230B7 /* Axis.swift in Sources */,
-				ECF2EB4E24098FD200BD5E67 /* Layout.ZStack.swift in Sources */,
+				ECF2EB4E24098FD200BD5E67 /* Layouts.ZStack.swift in Sources */,
 				EC5C60022408662800A7C0A5 /* ViewModifiers.swift in Sources */,
 				EC30A37C2370D5FC00D40848 /* Never.swift in Sources */,
 				EC9F94CE2370C15400E418F9 /* ZStack.swift in Sources */,
@@ -567,17 +574,18 @@
 				EC10027D23786B1900AD8BF2 /* Shape.swift in Sources */,
 				EC38159123A5291E00F643A5 /* Renderer.swift in Sources */,
 				EC5C60082408662800A7C0A5 /* ViewModifiers.Overlay.swift in Sources */,
-				EC907C2A23F81A7100FF48E7 /* LayoutAlgorithm.Frame.swift in Sources */,
+				EC907C2A23F81A7100FF48E7 /* LayoutAlgorithms.Frame.swift in Sources */,
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
 				EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */,
 				EC5C60062408662800A7C0A5 /* ViewModifiers.LayoutPriority.swift in Sources */,
 				EC907C1723F80A8000FF48E7 /* ContentGeometry.swift in Sources */,
+				ECF2EBA6240AB3DA00BD5E67 /* LayoutAlgorithms.swift in Sources */,
 				ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */,
-				EC907C2F23F81A7100FF48E7 /* LayoutAlgorithm.VStack.swift in Sources */,
+				EC907C2F23F81A7100FF48E7 /* LayoutAlgorithms.VStack.swift in Sources */,
 				EC907C2923F81A7100FF48E7 /* LayoutNode.swift in Sources */,
 				ECA23301237C96C50044F12F /* Font.swift in Sources */,
 				EC5C60042408662800A7C0A5 /* ViewModifiers.Frame.swift in Sources */,
-				EC907C2D23F81A7100FF48E7 /* LayoutAlgorithm.ZStack.swift in Sources */,
+				EC907C2D23F81A7100FF48E7 /* LayoutAlgorithms.ZStack.swift in Sources */,
 				ECA5D6FE2389C18500239A89 /* Transaction.swift in Sources */,
 				ECA5D7042389D55100239A89 /* Image.swift in Sources */,
 				EC5C60012408662800A7C0A5 /* ViewModifier.swift in Sources */,
@@ -602,7 +610,7 @@
 				EC5C600E2408662800A7C0A5 /* ViewModifiers.Gesture.swift in Sources */,
 				EC5C600F2408662800A7C0A5 /* ViewModifiers.EdgesIgnoringSafeArea.swift in Sources */,
 				ECF2EB5624099E4500BD5E67 /* VariadicView.swift in Sources */,
-				EC907C2E23F81A7100FF48E7 /* LayoutAlgorithm.HStack.swift in Sources */,
+				EC907C2E23F81A7100FF48E7 /* LayoutAlgorithms.HStack.swift in Sources */,
 				ECF2EB4B24098A0600BD5E67 /* ConditionalContent.swift in Sources */,
 				EC9F94C72370BF3E00E418F9 /* VStack.swift in Sources */,
 				ECDF0F1E239D627F00675977 /* CoreGraphics+Extensions.swift in Sources */,

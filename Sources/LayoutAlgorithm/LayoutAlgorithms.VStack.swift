@@ -22,37 +22,24 @@
 
 import CoreGraphics
 
-extension LayoutAlgorithm {
+extension LayoutAlgorithms {
 
     /// A VStack layout is just an HStack layout flipped in axis :)
-    public struct VStack {
+    public struct VStack: LayoutAlgorithm {
 
-        private var hStackLayout: LayoutAlgorithm.HStack
+        private var hStackLayout: LayoutAlgorithms.HStack
 
-        public var nodes: [LayoutNode] {
-            hStackLayout.nodes
-        }
-
-        public var interItemSpacing: CGFloat {
-            hStackLayout.interItemSpacing
-        }
-
-        public var screenScale: CGFloat {
-            hStackLayout.screenScale
-        }
-
-        public init(nodes: [LayoutNode], interItemSpacing: CGFloat, screenScale: CGFloat = 2) {
-            hStackLayout = LayoutAlgorithm.HStack(
+        public init(nodes: [LayoutNode], layout: Layouts.VStack, defaultSpacing: CGFloat) {
+            hStackLayout = LayoutAlgorithms.HStack(
                 nodes: nodes.map { $0.axisFlipped() },
-                interItemSpacing: interItemSpacing,
-                screenScale: screenScale
+                layout: .init(alignment: layout.alignment.flipped, spacing: layout.spacing),
+                defaultSpacing: defaultSpacing
             )
         }
 
-        public func contentLayout(fittingSize targetSize: CGSize, alignment: HorizontalAlignment) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
             hStackLayout.contentLayout(
-                fittingSize: CGSize(width: targetSize.height, height: targetSize.width),
-                alignment: alignment.flipped
+                fittingSize: CGSize(width: targetSize.height, height: targetSize.width)
             ).flipped()
         }
     }
