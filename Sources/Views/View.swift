@@ -30,7 +30,7 @@ public protocol View: SomeView {
 extension View {
 
     public var body: SomeView {
-        return body as Body
+        return (body as Body) as SomeView
     }
 }
 
