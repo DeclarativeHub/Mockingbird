@@ -40,7 +40,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func environmentObject<B>(_ object: B) -> ModifiedContent {
+    public func environmentObject<B>(_ object: B) -> ModifiedContent<Self, ViewModifiers.EnvironmentObject> {
         return modifier(ViewModifiers.EnvironmentObject(object, objectTypeIdentifier: String(reflecting: B.self)))
     }
 

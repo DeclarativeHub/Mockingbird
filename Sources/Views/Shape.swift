@@ -29,55 +29,72 @@ public protocol Shape: View {
 
 extension Shape {
 
-    public var body: View {
-        fatalError()
+    public var body: ShapeView<Self, ForegroundStyle> {
+        return ShapeView(shape: self, style: ForegroundStyle())
     }
 }
 
-public struct FillShapeView: View {
+public protocol ShapeStyle {
+}
 
-    public let color: Color
-    public let shape: Shape
+extension ShapeStyle where Self: View, Self.Body == ShapeView<Rectangle, Self> {
+
+    public var body: ShapeView<Rectangle, Self> {
+        return ShapeView(shape: Rectangle(), style: self)
+    }
+}
+
+public struct ForegroundStyle: ShapeStyle {
+
+    @inlinable public init() {}
+}
+
+public struct ShapeView<S: Shape, SS: ShapeStyle>: View {
+
+    public typealias Body = Swift.Never
+
+    public let shape: S
+    public let style: SS
 
     @inlinable
-    public init(_ color: Color, shape: Shape) {
-        self.color = color
+    public init(shape: S, style: SS) {
         self.shape = shape
-    }
-
-    public var body: View {
-        fatalError()
+        self.style = style
     }
 }
 
-public struct StrokeShapeView: View {
+public struct FillShapeStyle: ShapeStyle {
 
     public let color: Color
-    public let shape: Shape
+
+    @inlinable
+    public init(color: Color) {
+        self.color = color
+    }
+}
+
+public struct StrokeShapeStyle: ShapeStyle {
+
+    public let color: Color
     public let lineWidth: CGFloat
 
     @inlinable
-    public init(_ color: Color, shape: Shape, lineWidth: CGFloat) {
+    public init(color: Color, lineWidth: CGFloat) {
         self.color = color
-        self.shape = shape
         self.lineWidth = lineWidth
-    }
-
-    public var body: View {
-        fatalError()
     }
 }
 
 extension Shape {
 
     @inlinable
-    public func fill(_ color: Color) -> FillShapeView {
-        return FillShapeView(color, shape: self)
+    public func fill(_ color: Color) -> ShapeView<Self, FillShapeStyle> {
+        return ShapeView(shape: self, style: FillShapeStyle(color: color))
     }
 
     @inlinable
-    public func stroke(_ color: Color, lineWidth: CGFloat = 1) -> StrokeShapeView {
-        return StrokeShapeView(color, shape: self, lineWidth: lineWidth)
+    public func stroke(_ color: Color, lineWidth: CGFloat = 1) -> ShapeView<Self, StrokeShapeStyle> {
+        return ShapeView(shape: self, style: StrokeShapeStyle(color: color, lineWidth: lineWidth))
     }
 }
 

@@ -38,7 +38,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func fixedSize(horizontal: Bool = true, vertical: Bool = false) -> ModifiedContent {
+    public func fixedSize(horizontal: Bool = true, vertical: Bool = false) -> ModifiedContent<Self, ViewModifiers.FixedSize> {
         return modifier(ViewModifiers.FixedSize(horizontal: horizontal, vertical: vertical))
     }
 }

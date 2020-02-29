@@ -38,12 +38,12 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func offset(_ offset: CGSize) -> ModifiedContent {
+    public func offset(_ offset: CGSize) -> ModifiedContent<Self, ViewModifiers.Offset> {
         return modifier(ViewModifiers.Offset(offset))
     }
 
     @inlinable
-    public func offset(x: CGFloat = 0, y: CGFloat = 0) -> ModifiedContent {
+    public func offset(x: CGFloat = 0, y: CGFloat = 0) -> ModifiedContent<Self, ViewModifiers.Offset> {
         return offset(CGSize(width: x, height: y))
     }
 }

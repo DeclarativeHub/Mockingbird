@@ -20,16 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct GeometryReader: View {
+public struct GeometryReader<Content>: View where Content: View {
 
-    public var content: (GeometryProxy) -> View
+    public typealias Body = Swift.Never
+
+    public var content: (GeometryProxy) -> Content
 
     @inlinable
-    public init(@ViewBuilder content: @escaping (GeometryProxy) -> View) {
+    public init(@ViewBuilder content: @escaping (GeometryProxy) -> Content) {
         self.content = content
-    }
-
-    public var body: View {
-        fatalError()
     }
 }

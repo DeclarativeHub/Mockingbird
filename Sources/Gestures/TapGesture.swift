@@ -35,7 +35,7 @@ public struct TapGesture: Gesture {
 extension View {
 
     @inlinable
-    public func onTapGesture(count: Int = 1, perform action: @escaping () -> Void) -> ModifiedContent {
+    public func onTapGesture(count: Int = 1, perform action: @escaping () -> Void) -> ModifiedContent<Self, ViewModifiers.Gesture> {
         return gesture(TapGesture(count: count).onEnded(action))
     }
 }

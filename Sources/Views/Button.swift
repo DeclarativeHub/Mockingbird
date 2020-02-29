@@ -20,26 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct Button: View {
+public struct Button<Label>: View where Label: View {
 
-    public let label: View
+    public typealias Body = Swift.Never
+
+    public let label: Label
     public let action: () -> Void
 
     @inlinable
-    public init(action: @escaping () -> Void, @ViewBuilder makeLabel: () -> View) {
+    public init(action: @escaping () -> Void, @ViewBuilder label: () -> Label) {
         self.action = action
-        self.label = makeLabel()
-    }
-
-    public var body: View {
-        fatalError()
+        self.label = label()
     }
 }
 
-extension Button {
+extension Button where Label == Text {
 
     @inlinable
-    public init(_ title: String, action:  @escaping () -> Void) {
+    public init(_ title: String, action: @escaping () -> Void) {
         self.action = action
         self.label = Text(title)
     }

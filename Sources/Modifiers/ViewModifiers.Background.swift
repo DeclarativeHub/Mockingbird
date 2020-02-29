@@ -24,12 +24,12 @@ import CoreGraphics
 
 extension ViewModifiers {
 
-    public struct Background: ViewModifier {
+    public struct Background<Background: View>: ViewModifier {
 
-        public let background: View
+        public let background: Background
 
         @inlinable
-        public init(_ background: View) {
+        public init(_ background: Background) {
             self.background = background
         }
     }
@@ -38,7 +38,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func background(_ view: View) -> ModifiedContent {
+    public func background<Background: View>(_ view: Background) -> ModifiedContent<Self, ViewModifiers.Background<Background>> {
         return modifier(ViewModifiers.Background(view))
     }
 }

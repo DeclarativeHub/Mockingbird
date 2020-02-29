@@ -20,22 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct AnyView: View, ViewList {
+public struct AnyView: View {
 
-    public let content: View
+    public typealias Body = Swift.Never
 
-    @inlinable
-    public init(_ content: View) {
-        self.content = content
-    }
+    public let view: SomeView
 
     @inlinable
-    public var body: View {
-        return content.body
-    }
-
-    @inlinable
-    public func makeViews() -> [View] {
-        return [content]
+    public init<V: View>(_ view: V) {
+        self.view = view
     }
 }

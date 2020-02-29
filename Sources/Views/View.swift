@@ -20,7 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public protocol View {
+import SwiftUI
 
-    var body: View { get }
+public protocol SomeView {
+
+    var body: SomeView { get }
+}
+
+public protocol View: SomeView {
+
+    associatedtype Body: View
+
+    var body: Body { get }
+}
+
+extension View {
+
+    public var body: SomeView {
+        return body as Body
+    }
+}
+
+extension View where Body == Never {
+
+    public var body: Never {
+        fatalError()
+    }
 }

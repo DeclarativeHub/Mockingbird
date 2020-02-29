@@ -38,7 +38,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func layoutPriority(_ value: Double) -> ModifiedContent {
+    public func layoutPriority(_ value: Double) -> ModifiedContent<Self, ViewModifiers.LayoutPriority> {
         return modifier(ViewModifiers.LayoutPriority(value))
     }
 }

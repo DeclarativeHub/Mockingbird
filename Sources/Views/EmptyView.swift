@@ -22,10 +22,8 @@
 
 public struct EmptyView: View, Equatable {
 
-    public init() {
-    }
+    public typealias Body = Swift.Never
 
-    public var body: View {
-        fatalError()
+    public init() {
     }
 }

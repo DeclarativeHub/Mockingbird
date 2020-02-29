@@ -42,7 +42,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func frame(width: CGFloat? = nil, height: CGFloat? = nil, alignment: Alignment = .center) -> ModifiedContent {
+    public func frame(width: CGFloat? = nil, height: CGFloat? = nil, alignment: Alignment = .center) -> ModifiedContent<Self, ViewModifiers.Frame> {
         return modifier(ViewModifiers.Frame(width: width, height: height, alignment: alignment))
     }
 }

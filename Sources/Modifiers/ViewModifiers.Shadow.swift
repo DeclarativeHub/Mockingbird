@@ -44,7 +44,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func shadow(color: Color = Color(white: 0, opacity: 0.33), radius: CGFloat, x: CGFloat = 0, y: CGFloat = 0) -> ModifiedContent {
+    public func shadow(color: Color = Color(white: 0, opacity: 0.33), radius: CGFloat, x: CGFloat = 0, y: CGFloat = 0) -> ModifiedContent<Self, ViewModifiers.Shadow> {
         return modifier(ViewModifiers.Shadow(color: color, radius: radius, x: x, y: y))
     }
 }

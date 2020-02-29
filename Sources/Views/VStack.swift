@@ -22,28 +22,14 @@
 
 import CoreGraphics
 
-public struct VStack: View {
+public struct VStack<Content: View>: View {
 
-    public let content: [View]
-    public let alignment: HorizontalAlignment
-    public let spacing: CGFloat?
+    public typealias Body = Swift.Never
 
-    @inlinable
-    public init(alignment: HorizontalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder makeContent: () -> View) {
-        self.content = makeContent().flattened
-        self.alignment = alignment
-        self.spacing = spacing
-    }
-
-    public var body: View {
-        fatalError()
-    }
-}
-
-extension VStack: Equatable {
+    public let tree: VariadicView.Tree<Layout.VStack, Content>
 
     @inlinable
-    public static func == (lhs: VStack, rhs: VStack) -> Bool {
-        return lhs.spacing == rhs.spacing && lhs.alignment == rhs.alignment
+    public init(alignment: HorizontalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder content: () -> Content) {
+        tree = .init(root: .init(alignment: alignment, spacing: spacing), content: content())
     }
 }

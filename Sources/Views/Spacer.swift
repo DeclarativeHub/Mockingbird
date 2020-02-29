@@ -24,14 +24,12 @@ import CoreGraphics
 
 public struct Spacer: View, Equatable {
 
+    public typealias Body = Swift.Never
+
     public let minLength: CGFloat?
 
     @inlinable
     public init(minLength: CGFloat? = nil) {
         self.minLength = minLength
-    }
-
-    public var body: View {
-        fatalError()
     }
 }

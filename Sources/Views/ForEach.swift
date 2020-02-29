@@ -20,24 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollection, ID: Hashable {
+public struct ForEach<Data, ID, Content>: View
+where Data: RandomAccessCollection, ID: Hashable, Content: View {
+
+    public typealias Body = Swift.Never
 
     public var data: Data
-    public var content: (Data.Element) -> View
+    public var content: (Data.Element) -> Content
 
     @inlinable
-    public init(_ data: Data, id: KeyPath<Data.Element, ID>, @ViewBuilder content: @escaping (Data.Element) -> View) {
+    public init(_ data: Data, id: KeyPath<Data.Element, ID>, @ViewBuilder content: @escaping (Data.Element) -> Content) {
         self.data = data
         self.content = content
-    }
-
-    public var body: View {
-        fatalError()
-    }
-
-    @inlinable
-    public func makeViews() -> [View] {
-        return data.map { content($0) }
     }
 }
 
@@ -48,7 +42,7 @@ public struct ForEach<Data, ID>: View, ViewList where Data: RandomAccessCollecti
 extension ForEach where Data == Range<Int>, ID == Int {
 
     @inlinable
-    public init(_ data: Range<Int>, @ViewBuilder content: @escaping (Int) -> View) {
+    public init(_ data: Range<Int>, @ViewBuilder content: @escaping (Int) -> Content) {
         self.data = data
         self.content = content
     }

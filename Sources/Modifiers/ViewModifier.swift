@@ -20,15 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public protocol ViewModifier {
-    
-    func body(content: View) -> View
-}
+public struct _ViewModifier_Content<VM: ViewModifier>: View {
 
-extension ViewModifier {
-
-    @inlinable
-    public func body(content: View) -> View {
-        return ModifiedContent(content: content, modifier: self)
+    public var body: Never {
+        fatalError()
     }
 }
+
+public protocol ViewModifier {
+
+    associatedtype Body: View
+    typealias Content = _ViewModifier_Content<Self>
+    
+    func body(content: Content) -> Body
+}
+
+extension ViewModifier where Body == Never {
+
+    public func body(content: Content) -> Never {
+        fatalError()
+    }
+}
+
+//extension ViewModifier {
+//
+//    @inlinable
+//    public func body(content: Content) -> ModifiedContent {
+//        return ModifiedContent(content: content, modifier: self)
+//    }
+//}

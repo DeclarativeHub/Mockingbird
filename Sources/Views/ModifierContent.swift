@@ -20,26 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct ModifiedContent: View {
+public struct ModifiedContent<Content, Modifier>: View where Content: View, Modifier: ViewModifier {
 
-    public var content: View
-    public var modifier: ViewModifier
+    public typealias Body = Swift.Never
+
+    public var content: Content
+    public var modifier: Modifier
 
     @inlinable
-    public init(content: View, modifier: ViewModifier) {
+    public init(content: Content, modifier: Modifier) {
         self.content = content
         self.modifier = modifier
     }
+}
 
-    public var body: View {
-        fatalError()
-    }
+extension ModifiedContent: Equatable where Content: Equatable, Modifier: Equatable {
 }
 
 extension View {
 
     @inlinable
-    public func modifier(_ modifier: ViewModifier) -> ModifiedContent {
+    public func modifier<Modifier: ViewModifier>(_ modifier: Modifier) -> ModifiedContent<Self, Modifier> {
         return ModifiedContent(content: self, modifier: modifier)
     }
 }

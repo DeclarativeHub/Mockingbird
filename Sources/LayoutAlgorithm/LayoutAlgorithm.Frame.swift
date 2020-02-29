@@ -22,7 +22,7 @@
 
 import CoreGraphics
 
-extension Layout {
+extension LayoutAlgorithm {
 
     public struct Frame {
 

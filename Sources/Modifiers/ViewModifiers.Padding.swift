@@ -54,17 +54,17 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func padding(_ insets: EdgeInsets) -> ModifiedContent {
+    public func padding(_ insets: EdgeInsets) -> ModifiedContent<Self, ViewModifiers.Padding> {
         return modifier(ViewModifiers.Padding(insets))
     }
 
     @inlinable
-    public func padding(_ insets: CGFloat? = nil) -> ModifiedContent {
+    public func padding(_ insets: CGFloat? = nil) -> ModifiedContent<Self, ViewModifiers.Padding> {
         return modifier(ViewModifiers.Padding(insets))
     }
 
     @inlinable
-    public func padding(_ edges: Edge.Set = .all, _ length: CGFloat? = nil) -> ModifiedContent {
+    public func padding(_ edges: Edge.Set = .all, _ length: CGFloat? = nil) -> ModifiedContent<Self, ViewModifiers.Padding> {
         return modifier(ViewModifiers.Padding(
             top: edges.contains(.top) ? length : 0,
             bottom: edges.contains(.bottom) ? length : 0,

@@ -24,6 +24,8 @@ import CoreGraphics
 
 public struct Text: View, Equatable {
 
+    public typealias Body = Swift.Never
+
     public let storage: Storage
 
     @inlinable
@@ -34,10 +36,6 @@ public struct Text: View, Equatable {
     @inlinable
     public init(_ storage: Storage) {
         self.storage = storage
-    }
-
-    public var body: View {
-        fatalError()
     }
 
     @inlinable

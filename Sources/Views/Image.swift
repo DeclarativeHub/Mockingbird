@@ -24,6 +24,8 @@ import Foundation
 
 public struct Image: View, Hashable {
 
+    public typealias Body = Swift.Never
+
     public let name: String
     public let bundle: Bundle?
 
@@ -31,9 +33,5 @@ public struct Image: View, Hashable {
     public init(_ name: String, bundle: Bundle? = nil) {
         self.name = name
         self.bundle = bundle
-    }
-
-    public var body: View {
-        fatalError()
     }
 }

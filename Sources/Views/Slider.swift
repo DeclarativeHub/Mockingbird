@@ -24,6 +24,8 @@ import SwiftUI
 
 public struct Slider: View {
 
+    public typealias Body = Swift.Never
+
     public let value: Binding<Float>
     public let bounds: ClosedRange<Float>
     public let step: Float
@@ -32,9 +34,5 @@ public struct Slider: View {
         self.value = Binding(get: { Float(value.get()) }, set: { value.set(V($0), $1) })
         self.bounds = Float(bounds.lowerBound)...Float(bounds.upperBound)
         self.step = Float(step)
-    }
-
-    public var body: View {
-        fatalError()
     }
 }

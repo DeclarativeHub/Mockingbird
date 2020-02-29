@@ -20,26 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct ZStack: View {
+public struct ZStack<Content: View>: View {
 
-    public let content: [View]
-    public let alignment: Alignment
+    public typealias Body = Swift.Never
 
-    @inlinable
-    public init(alignment: Alignment = .center, @ViewBuilder makeContent: () -> View) {
-        self.content = makeContent().flattened
-        self.alignment = alignment
-    }
-
-    public var body: View {
-        fatalError()
-    }
-}
-
-extension ZStack: Equatable {
+    public let tree: VariadicView.Tree<Layout.ZStack, Content>
 
     @inlinable
-    public static func == (lhs: ZStack, rhs: ZStack) -> Bool {
-        return lhs.alignment == rhs.alignment
+    public init(alignment: Alignment = .center, ViewBuilder content: () -> Content) {
+        tree = .init(root: .init(alignment: alignment), content: content())
     }
 }

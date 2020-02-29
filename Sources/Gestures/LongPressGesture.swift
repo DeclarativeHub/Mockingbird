@@ -39,7 +39,7 @@ public struct LongPressGesture: Gesture {
 extension View {
 
     @inlinable
-    public func onLongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10, perform action: @escaping () -> Void) -> ModifiedContent {
+    public func onLongPressGesture(minimumDuration: Double = 0.5, maximumDistance: CGFloat = 10, perform action: @escaping () -> Void) -> ModifiedContent<Self, ViewModifiers.Gesture> {
         return gesture(LongPressGesture(minimumDuration: minimumDuration, maximumDistance: maximumDistance)
             .onEnded { pressing in
                 if !pressing {

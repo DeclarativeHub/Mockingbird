@@ -24,6 +24,8 @@ import Foundation
 
 public struct Color: View {
 
+    public typealias Body = Swift.Never
+
     public enum Storage: Hashable {
         case rgba(red: Double, green: Double, blue: Double, alpha: Double)
         case asset(name: String, bundle: Bundle?)
@@ -54,10 +56,6 @@ public struct Color: View {
     @inlinable
     public init(_ name: String, bundle: Bundle? = nil) {
         self.storage = .asset(name: name, bundle: bundle)
-    }
-
-    public var body: View {
-        fatalError()
     }
 
     public static let clear: Color = .init(red: 0, green: 0, blue: 0, alpha: 0)

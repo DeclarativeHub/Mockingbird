@@ -24,12 +24,12 @@ import CoreGraphics
 
 extension ViewModifiers {
 
-    public struct ClipShape: ViewModifier {
+    public struct ClipShape<S: Shape>: ViewModifier {
 
-        public let shape: Shape
+        public let shape: S
 
         @inlinable
-        public init(_ shape: Shape) {
+        public init(_ shape: S) {
             self.shape = shape
         }
     }
@@ -38,17 +38,17 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func clipShape(_ shape: Shape) -> ModifiedContent {
+    public func clipShape<S: Shape>(_ shape: S) -> ModifiedContent<Self, ViewModifiers.ClipShape<S>> {
         return modifier(ViewModifiers.ClipShape(shape))
     }
 
     @inlinable
-    public func clipped() -> ModifiedContent {
+    public func clipped() -> ModifiedContent<Self, ViewModifiers.ClipShape<Rectangle>> {
         return modifier(ViewModifiers.ClipShape(Rectangle()))
     }
 
     @inlinable
-    public func cornerRadius(_ radius: CGFloat) -> ModifiedContent {
+    public func cornerRadius(_ radius: CGFloat) -> ModifiedContent<Self, ViewModifiers.ClipShape<RoundedRectangle>> {
         return modifier(ViewModifiers.ClipShape(RoundedRectangle(cornerRadius: radius)))
     }
 }

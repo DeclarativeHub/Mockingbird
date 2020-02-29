@@ -22,7 +22,7 @@
 
 extension Never: View {
 
-    public var body: View {
+    public var body: Never {
         fatalError()
     }
 }

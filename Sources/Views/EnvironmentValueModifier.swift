@@ -22,31 +22,30 @@
 
 import CoreGraphics
 
-public struct EnvironmentValueModifier: View {
+// TODO: Make this a modifier, not a view
+public struct EnvironmentValueModifier<Content>: View where Content: View {
 
-    public let content: View
+    public typealias Body = Swift.Never
+
+    public let content: Content
     public let modify: (inout EnvironmentValues) -> Void
 
     @inlinable
-    public init(content: View, _ modify: @escaping (inout EnvironmentValues) -> Void) {
+    public init(content: Content, _ modify: @escaping (inout EnvironmentValues) -> Void) {
         self.content = content
         self.modify = modify
-    }
-
-    public var body: View {
-        fatalError()
     }
 }
 
 extension View {
 
     @inlinable
-    public func environment<V>(_ keyPath: WritableKeyPath<EnvironmentValues, V>, _ value: V) -> EnvironmentValueModifier {
+    public func environment<V>(_ keyPath: WritableKeyPath<EnvironmentValues, V>, _ value: V) -> EnvironmentValueModifier<Self> {
         return EnvironmentValueModifier(content: self) { $0[keyPath: keyPath] = value }
     }
 
     @inlinable
-    public func environment(_ modify: @escaping (inout EnvironmentValues) -> Void) -> EnvironmentValueModifier {
+    public func environment(_ modify: @escaping (inout EnvironmentValues) -> Void) -> EnvironmentValueModifier<Self> {
         return EnvironmentValueModifier(content: self, modify)
     }
 }
@@ -54,7 +53,7 @@ extension View {
 extension View {
 
     @inlinable
-    public func foregroundColor(_ color: Color?) -> EnvironmentValueModifier {
+    public func foregroundColor(_ color: Color?) -> EnvironmentValueModifier<Self> {
         return environment(\.foregroundColor, color)
     }
 
@@ -64,12 +63,12 @@ extension View {
 //    }
 
     @inlinable
-    public func accentColor(_ accentColor: Color?) -> EnvironmentValueModifier {
+    public func accentColor(_ accentColor: Color?) -> EnvironmentValueModifier<Self> {
         return environment(\.accentColor, accentColor)
     }
 
     @inlinable
-    public func disabled(_ disabled: Bool) -> EnvironmentValueModifier {
+    public func disabled(_ disabled: Bool) -> EnvironmentValueModifier<Self> {
         return environment(\.isEnabled, !disabled)
     }
 
@@ -77,42 +76,42 @@ extension View {
 //    public func opacity(_ opacity: Double) -> View
 
     @inlinable
-    public func font(_ font: Font) -> EnvironmentValueModifier {
+    public func font(_ font: Font) -> EnvironmentValueModifier<Self> {
         return environment(\.font, font)
     }
 
     @inlinable
-    public func hidden() -> EnvironmentValueModifier {
+    public func hidden() -> EnvironmentValueModifier<Self> {
         return environment(\.hidden, true)
     }
 
     @inlinable
-    public func multilineTextAlignment(_ multilineTextAlignment: TextAlignment) -> EnvironmentValueModifier {
+    public func multilineTextAlignment(_ multilineTextAlignment: TextAlignment) -> EnvironmentValueModifier<Self> {
         return environment(\.multilineTextAlignment, multilineTextAlignment)
     }
 
     @inlinable
-    public func truncationMode(_ truncationMode: Text.TruncationMode) -> EnvironmentValueModifier {
+    public func truncationMode(_ truncationMode: Text.TruncationMode) -> EnvironmentValueModifier<Self> {
         return environment(\.truncationMode, truncationMode)
     }
 
     @inlinable
-    public func lineSpacing(_ lineSpacing: CGFloat) -> EnvironmentValueModifier {
+    public func lineSpacing(_ lineSpacing: CGFloat) -> EnvironmentValueModifier<Self> {
         return environment(\.lineSpacing, lineSpacing)
     }
 
     @inlinable
-    public func allowsTightening(_ allowsTightening: Bool) -> EnvironmentValueModifier {
+    public func allowsTightening(_ allowsTightening: Bool) -> EnvironmentValueModifier<Self> {
         return environment(\.allowsTightening, allowsTightening)
     }
 
     @inlinable
-    public func lineLimit(_ lineLimit: Int?) -> EnvironmentValueModifier {
+    public func lineLimit(_ lineLimit: Int?) -> EnvironmentValueModifier<Self> {
         return environment(\.lineLimit, lineLimit)
     }
 
     @inlinable
-    public func minimumScaleFactor(_ minimumScaleFactor: CGFloat) -> EnvironmentValueModifier {
+    public func minimumScaleFactor(_ minimumScaleFactor: CGFloat) -> EnvironmentValueModifier<Self> {
         return environment(\.minimumScaleFactor, minimumScaleFactor)
     }
 }

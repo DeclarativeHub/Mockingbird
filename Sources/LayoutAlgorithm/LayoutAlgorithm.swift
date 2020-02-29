@@ -20,36 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct ViewContent: View, ViewList {
-
-    public let content: [View]
-
-    @inlinable
-    public init(_ content: [View]) {
-        self.content = content
-    }
-
-    public var body: View {
-        fatalError()
-    }
-
-    public func makeViews() -> [View] {
-        return content
-    }
-}
-
-public protocol ViewList {
-    func makeViews() -> [View]
-}
-
-extension View {
-
-    @inlinable
-    public var flattened: [View] {
-        if let view = self as? ViewList {
-            return view.makeViews()
-        } else {
-            return [self]
-        }
-    }
-}
+public enum LayoutAlgorithm {}

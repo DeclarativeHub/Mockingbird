@@ -24,12 +24,12 @@ import CoreGraphics
 
 extension ViewModifiers {
 
-    public struct Overlay: ViewModifier {
+    public struct Overlay<Overlay: View>: ViewModifier {
 
-        public let overlay: View
+        public let overlay: Overlay
 
         @inlinable
-        public init(_ overlay: View) {
+        public init(_ overlay: Overlay) {
             self.overlay = overlay
         }
     }
@@ -38,7 +38,7 @@ extension ViewModifiers {
 extension View {
 
     @inlinable
-    public func overlay(_ view: View) -> ModifiedContent {
+    public func overlay<Overlay: View>(_ view: Overlay) -> ModifiedContent<Self, ViewModifiers.Overlay<Overlay>> {
         return modifier(ViewModifiers.Overlay(view))
     }
 }

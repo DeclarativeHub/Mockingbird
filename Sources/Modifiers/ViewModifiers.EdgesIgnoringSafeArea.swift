@@ -36,7 +36,7 @@ extension ViewModifiers {
 extension View {
     
     @inlinable
-    public func edgesIgnoringSafeArea(_ edges: Edge.Set) -> ModifiedContent {
+    public func edgesIgnoringSafeArea(_ edges: Edge.Set) -> ModifiedContent<Self, ViewModifiers.EdgesIgnoringSafeArea> {
         return modifier(ViewModifiers.EdgesIgnoringSafeArea(edges: edges))
     }
 }
