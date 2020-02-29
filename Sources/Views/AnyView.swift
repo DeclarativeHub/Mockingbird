@@ -27,7 +27,7 @@ public struct AnyView: View {
     public let view: SomeView
 
     @inlinable
-    public init<V: View>(_ view: V) {
+    public init(_ view: SomeView) {
         self.view = view
     }
 }
