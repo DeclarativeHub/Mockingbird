@@ -20,17 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct Slider: View {
-
-    public typealias Body = Swift.Never
-
-    public let value: Binding<Float>
-    public let bounds: ClosedRange<Float>
-    public let step: Float
-
-    public init<V>(value: Binding<V>, in bounds: ClosedRange<V> = 0...1, step: V = 1) where V: BinaryFloatingPoint, V.Stride: BinaryFloatingPoint {
-        self.value = Binding(get: { Float(value.get()) }, set: { value.set(V($0), $1) })
-        self.bounds = Float(bounds.lowerBound)...Float(bounds.upperBound)
-        self.step = Float(step)
-    }
-}
+//public struct Slider: View { // TODO: Labels
+//
+//    public typealias Body = Swift.Never
+//
+//    public let value: Binding<Float>
+//    public let bounds: ClosedRange<Float>
+//    public let step: Float
+//
+//    public init<V>(value: Binding<V>, in bounds: ClosedRange<V> = 0...1, step: V = 1) where V: BinaryFloatingPoint, V.Stride: BinaryFloatingPoint {
+//        self.value = Binding(get: { Float(value.get()) }, set: { value.set(V($0), $1) })
+//        self.bounds = Float(bounds.lowerBound)...Float(bounds.upperBound)
+//        self.step = Float(step)
+//    }
+//}

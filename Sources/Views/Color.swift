@@ -22,7 +22,7 @@
 
 import Foundation
 
-public struct Color: View {
+public struct Color: View, Hashable {
 
     public typealias Body = Swift.Never
 
@@ -87,35 +87,6 @@ public struct Color: View {
             return Color(red: red, green: green, blue: blue, alpha: oldAlpha * alpha)
         default:
             return self // TODO
-        }
-    }
-}
-
-extension Color: Hashable {
-
-    @inlinable
-    public static func == (lhs: Color, rhs: Color) -> Bool {
-        switch (lhs.storage, rhs.storage) {
-        case (.rgba(let lr, let lg, let lb, let la), .rgba(let rr, let rg, let rb, let ra)):
-            return lr == rr && lg == rg && lb == rb && la == ra
-        case (.asset(let lName, let lBundle), .asset(let rName, let rBundle)):
-            return lName == rName && lBundle == rBundle
-        default:
-            return false
-        }
-    }
-
-    @inlinable
-    public func hash(into hasher: inout Hasher) {
-        switch storage {
-        case .rgba(let red, let green, let blue, let alpha):
-            hasher.combine(red)
-            hasher.combine(green)
-            hasher.combine(blue)
-            hasher.combine(alpha)
-        case .asset(let name, let bundle):
-            hasher.combine(name)
-            hasher.combine(bundle)
         }
     }
 }

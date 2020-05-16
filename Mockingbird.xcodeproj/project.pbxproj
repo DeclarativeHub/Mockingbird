@@ -70,12 +70,12 @@
 		ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D6FB2389C14F00239A89 /* Context.swift */; };
 		ECA5D6FE2389C18500239A89 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D6FD2389C18500239A89 /* Transaction.swift */; };
 		ECA5D7042389D55100239A89 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D7032389D55100239A89 /* Image.swift */; };
+		ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */; };
 		ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */; };
 		ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
 		ECDF0F1A239D422100675977 /* StackLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */; };
 		ECDF0F1C239D428600675977 /* ReactiveKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECDF0F1E239D627F00675977 /* CoreGraphics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */; };
-		ECDFA45B237F3517001C0238 /* EnvironmentValueModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */; };
 		ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE406D1238ACB4800F7B020 /* MutableCollection+Extensions.swift */; };
 		ECE406D4238ACBD400F7B020 /* Modified.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE406D3238ACBD400F7B020 /* Modified.swift */; };
 		ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB5BD23814FA1006230B7 /* AnyView.swift */; };
@@ -176,10 +176,10 @@
 		ECA5D6FB2389C14F00239A89 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		ECA5D6FD2389C18500239A89 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		ECA5D7032389D55100239A89 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentValue.swift; sourceTree = "<group>"; };
 		ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierContent.swift; sourceTree = "<group>"; };
 		ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Extensions.swift"; sourceTree = "<group>"; };
-		ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueModifier.swift; sourceTree = "<group>"; };
 		ECE0DC272380759800105B93 /* LayoutNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutNode.swift; sourceTree = "<group>"; };
 		ECE0DC292380762000105B93 /* LayoutAlgorithms.HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.HStack.swift; sourceTree = "<group>"; };
 		ECE406B62389F60000F7B020 /* ViewModifiers.Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Offset.swift; sourceTree = "<group>"; };
@@ -356,7 +356,6 @@
 				EC533ACE2378469F007EA560 /* GeometryReader.swift */,
 				EC9F94D62370C53700E418F9 /* ForEach.swift */,
 				EC10027C23786B1900AD8BF2 /* Shape.swift */,
-				ECDFA45A237F3517001C0238 /* EnvironmentValueModifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,6 +378,7 @@
 				EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */,
 				EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */,
 				EC1CAAC923A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift */,
+				ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -559,6 +559,7 @@
 				EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
 				ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */,
+				ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */,
 				EC2441BB238DD29300135660 /* State.swift in Sources */,
 				EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */,
 				EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */,
@@ -609,7 +610,6 @@
 				EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */,
 				EC5C600C2408662800A7C0A5 /* ViewModifiers.Shadow.swift in Sources */,
 				EC2441B5238DD16100135660 /* DynamicProperty.swift in Sources */,
-				ECDFA45B237F3517001C0238 /* EnvironmentValueModifier.swift in Sources */,
 				EC5C60072408662800A7C0A5 /* ViewModifiers.ClipShape.swift in Sources */,
 				EC5C600E2408662800A7C0A5 /* ViewModifiers.Gesture.swift in Sources */,
 				EC5C600F2408662800A7C0A5 /* ViewModifiers.EdgesIgnoringSafeArea.swift in Sources */,
