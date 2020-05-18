@@ -24,6 +24,10 @@ extension ViewModifiers {
 
     public struct Gesture: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "Gesture"
+        }
+
         public enum Priority {
             case low
             case high

@@ -24,6 +24,10 @@ import CoreGraphics
 
 public struct Spacer: View, Equatable {
 
+    public static var typeIdentifier: String {
+        "Spacer"
+    }
+
     public typealias Body = Swift.Never
 
     public let minLength: CGFloat?

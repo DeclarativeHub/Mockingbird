@@ -24,6 +24,10 @@ import CoreGraphics
 
 public struct Text: View, Hashable {
 
+    public static var typeIdentifier: String {
+        "Text"
+    }
+
     public typealias Body = Swift.Never
 
     public let storage: Storage

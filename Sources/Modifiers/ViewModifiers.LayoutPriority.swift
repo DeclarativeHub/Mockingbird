@@ -26,6 +26,10 @@ extension ViewModifiers {
     
     public struct LayoutPriority: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "LayoutPriority"
+        }
+
         public let value: Double
 
         @inlinable

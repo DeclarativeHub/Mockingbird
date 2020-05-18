@@ -22,6 +22,10 @@
 
 public struct ZStack<Content: View>: View {
 
+    public static var typeIdentifier: String {
+        "ZStack<\(Content.typeIdentifier)>"
+    }
+
     public typealias Body = Swift.Never
 
     public let tree: VariadicView.Tree<Layouts.ZStack, Content>

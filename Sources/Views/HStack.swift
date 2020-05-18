@@ -24,6 +24,10 @@ import CoreGraphics
 
 public struct HStack<Content: View>: View {
 
+    public static var typeIdentifier: String {
+        "HStack<\(Content.typeIdentifier)>"
+    }
+
     public typealias Body = Swift.Never
 
     public let tree: VariadicView.Tree<Layouts.HStack, Content>

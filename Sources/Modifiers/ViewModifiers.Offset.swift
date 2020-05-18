@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct Offset: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "Offset"
+        }
+
         public let offset: CGSize
 
         @inlinable

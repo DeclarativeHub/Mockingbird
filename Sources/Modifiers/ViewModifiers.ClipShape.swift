@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct ClipShape<S: Shape>: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "ClipShape<\(S.typeIdentifier)>"
+        }
+
         public let shape: S
 
         @inlinable

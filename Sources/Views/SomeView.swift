@@ -10,5 +10,8 @@ import Foundation
 
 public protocol SomeView {
 
+    static var typeIdentifier: String { get }
+
     var body: SomeView { get }
+    
 }

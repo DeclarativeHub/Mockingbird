@@ -22,6 +22,10 @@
 
 public struct EmptyView: View, Equatable {
 
+    public static var typeIdentifier: String {
+        "EmptyView"
+    }
+
     public typealias Body = Swift.Never
 
     public init() {

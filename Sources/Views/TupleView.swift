@@ -8,6 +8,10 @@
 
 public struct TupleView<T>: View {
 
+    public static var typeIdentifier: String {
+        "???"
+    }
+
     public typealias Body = Swift.Never
 
     public var value: T

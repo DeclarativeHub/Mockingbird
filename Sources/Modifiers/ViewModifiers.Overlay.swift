@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct Overlay<Overlay: View>: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "Overlay<\(Overlay.typeIdentifier)>"
+        }
+
         public let overlay: Overlay
 
         @inlinable

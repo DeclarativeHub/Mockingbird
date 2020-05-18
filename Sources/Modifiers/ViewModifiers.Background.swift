@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct Background<Background: View>: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "Background<\(Background.typeIdentifier)>"
+        }
+
         public let background: Background
 
         @inlinable

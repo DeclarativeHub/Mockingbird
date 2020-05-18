@@ -22,6 +22,10 @@
 
 public struct ModifiedContent<Content, Modifier>: View where Content: View, Modifier: ViewModifier {
 
+    public static var typeIdentifier: String {
+        "ModifiedContent<\(Content.typeIdentifier), \(Modifier.typeIdentifier)>"
+    }
+
     public typealias Body = Swift.Never
 
     public var content: Content

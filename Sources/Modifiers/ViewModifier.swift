@@ -22,6 +22,8 @@
 
 public protocol ViewModifier {
 
+    static var typeIdentifier: String { get }
+
     associatedtype Body: View
     typealias Content = ViewModifierContent<Self>
     
@@ -36,6 +38,10 @@ extension ViewModifier where Body == Never {
 }
 
 public struct ViewModifierContent<VM: ViewModifier>: View {
+
+    public static var typeIdentifier: String {
+        "ViewModifierContent<\(VM.typeIdentifier)>"
+    }
 
     public let view: SomeView
     public let modifier: VM

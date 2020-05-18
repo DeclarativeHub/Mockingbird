@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct Padding: ViewModifier, Layout {
 
+        public static var typeIdentifier: String {
+            "Padding"
+        }
+
         public let top: CGFloat?
         public let bottom: CGFloat?
         public let leading: CGFloat?

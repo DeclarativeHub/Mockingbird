@@ -24,6 +24,10 @@ extension ViewModifiers {
 
     public struct EdgesIgnoringSafeArea: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "EdgesIgnoringSafeArea"
+        }
+
         public let edges: Edge.Set
 
         @inlinable

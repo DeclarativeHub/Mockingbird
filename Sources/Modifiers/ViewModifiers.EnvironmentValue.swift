@@ -12,6 +12,10 @@ extension ViewModifiers {
 
     public struct EnvironmentValue: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "EnvironmentValue"
+        }
+
         public let modify: (inout EnvironmentValues) -> Void
 
         @inlinable

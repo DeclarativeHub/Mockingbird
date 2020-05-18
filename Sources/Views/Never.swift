@@ -22,6 +22,10 @@
 
 extension Never: View {
 
+    public static var typeIdentifier: String {
+        "Never"
+    }
+
     public var body: Never {
         fatalError()
     }

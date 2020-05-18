@@ -29,6 +29,10 @@ public protocol Shape: View {
 
 extension Shape {
 
+    public static var typeIdentifier: String {
+        String(reflecting: self)
+    }
+
     public var body: ShapeView<Self, ForegroundStyle> {
         return ShapeView(shape: self, style: ForegroundStyle())
     }
@@ -50,6 +54,10 @@ public struct ForegroundStyle: ShapeStyle {
 }
 
 public struct ShapeView<S: Shape, SS: ShapeStyle>: View {
+
+    public static var typeIdentifier: String {
+        "ShapeView<\(S.typeIdentifier)>" // SS?
+    }
 
     public typealias Body = Swift.Never
 

@@ -8,6 +8,10 @@
 
 public struct ConditionalContent<TrueContent: View, FalseContent: View>: View {
 
+    public static var typeIdentifier: String {
+        "ConditionalContent<\(TrueContent.typeIdentifier), \(FalseContent.typeIdentifier)>"
+    }
+
     public typealias Body = Swift.Never
 
     public enum Storage {

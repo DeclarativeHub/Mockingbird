@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct EnvironmentObject: ViewModifier {
 
+        public static var typeIdentifier: String {
+            "EnvironmentObject"
+        }
+
         public let object: Any
         public let objectTypeIdentifier: String
 

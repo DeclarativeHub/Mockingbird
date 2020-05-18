@@ -26,6 +26,10 @@ extension ViewModifiers {
 
     public struct Frame: ViewModifier, Layout {
 
+        public static var typeIdentifier: String {
+            "Frame"
+        }
+
         public let width: CGFloat?
         public let height: CGFloat?
         public let alignment: Alignment
