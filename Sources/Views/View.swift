@@ -30,7 +30,7 @@ public protocol View: SomeView {
 extension View {
 
     public static var typeIdentifier: String {
-        String(reflecting: self)
+        "\(String(reflecting: self))<\(Body.typeIdentifier)>"
     }
 
     public var body: SomeView {
