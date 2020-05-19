@@ -25,9 +25,17 @@ public protocol ViewModifier {
     static var typeIdentifier: String { get }
 
     associatedtype Body: View
+
     typealias Content = ViewModifierContent<Self>
     
     func body(content: Content) -> Body
+}
+
+extension ViewModifier {
+
+    public static var typeIdentifier: String {
+        String(describing: self)
+    }
 }
 
 extension ViewModifier where Body == Never {

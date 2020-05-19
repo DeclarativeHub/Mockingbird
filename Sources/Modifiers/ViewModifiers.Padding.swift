@@ -73,10 +73,13 @@ extension View {
 
     @inlinable
     public func padding(_ edges: Edge.Set = .all, _ length: CGFloat? = nil) -> ModifiedContent<Self, ViewModifiers.Padding> {
-        return modifier(ViewModifiers.Padding(
-            top: edges.contains(.top) ? length : 0,
-            bottom: edges.contains(.bottom) ? length : 0,
-            leading: edges.contains(.leading) ? length : 0,
-            trailing: edges.contains(.trailing) ? length : 0))
+        return modifier(
+            ViewModifiers.Padding(
+                top: edges.contains(.top) ? length : 0,
+                bottom: edges.contains(.bottom) ? length : 0,
+                leading: edges.contains(.leading) ? length : 0,
+                trailing: edges.contains(.trailing) ? length : 0
+            )
+        )
     }
 }
