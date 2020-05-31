@@ -73,7 +73,7 @@
 		ECB331462483A48600893516 /* SomeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB331452483A48600893516 /* SomeViewModifier.swift */; };
 		ECB3316224843D5700893516 /* ViewModifiers.AspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3316124843D5700893516 /* ViewModifiers.AspectRatio.swift */; };
 		ECB3316424843D8800893516 /* ContentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3316324843D8800893516 /* ContentMode.swift */; };
-		ECB33168248444ED00893516 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB33167248444ED00893516 /* Sheet.swift */; };
+		ECB3316C2484462300893516 /* ViewModifiers.Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3316B2484462300893516 /* ViewModifiers.Sheet.swift */; };
 		ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */; };
 		ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */; };
 		ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
@@ -183,7 +183,7 @@
 		ECB331452483A48600893516 /* SomeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewModifier.swift; sourceTree = "<group>"; };
 		ECB3316124843D5700893516 /* ViewModifiers.AspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.AspectRatio.swift; sourceTree = "<group>"; };
 		ECB3316324843D8800893516 /* ContentMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMode.swift; sourceTree = "<group>"; };
-		ECB33167248444ED00893516 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		ECB3316B2484462300893516 /* ViewModifiers.Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Sheet.swift; sourceTree = "<group>"; };
 		ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentValue.swift; sourceTree = "<group>"; };
 		ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierContent.swift; sourceTree = "<group>"; };
@@ -365,7 +365,6 @@
 				EC533ACE2378469F007EA560 /* GeometryReader.swift */,
 				EC9F94D62370C53700E418F9 /* ForEach.swift */,
 				EC10027C23786B1900AD8BF2 /* Shape.swift */,
-				ECB33167248444ED00893516 /* Sheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +390,7 @@
 				EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */,
 				EC1CAAC923A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift */,
 				ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */,
+				ECB3316B2484462300893516 /* ViewModifiers.Sheet.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -573,7 +573,6 @@
 				ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */,
 				ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */,
 				EC2441BB238DD29300135660 /* State.swift in Sources */,
-				ECB33168248444ED00893516 /* Sheet.swift in Sources */,
 				EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */,
 				EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */,
 				EC7469E8239C3541009A4102 /* EndedGesture.swift in Sources */,
@@ -606,6 +605,7 @@
 				EC907C2D23F81A7100FF48E7 /* LayoutAlgorithms.ZStack.swift in Sources */,
 				ECA5D6FE2389C18500239A89 /* Transaction.swift in Sources */,
 				ECA5D7042389D55100239A89 /* Image.swift in Sources */,
+				ECB3316C2484462300893516 /* ViewModifiers.Sheet.swift in Sources */,
 				EC5C60012408662800A7C0A5 /* ViewModifier.swift in Sources */,
 				EC533ACB237845B2007EA560 /* GeometryProxy.swift in Sources */,
 				ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */,
