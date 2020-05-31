@@ -70,6 +70,7 @@
 		ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D6FB2389C14F00239A89 /* Context.swift */; };
 		ECA5D6FE2389C18500239A89 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D6FD2389C18500239A89 /* Transaction.swift */; };
 		ECA5D7042389D55100239A89 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D7032389D55100239A89 /* Image.swift */; };
+		ECB331462483A48600893516 /* SomeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB331452483A48600893516 /* SomeViewModifier.swift */; };
 		ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */; };
 		ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */; };
 		ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
@@ -176,6 +177,7 @@
 		ECA5D6FB2389C14F00239A89 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		ECA5D6FD2389C18500239A89 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		ECA5D7032389D55100239A89 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		ECB331452483A48600893516 /* SomeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewModifier.swift; sourceTree = "<group>"; };
 		ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentValue.swift; sourceTree = "<group>"; };
 		ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierContent.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 		ECC7DFCD23783540007B0AF5 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				ECB331452483A48600893516 /* SomeViewModifier.swift */,
 				ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */,
 				EC907C2323F819A400FF48E7 /* ViewModifiers.swift */,
 				EC90E6D22377504300A9B7E0 /* ViewModifiers.Padding.swift */,
@@ -578,6 +581,7 @@
 				EC10027D23786B1900AD8BF2 /* Shape.swift in Sources */,
 				EC38159123A5291E00F643A5 /* Renderer.swift in Sources */,
 				EC5C60082408662800A7C0A5 /* ViewModifiers.Overlay.swift in Sources */,
+				ECB331462483A48600893516 /* SomeViewModifier.swift in Sources */,
 				EC907C2A23F81A7100FF48E7 /* LayoutAlgorithms.Frame.swift in Sources */,
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
 				EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */,

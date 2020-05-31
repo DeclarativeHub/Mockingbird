@@ -20,14 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public protocol ViewModifier {
-
-    static var typeIdentifier: String { get }
+public protocol ViewModifier: SomeViewModifier {
 
     associatedtype Body: View
 
     typealias Content = ViewModifierContent<Self>
-    
+
     func body(content: Content) -> Body
 }
 
@@ -35,6 +33,10 @@ extension ViewModifier {
 
     public static var typeIdentifier: String {
         String(describing: self)
+    }
+
+    public func body(content: SomeView) -> SomeView {
+        return (body(content: Content(content, modifier: self)) as Body) as SomeView
     }
 }
 
@@ -45,7 +47,7 @@ extension ViewModifier where Body == Never {
     }
 }
 
-public struct ViewModifierContent<VM: ViewModifier>: View {
+public struct ViewModifierContent<VM: SomeViewModifier>: View {
 
     public static var typeIdentifier: String {
         "ViewModifierContent<\(VM.typeIdentifier)>"
