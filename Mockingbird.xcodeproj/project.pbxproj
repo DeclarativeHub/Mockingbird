@@ -71,6 +71,8 @@
 		ECA5D6FE2389C18500239A89 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D6FD2389C18500239A89 /* Transaction.swift */; };
 		ECA5D7042389D55100239A89 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5D7032389D55100239A89 /* Image.swift */; };
 		ECB331462483A48600893516 /* SomeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB331452483A48600893516 /* SomeViewModifier.swift */; };
+		ECB3316224843D5700893516 /* ViewModifiers.AspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3316124843D5700893516 /* ViewModifiers.AspectRatio.swift */; };
+		ECB3316424843D8800893516 /* ContentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3316324843D8800893516 /* ContentMode.swift */; };
 		ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */; };
 		ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */; };
 		ECDF0F19239D41F400675977 /* ReactiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; };
@@ -178,6 +180,8 @@
 		ECA5D6FD2389C18500239A89 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		ECA5D7032389D55100239A89 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		ECB331452483A48600893516 /* SomeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewModifier.swift; sourceTree = "<group>"; };
+		ECB3316124843D5700893516 /* ViewModifiers.AspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.AspectRatio.swift; sourceTree = "<group>"; };
+		ECB3316324843D8800893516 /* ContentMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMode.swift; sourceTree = "<group>"; };
 		ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentValue.swift; sourceTree = "<group>"; };
 		ECC7DFCE23783551007B0AF5 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierContent.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 				ECEBB5BF238154EB006230B7 /* Axis.swift */,
 				EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */,
 				EC907C1623F80A8000FF48E7 /* ContentGeometry.swift */,
+				ECB3316324843D8800893516 /* ContentMode.swift */,
 				EC533AC82378453F007EA560 /* CoordinateSpace.swift */,
 				EC533ACA237845B2007EA560 /* GeometryProxy.swift */,
 				EC9F94C92370BFA700E418F9 /* Alignment.swift */,
@@ -376,6 +381,7 @@
 				ECE406BA2389F94400F7B020 /* ViewModifiers.Overlay.swift */,
 				ECE406BE2389FC5E00F7B020 /* ViewModifiers.Background.swift */,
 				ECE461362379FC9600A21198 /* ViewModifiers.FixedSize.swift */,
+				ECB3316124843D5700893516 /* ViewModifiers.AspectRatio.swift */,
 				ECE406B62389F60000F7B020 /* ViewModifiers.Offset.swift */,
 				ECE406CA238A86DC00F7B020 /* ViewModifiers.Shadow.swift */,
 				EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */,
@@ -611,7 +617,9 @@
 				ECF2EB492409893C00BD5E67 /* TupleView.swift in Sources */,
 				EC5C600A2408662800A7C0A5 /* ViewModifiers.FixedSize.swift in Sources */,
 				EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */,
+				ECB3316224843D5700893516 /* ViewModifiers.AspectRatio.swift in Sources */,
 				EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */,
+				ECB3316424843D8800893516 /* ContentMode.swift in Sources */,
 				EC5C600C2408662800A7C0A5 /* ViewModifiers.Shadow.swift in Sources */,
 				EC2441B5238DD16100135660 /* DynamicProperty.swift in Sources */,
 				EC5C60072408662800A7C0A5 /* ViewModifiers.ClipShape.swift in Sources */,

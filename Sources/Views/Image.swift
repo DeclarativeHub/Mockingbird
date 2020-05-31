@@ -32,10 +32,20 @@ public struct Image: View, Hashable {
 
     public let name: String
     public let bundle: Bundle?
+    public private(set) var isResizable: Bool = false
 
     @inlinable
     public init(_ name: String, bundle: Bundle? = nil) {
         self.name = name
         self.bundle = bundle
+    }
+}
+
+extension Image {
+
+    public func resizable() -> Image {
+        var copy = self
+        copy.isResizable = true
+        return copy
     }
 }
