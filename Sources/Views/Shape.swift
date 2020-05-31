@@ -73,36 +73,38 @@ public struct ShapeView<S: Shape, SS: ShapeStyle>: View {
 
 public struct FillShapeStyle: ShapeStyle {
 
-    public let color: Color
+    public let content: ShapeStyle
 
     @inlinable
-    public init(color: Color) {
-        self.color = color
+    public init(content: ShapeStyle) {
+        self.content = content
     }
 }
 
 public struct StrokeShapeStyle: ShapeStyle {
 
-    public let color: Color
+    public let content: ShapeStyle
     public let lineWidth: CGFloat
 
     @inlinable
-    public init(color: Color, lineWidth: CGFloat) {
-        self.color = color
+    public init(content: ShapeStyle, lineWidth: CGFloat) {
+        self.content = content
         self.lineWidth = lineWidth
     }
 }
 
+extension Color: ShapeStyle {}
+
 extension Shape {
 
     @inlinable
-    public func fill(_ color: Color) -> ShapeView<Self, FillShapeStyle> {
-        return ShapeView(shape: self, style: FillShapeStyle(color: color))
+    public func fill<S: ShapeStyle>(_ content: S) -> ShapeView<Self, FillShapeStyle> {
+        return ShapeView(shape: self, style: FillShapeStyle(content: content))
     }
 
     @inlinable
-    public func stroke(_ color: Color, lineWidth: CGFloat = 1) -> ShapeView<Self, StrokeShapeStyle> {
-        return ShapeView(shape: self, style: StrokeShapeStyle(color: color, lineWidth: lineWidth))
+    public func stroke<S: ShapeStyle>(_ content: S, lineWidth: CGFloat = 1) -> ShapeView<Self, StrokeShapeStyle> {
+        return ShapeView(shape: self, style: StrokeShapeStyle(content: content, lineWidth: lineWidth))
     }
 }
 

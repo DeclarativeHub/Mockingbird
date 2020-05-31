@@ -45,4 +45,10 @@ extension View {
     public func overlay<Overlay: View>(_ view: Overlay) -> ModifiedContent<Self, ViewModifiers.Overlay<Overlay>> {
         return modifier(ViewModifiers.Overlay(view))
     }
+
+
+    @inlinable
+    public func border<S: ShapeStyle>(_ content: S, width: CGFloat = 1) -> ModifiedContent<Self, ViewModifiers.Overlay<ShapeView<Rectangle, StrokeShapeStyle>>> {
+        overlay(Rectangle().stroke(content, lineWidth: width))
+    }
 }
