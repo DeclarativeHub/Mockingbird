@@ -74,7 +74,7 @@ public struct Path: Equatable {
         fatalError("Not implemented")
     }
 
-    public enum Element: Equatable {
+    public enum Element: Equatable, CustomStringConvertible {
 
         case move(to: CGPoint)
 
@@ -85,6 +85,21 @@ public struct Path: Equatable {
         case curve(to: CGPoint, control1: CGPoint, control2: CGPoint)
 
         case closeSubpath
+
+        public var description: String {
+            switch self {
+            case .move(to: let to):
+                return "moveto \(to)"
+            case .line(to: let to):
+                return "lineto \(to)"
+            case .quadCurve(let to, let control):
+                return "quadcureveto \(to) \(control)"
+            case .curve(let to, let control1, let control2):
+                return "cureveto \(to) \(control1) \(control2)"
+            case .closeSubpath:
+                return "closepath"
+            }
+        }
 
         var points: [CGPoint] {
             switch self {
@@ -180,27 +195,27 @@ extension Path {
             .move(to: CGPoint(x: xe, y: y + h / 2)),
             .line(to: CGPoint(x: xe, y: ye - ch)),
             .curve(
-                to: .init(x: xe, y: ye - ch + ch * c),
-                control1: .init(x: xe - cw + cw * c, y: ye),
-                control2: .init(x: xe - cw, y: ye)
+                to: .init(x: xe - cw, y: ye),
+                control1: .init(x: xe, y: ye - ch + ch * c),
+                control2: .init(x: xe - cw + cw * c, y: ye)
             ),
             .line(to: CGPoint(x: x + cw, y: ye)),
             .curve(
-                to: .init(x: x + (1 - c) * cw, y: ye),
-                control1: .init(x: x, y: ye - ch + ch * c),
-                control2: .init(x: x, y: ye - ch)
+                to: .init(x: x, y: ye - ch),
+                control1: .init(x: x + (1 - c) * cw, y: ye),
+                control2: .init(x: x, y: ye - ch + ch * c)
             ),
             .line(to: CGPoint(x: x, y: y + ch)),
             .curve(
-                to: .init(x: x, y: y + (1 - c) * ch),
-                control1: .init(x: x + (1 - c) * cw, y: y),
-                control2: .init(x: x + cw, y: y)
+                to: .init(x: x + cw, y: y),
+                control1: .init(x: x, y: y + (1 - c) * ch),
+                control2: .init(x: x + (1 - c) * cw, y: y)
             ),
             .line(to: CGPoint(x: xe - cw, y: y)),
             .curve(
-                to: .init(x: xe - cw + cw * c, y: y),
-                control1: .init(x: xe, y: y + (1 - c) * ch),
-                control2: .init(x: xe, y: y + ch)
+                to: .init(x: xe, y: y + ch),
+                control1: .init(x: xe - cw + cw * c, y: y),
+                control2: .init(x: xe, y: y + (1 - c) * ch)
             ),
             .closeSubpath
         ]
@@ -220,24 +235,24 @@ extension Path {
         let newElements: [Element] = [
             .move(to: CGPoint(x: xe, y: y + h / 2)),
             .curve(
-                to: .init(x: xe, y: ye - ch + ch * c),
-                control1: .init(x: xe - cw + cw * c, y: ye),
-                control2: .init(x: xe - cw, y: ye)
+                to: .init(x: xe - cw, y: ye),
+                control1: .init(x: xe, y: ye - ch + ch * c),
+                control2: .init(x: xe - cw + cw * c, y: ye)
             ),
             .curve(
-                to: .init(x: x + (1 - c) * cw, y: ye),
-                control1: .init(x: x, y: ye - ch + ch * c),
-                control2: .init(x: x, y: ye - ch)
+                to: .init(x: x, y: ye - ch),
+                control1: .init(x: x + (1 - c) * cw, y: ye),
+                control2: .init(x: x, y: ye - ch + ch * c)
             ),
             .curve(
-                to: .init(x: x, y: y + (1 - c) * ch),
-                control1: .init(x: x + (1 - c) * cw, y: y),
-                control2: .init(x: x + cw, y: y)
+                to: .init(x: x + cw, y: y),
+                control1: .init(x: x, y: y + (1 - c) * ch),
+                control2: .init(x: x + (1 - c) * cw, y: y)
             ),
             .curve(
-                to: .init(x: xe - cw + cw * c, y: y),
-                control1: .init(x: xe, y: y + (1 - c) * ch),
-                control2: .init(x: xe, y: y + ch)
+                to: .init(x: xe, y: y + ch),
+                control1: .init(x: xe - cw + cw * c, y: y),
+                control2: .init(x: xe, y: y + (1 - c) * ch)
             ),
             .closeSubpath
         ]
