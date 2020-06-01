@@ -6,8 +6,6 @@
 //  Copyright © 2020 Declarative Hub. All rights reserved.
 //
 
-import CoreGraphics
-
 extension Layouts {
 
     public struct VStack: Layout, Equatable {

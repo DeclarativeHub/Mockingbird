@@ -41,6 +41,12 @@
 		EC7469E4239C3458009A4102 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E3239C3458009A4102 /* TapGesture.swift */; };
 		EC7469E6239C3469009A4102 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E5239C3469009A4102 /* LongPressGesture.swift */; };
 		EC7469E8239C3541009A4102 /* EndedGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7469E7239C3541009A4102 /* EndedGesture.swift */; };
+		EC7776192484ED1D00778788 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7776182484ED1D00778788 /* CGSize.swift */; };
+		EC77761B2484ED9200778788 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77761A2484ED9200778788 /* CGPoint.swift */; };
+		EC77761D2484EE9200778788 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77761C2484EE9200778788 /* CGFloat.swift */; };
+		EC77761F2484EFAA00778788 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77761E2484EFAA00778788 /* CGRect.swift */; };
+		EC7776222484F85900778788 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7776202484F2D700778788 /* Path.swift */; };
+		EC7776242484F92200778788 /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7776232484F92200778788 /* CGAffineTransform.swift */; };
 		EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77FD0323E8B44D00EE3D1C /* Slider.swift */; };
 		EC7A0F5B239D41A6008E7AF4 /* Mockingbird.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9F94B62370BE6E00E418F9 /* Mockingbird.framework */; };
 		EC907C1723F80A8000FF48E7 /* ContentGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC907C1623F80A8000FF48E7 /* ContentGeometry.swift */; };
@@ -55,7 +61,6 @@
 		EC90E6D52377525600A9B7E0 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */; };
 		EC90E6DA2378204100A9B7E0 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */; };
 		EC90E6DC2378208200A9B7E0 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90E6DB2378208200A9B7E0 /* EmptyView.swift */; };
-		EC9F94BB2370BE6E00E418F9 /* Mockingbird.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9F94B92370BE6E00E418F9 /* Mockingbird.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC9F94C32370BEA600E418F9 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F94C22370BEA600E418F9 /* View.swift */; };
 		EC9F94C52370BEBA00E418F9 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F94C42370BEBA00E418F9 /* Text.swift */; };
 		EC9F94C72370BF3E00E418F9 /* VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F94C62370BF3E00E418F9 /* VStack.swift */; };
@@ -147,6 +152,12 @@
 		EC7469E5239C3469009A4102 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
 		EC7469E7239C3541009A4102 /* EndedGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndedGesture.swift; sourceTree = "<group>"; };
 		EC7469E9239C35F1009A4102 /* ViewModifiers.Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Gesture.swift; sourceTree = "<group>"; };
+		EC7776182484ED1D00778788 /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		EC77761A2484ED9200778788 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		EC77761C2484EE9200778788 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		EC77761E2484EFAA00778788 /* CGRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		EC7776202484F2D700778788 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		EC7776232484F92200778788 /* CGAffineTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		EC77FD0323E8B44D00EE3D1C /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		EC7A0F56239D41A5008E7AF4 /* MockingbirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingbirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7A0F5A239D41A6008E7AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,7 +175,6 @@
 		EC90E6DB2378208200A9B7E0 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		EC92E79623786C8E0032AADB /* ViewModifiers.ClipShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.ClipShape.swift; sourceTree = "<group>"; };
 		EC9F94B62370BE6E00E418F9 /* Mockingbird.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mockingbird.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC9F94B92370BE6E00E418F9 /* Mockingbird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mockingbird.h; sourceTree = "<group>"; };
 		EC9F94BA2370BE6E00E418F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC9F94C22370BEA600E418F9 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		EC9F94C42370BEBA00E418F9 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -297,7 +307,6 @@
 		EC9F94B82370BE6E00E418F9 /* Mockingbird */ = {
 			isa = PBXGroup;
 			children = (
-				EC9F94B92370BE6E00E418F9 /* Mockingbird.h */,
 				EC9F94BA2370BE6E00E418F9 /* Info.plist */,
 			);
 			path = Mockingbird;
@@ -330,6 +339,12 @@
 				EC9F94C92370BFA700E418F9 /* Alignment.swift */,
 				EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */,
 				EC1CAAC723A6A6DC0073C826 /* Edge.swift */,
+				EC77761C2484EE9200778788 /* CGFloat.swift */,
+				EC7776182484ED1D00778788 /* CGSize.swift */,
+				EC77761A2484ED9200778788 /* CGPoint.swift */,
+				EC77761E2484EFAA00778788 /* CGRect.swift */,
+				EC7776232484F92200778788 /* CGAffineTransform.swift */,
+				EC7776202484F2D700778788 /* Path.swift */,
 				ECA23300237C96C50044F12F /* Font.swift */,
 				EC10027A23786A4C00AD8BF2 /* EnvironmentValues.swift */,
 				ECA5D6FD2389C18500239A89 /* Transaction.swift */,
@@ -440,7 +455,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9F94BB2370BE6E00E418F9 /* Mockingbird.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +571,7 @@
 				ECF2EB472409889A00BD5E67 /* Optional.swift in Sources */,
 				EC6F1374239BD770002FE2E4 /* ObservedObject.swift in Sources */,
 				EC9F94C52370BEBA00E418F9 /* Text.swift in Sources */,
+				EC7776192484ED1D00778788 /* CGSize.swift in Sources */,
 				ECF2EB5024098FF600BD5E67 /* Layouts.swift in Sources */,
 				ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */,
 				EC9F94CA2370BFA700E418F9 /* Alignment.swift in Sources */,
@@ -568,6 +583,7 @@
 				EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */,
 				EC9F94D12370C1DB00E418F9 /* Spacer.swift in Sources */,
 				ECF2EB522409903E00BD5E67 /* Layouts.VStack.swift in Sources */,
+				EC7776242484F92200778788 /* CGAffineTransform.swift in Sources */,
 				EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
 				ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */,
@@ -583,7 +599,9 @@
 				ECEBB5C0238154EB006230B7 /* Axis.swift in Sources */,
 				ECF2EB4E24098FD200BD5E67 /* Layouts.ZStack.swift in Sources */,
 				EC5C60022408662800A7C0A5 /* ViewModifiers.swift in Sources */,
+				EC77761B2484ED9200778788 /* CGPoint.swift in Sources */,
 				EC30A37C2370D5FC00D40848 /* Never.swift in Sources */,
+				EC7776222484F85900778788 /* Path.swift in Sources */,
 				EC9F94CE2370C15400E418F9 /* ZStack.swift in Sources */,
 				EC90E6DC2378208200A9B7E0 /* EmptyView.swift in Sources */,
 				EC9F94D32370C2BE00E418F9 /* Color.swift in Sources */,
@@ -595,6 +613,7 @@
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
 				EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */,
 				EC5C60062408662800A7C0A5 /* ViewModifiers.LayoutPriority.swift in Sources */,
+				EC77761D2484EE9200778788 /* CGFloat.swift in Sources */,
 				EC907C1723F80A8000FF48E7 /* ContentGeometry.swift in Sources */,
 				ECF2EBA6240AB3DA00BD5E67 /* LayoutAlgorithms.swift in Sources */,
 				ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */,
@@ -608,6 +627,7 @@
 				ECB3316C2484462300893516 /* ViewModifiers.Sheet.swift in Sources */,
 				EC5C60012408662800A7C0A5 /* ViewModifier.swift in Sources */,
 				EC533ACB237845B2007EA560 /* GeometryProxy.swift in Sources */,
+				EC77761F2484EFAA00778788 /* CGRect.swift in Sources */,
 				ECC7DFD12378358D007B0AF5 /* ModifierContent.swift in Sources */,
 				EC5C60052408662800A7C0A5 /* ViewModifiers.FlexFrame.swift in Sources */,
 				EC10027B23786A4C00AD8BF2 /* EnvironmentValues.swift in Sources */,

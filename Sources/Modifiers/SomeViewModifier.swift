@@ -8,7 +8,5 @@
 
 public protocol SomeViewModifier {
 
-    static var typeIdentifier: String { get }
-
     func body(content: SomeView) -> SomeView
 }

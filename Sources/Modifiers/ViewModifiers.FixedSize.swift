@@ -23,11 +23,7 @@
 extension ViewModifiers {
 
     public struct FixedSize: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "FixedSize"
-        }
-
+        
         public let horizontal: Bool
         public let vertical: Bool
 

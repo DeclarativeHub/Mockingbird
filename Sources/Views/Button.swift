@@ -22,10 +22,6 @@
 
 public struct Button<Label>: View where Label: View {
 
-    public static var typeIdentifier: String {
-        "Button<\(Label.typeIdentifier)>"
-    }
-
     public typealias Body = Swift.Never
 
     public let label: Label

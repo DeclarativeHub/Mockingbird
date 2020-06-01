@@ -20,16 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct Frame: ViewModifier, Layout {
-
-        public static var typeIdentifier: String {
-            "Frame"
-        }
-
+        
         public let width: CGFloat?
         public let height: CGFloat?
         public let alignment: Alignment

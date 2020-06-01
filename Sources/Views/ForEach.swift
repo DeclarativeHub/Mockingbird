@@ -23,10 +23,6 @@
 public struct ForEach<Data, ID, Content>: View
 where Data: RandomAccessCollection, ID: Hashable, Content: View {
 
-    public static var typeIdentifier: String {
-        "ForEach<\(Content.typeIdentifier)>" // Data, ID?
-    }
-
     public typealias Body = Swift.Never
 
     public var data: Data

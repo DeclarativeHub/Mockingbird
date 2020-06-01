@@ -20,13 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 public struct Text: View, Hashable {
-
-    public static var typeIdentifier: String {
-        "Text"
-    }
 
     public typealias Body = Swift.Never
 

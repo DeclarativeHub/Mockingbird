@@ -20,15 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct FlexFrame: ViewModifier, Layout {
-
-        public static var typeIdentifier: String {
-            "FlexFrame"
-        }
 
         public let minWidth: CGFloat?
         public let idealWidth: CGFloat?

@@ -10,17 +10,9 @@ import Foundation
 
 public enum VariadicView: View {
 
-    public static var typeIdentifier: String {
-        "VariadicView"
-    }
-
     public typealias Body = Swift.Never
 
     public struct Tree<Root: Layout, Content: View>: View {
-
-        public static var typeIdentifier: String {
-            "Tree<\(Content.typeIdentifier)>" // Layout?
-        }
 
         public typealias Body = Swift.Never
 

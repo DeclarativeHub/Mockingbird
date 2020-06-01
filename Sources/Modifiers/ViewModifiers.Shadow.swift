@@ -20,16 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct Shadow: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "Shadow"
-        }
-
+        
         public let color: Color
         public let radius: CGFloat
         public let x: CGFloat

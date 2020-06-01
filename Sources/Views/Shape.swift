@@ -20,11 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 public protocol Shape: View {
 
-    func path(in rect: CGRect) -> CGPath
+    func path(in rect: CGRect) -> Path
 }
 
 extension Shape {
@@ -54,10 +52,6 @@ public struct ForegroundStyle: ShapeStyle {
 }
 
 public struct ShapeView<S: Shape, SS: ShapeStyle>: View {
-
-    public static var typeIdentifier: String {
-        "ShapeView<\(S.typeIdentifier)>" // SS?
-    }
 
     public typealias Body = Swift.Never
 
@@ -114,8 +108,8 @@ public struct Circle: Shape, Equatable {
     }
 
     @inlinable
-    public func path(in rect: CGRect) -> CGPath {
-        guard !rect.isEmpty else { return CGPath(rect: .zero, transform: nil) }
+    public func path(in rect: CGRect) -> Path {
+        guard !rect.isEmpty else { return Path(CGRect.zero) }
         var rect = rect
         if rect.width < rect.height {
             rect.origin.y = (rect.height - rect.width) / 2
@@ -124,7 +118,7 @@ public struct Circle: Shape, Equatable {
             rect.origin.x = (rect.width - rect.height) / 2
             rect.size.width = rect.height
         }
-        return CGPath(ellipseIn: rect, transform: nil)
+        return Path(ellipseIn: rect)
     }
 }
 
@@ -134,8 +128,8 @@ public struct Rectangle: Shape, Equatable {
     }
 
     @inlinable
-    public func path(in rect: CGRect) -> CGPath {
-        return CGPath(rect: rect, transform: nil)
+    public func path(in rect: CGRect) -> Path {
+        return Path(rect)
     }
 }
 
@@ -162,10 +156,10 @@ public struct RoundedRectangle: Shape, Equatable {
     }
 
     @inlinable
-    public func path(in rect: CGRect) -> CGPath {
-        guard rect.width >= cornerSize.width * 2 else { return CGPath(rect: .zero, transform: nil) }
-        guard rect.height >= cornerSize.height * 2 else { return CGPath(rect: .zero, transform: nil) }
-        return CGPath(roundedRect: rect, cornerWidth: cornerSize.width, cornerHeight: cornerSize.height, transform: nil)
+    public func path(in rect: CGRect) -> Path {
+        guard rect.width >= cornerSize.width * 2 else { return Path(CGRect.zero) }
+        guard rect.height >= cornerSize.height * 2 else { return Path(CGRect.zero) }
+        return Path(roundedRect: rect, cornerSize: cornerSize)
     }
 }
 
@@ -179,10 +173,10 @@ public struct Capsule: Shape, Equatable {
     }
 
     @inlinable
-    public func path(in rect: CGRect) -> CGPath {
+    public func path(in rect: CGRect) -> Path {
         let radius = min(rect.width, rect.height) / 2
-        guard rect.width >= radius * 2 else { return CGPath(rect: .zero, transform: nil) }
-        guard rect.height >= radius * 2 else { return CGPath(rect: .zero, transform: nil) }
-        return CGPath(roundedRect: rect, cornerWidth: radius, cornerHeight: radius, transform: nil)
+        guard rect.width >= radius * 2 else { return Path(CGRect.zero) }
+        guard rect.height >= radius * 2 else { return Path(CGRect.zero) }
+        return Path(roundedRect: rect, cornerRadius: radius)
     }
 }

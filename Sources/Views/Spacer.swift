@@ -20,14 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 public struct Spacer: View, Equatable {
-
-    public static var typeIdentifier: String {
-        "Spacer"
-    }
-
+    
     public typealias Body = Swift.Never
 
     public let minLength: CGFloat?

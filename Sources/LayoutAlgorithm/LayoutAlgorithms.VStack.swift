@@ -20,8 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension LayoutAlgorithms {
 
     /// A VStack layout is just an HStack layout flipped in axis :)
@@ -51,7 +49,7 @@ private extension ContentGeometry {
         .init(
             idealSize: CGSize(width: idealSize.height, height: idealSize.width),
             frames: frames.map {
-                CGRect(x: $0.minY, y: $0.minX, width: $0.height, height: $0.width)
+                CGRect(x: $0.origin.y, y: $0.origin.x, width: $0.size.height, height: $0.size.width)
             }
         )
     }

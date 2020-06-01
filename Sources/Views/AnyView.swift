@@ -22,10 +22,6 @@
 
 public struct AnyView: View {
 
-    public static var typeIdentifier: String {
-        "AnyView" // :(
-    }
-
     public typealias Body = Swift.Never
 
     public let view: SomeView

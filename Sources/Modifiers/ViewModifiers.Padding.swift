@@ -20,16 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct Padding: ViewModifier, Layout {
-
-        public static var typeIdentifier: String {
-            "Padding"
-        }
-
+        
         public let top: CGFloat?
         public let bottom: CGFloat?
         public let leading: CGFloat?

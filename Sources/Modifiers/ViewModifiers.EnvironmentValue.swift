@@ -6,15 +6,9 @@
 //  Copyright © 2020 Declarative Hub. All rights reserved.
 //
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct EnvironmentValue: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "EnvironmentValue"
-        }
 
         public let modify: (inout EnvironmentValues) -> Void
 

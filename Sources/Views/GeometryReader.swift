@@ -22,10 +22,6 @@
 
 public struct GeometryReader<Content>: View where Content: View {
 
-    public static var typeIdentifier: String {
-        "GeometryReader<\(Content.typeIdentifier)>"
-    }
-
     public typealias Body = Swift.Never
 
     public var content: (GeometryProxy) -> Content

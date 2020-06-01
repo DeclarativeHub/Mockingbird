@@ -24,10 +24,6 @@ import Foundation
 
 public struct Image: View, Hashable {
 
-    public static var typeIdentifier: String {
-        "Image"
-    }
-
     public typealias Body = Swift.Never
 
     public let name: String

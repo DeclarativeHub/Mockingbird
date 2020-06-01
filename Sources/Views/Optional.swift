@@ -8,10 +8,6 @@
 
 extension Optional: SomeView where Wrapped: SomeView {
 
-    public static var typeIdentifier: String {
-        "Optional<\(Wrapped.typeIdentifier)>"
-    }
-
     public var body: SomeView {
         fatalError()
     }

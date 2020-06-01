@@ -20,15 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct Overlay<Overlay: View>: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "Overlay<\(Overlay.typeIdentifier)>"
-        }
 
         public let overlay: Overlay
 

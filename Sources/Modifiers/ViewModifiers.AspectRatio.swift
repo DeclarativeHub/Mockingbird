@@ -6,15 +6,9 @@
 //  Copyright © 2020 Declarative Hub. All rights reserved.
 //
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct AspectRatio: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "AspectRatio"
-        }
 
         public let aspectRatio: CGFloat?
         public let contentMode: ContentMode

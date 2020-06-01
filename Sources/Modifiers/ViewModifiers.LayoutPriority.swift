@@ -20,16 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
     
     public struct LayoutPriority: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "LayoutPriority"
-        }
-
+        
         public let value: Double
 
         @inlinable

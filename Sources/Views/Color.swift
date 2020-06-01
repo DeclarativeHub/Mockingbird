@@ -24,10 +24,6 @@ import Foundation
 
 public struct Color: View, Hashable {
 
-    public static var typeIdentifier: String {
-        "Color"
-    }
-
     public typealias Body = Swift.Never
 
     public enum Storage: Hashable {

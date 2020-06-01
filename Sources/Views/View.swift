@@ -29,10 +29,6 @@ public protocol View: SomeView {
 
 extension View {
 
-    public static var typeIdentifier: String {
-        "\(String(reflecting: self))<\(Body.typeIdentifier)>"
-    }
-
     public var body: SomeView {
         return (body as Body) as SomeView
     }

@@ -20,15 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 extension ViewModifiers {
 
     public struct ClipShape<S: Shape>: ViewModifier {
-
-        public static var typeIdentifier: String {
-            "ClipShape<\(S.typeIdentifier)>"
-        }
 
         public let shape: S
 

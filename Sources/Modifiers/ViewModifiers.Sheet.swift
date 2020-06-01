@@ -10,10 +10,6 @@ extension ViewModifiers {
 
     public struct Sheet<Content: View>: ViewModifier {
 
-        public static var typeIdentifier: String {
-            "Sheet"
-        }
-
         public typealias Body = Swift.Never
 
         public let isPresented: Binding<Bool>

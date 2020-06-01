@@ -20,13 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import CoreGraphics
-
 public struct HStack<Content: View>: View {
-
-    public static var typeIdentifier: String {
-        "HStack<\(Content.typeIdentifier)>"
-    }
 
     public typealias Body = Swift.Never
 
