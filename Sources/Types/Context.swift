@@ -37,6 +37,8 @@ extension Context {
 
     @inlinable
     public func environmentObject<B>(_ object: B) -> Context {
-        return modified(self) { $0.environmentObjects[String(reflecting: B.self)] = object }
+        var copy = self
+        copy.environmentObjects[String(reflecting: B.self)] = object
+        return copy
     }
 }

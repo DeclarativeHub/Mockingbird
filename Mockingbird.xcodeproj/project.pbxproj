@@ -86,7 +86,6 @@
 		ECDF0F1C239D428600675977 /* ReactiveKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = EC6F1371239BD721002FE2E4 /* ReactiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECDF0F1E239D627F00675977 /* CoreGraphics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */; };
 		ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE406D1238ACB4800F7B020 /* MutableCollection+Extensions.swift */; };
-		ECE406D4238ACBD400F7B020 /* Modified.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE406D3238ACBD400F7B020 /* Modified.swift */; };
 		ECEBB5BE23814FA1006230B7 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB5BD23814FA1006230B7 /* AnyView.swift */; };
 		ECEBB5C0238154EB006230B7 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB5BF238154EB006230B7 /* Axis.swift */; };
 		ECF2EB472409889A00BD5E67 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EB462409889A00BD5E67 /* Optional.swift */; };
@@ -205,7 +204,6 @@
 		ECE406BE2389FC5E00F7B020 /* ViewModifiers.Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Background.swift; sourceTree = "<group>"; };
 		ECE406CA238A86DC00F7B020 /* ViewModifiers.Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Shadow.swift; sourceTree = "<group>"; };
 		ECE406D1238ACB4800F7B020 /* MutableCollection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+Extensions.swift"; sourceTree = "<group>"; };
-		ECE406D3238ACBD400F7B020 /* Modified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modified.swift; sourceTree = "<group>"; };
 		ECE461362379FC9600A21198 /* ViewModifiers.FixedSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.FixedSize.swift; sourceTree = "<group>"; };
 		ECEBB5BD23814FA1006230B7 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
 		ECEBB5BF238154EB006230B7 /* Axis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
@@ -275,13 +273,13 @@
 			path = Gestures;
 			sourceTree = "<group>";
 		};
-		EC7A0F57239D41A6008E7AF4 /* MockingbirdTests */ = {
+		EC7A0F57239D41A6008E7AF4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				EC1280C1239D3E4E00350997 /* StackLayoutTests.swift */,
 				EC7A0F5A239D41A6008E7AF4 /* Info.plist */,
 			);
-			path = MockingbirdTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		EC9F94AC2370BE6E00E418F9 = {
@@ -289,7 +287,7 @@
 			children = (
 				EC9F94C12370BE9000E418F9 /* Sources */,
 				EC9F94B82370BE6E00E418F9 /* Mockingbird */,
-				EC7A0F57239D41A6008E7AF4 /* MockingbirdTests */,
+				EC7A0F57239D41A6008E7AF4 /* Tests */,
 				EC9F94B72370BE6E00E418F9 /* Products */,
 				EC100278237866FD00AD8BF2 /* Frameworks */,
 			);
@@ -429,7 +427,6 @@
 		ECE406D0238ACB3B00F7B020 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ECE406D3238ACBD400F7B020 /* Modified.swift */,
 				ECDF0F1D239D627F00675977 /* CoreGraphics+Extensions.swift */,
 				ECE406D1238ACB4800F7B020 /* MutableCollection+Extensions.swift */,
 			);
@@ -578,7 +575,6 @@
 				EC2441B9238DD1B900135660 /* Animation.swift in Sources */,
 				EC5C600B2408662800A7C0A5 /* ViewModifiers.Offset.swift in Sources */,
 				EC2441B7238DD17100135660 /* Binding.swift in Sources */,
-				ECE406D4238ACBD400F7B020 /* Modified.swift in Sources */,
 				ECF2EB5424099BBB00BD5E67 /* Layouts.HStack.swift in Sources */,
 				EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */,
 				EC9F94D12370C1DB00E418F9 /* Spacer.swift in Sources */,
@@ -677,7 +673,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MockingbirdTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -700,7 +696,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MockingbirdTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

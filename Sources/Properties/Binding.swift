@@ -77,11 +77,15 @@ extension Binding {
 
     @inlinable
     public func transaction(_ transaction: Transaction) -> Binding<Value> {
-        return modified(self) { $0.transaction = transaction }
+        var copy = self
+        copy.transaction = transaction
+        return copy
     }
 
     @inlinable
     public func animation(_ animation: Animation? = .default) -> Binding<Value> {
-        return modified(self) { $0.transaction = Transaction(animation: animation) }
+        var copy = self
+        copy.transaction = Transaction(animation: animation)
+        return copy
     }
 }
