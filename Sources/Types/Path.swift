@@ -42,27 +42,20 @@ public struct Path: Equatable {
         }
     }
 
-    /// Initializes to an empty path then calls `callback` to add
-    /// the initial elements.
     public init(_ callback: (inout Path) -> ()) {
         var path = Path()
         callback(&path)
         self = path
     }
 
-    /// True if the path contains no elements.
     public var isEmpty: Bool {
         elements.isEmpty
     }
 
-    /// A rectangle containing all path segments.
     public var boundingRect: CGRect {
         fatalError("Not implemented")
     }
 
-    /// Returns true if the path contains point `p`. If `eoFill` is
-    /// true the even-odd rule is used to define which points are
-    /// inside the path, otherwise the non-zero rule is used.
     public func contains(_ p: CGPoint, eoFill: Bool = false) -> Bool {
         fatalError("Not implemented")
     }
