@@ -20,34 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public enum Axis: Int8, CaseIterable {
-    
-    case vertical
-    case horizontal
+public struct ScrollView<Content: View>: View {
 
-    public struct Set: OptionSet {
+    public typealias Body = Swift.Never
 
-        public let rawValue: Int8
+    public let axes: Axis.Set
+    public let showsIndicators: Bool
+    public let content: Content
 
-        public init(rawValue: Int8) {
-            self.rawValue = rawValue
-        }
-
-        public static let horizontal: Axis.Set = .init(rawValue: 1 << 0)
-        public static let vertical: Axis.Set = .init(rawValue: 1 << 1)
+    public init(_ axes: Axis.Set = .vertical, showsIndicators: Bool = true, @ViewBuilder content: () -> Content) {
+        self.axes = axes
+        self.showsIndicators = showsIndicators
+        self.content = content()
     }
 
-}
-
-extension Axis {
-
-    @inlinable
-    public var flipped: Axis {
-        switch self {
-        case .horizontal:
-            return .vertical
-        case .vertical:
-            return .horizontal
-        }
-    }
 }

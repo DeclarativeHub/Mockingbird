@@ -15,6 +15,7 @@
 		EC2441B9238DD1B900135660 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441B8238DD1B900135660 /* Animation.swift */; };
 		EC2441BB238DD29300135660 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BA238DD29300135660 /* State.swift */; };
 		EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BC238DD49E00135660 /* EnvironmentObject.swift */; };
+		EC25395B248C134D00540102 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25395A248C134D00540102 /* ScrollView.swift */; };
 		EC30A37C2370D5FC00D40848 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC30A37B2370D5FC00D40848 /* Never.swift */; };
 		EC38159123A5291E00F643A5 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38159023A5291E00F643A5 /* Renderer.swift */; };
 		EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533AC82378453F007EA560 /* CoordinateSpace.swift */; };
@@ -137,6 +138,7 @@
 		EC2441BA238DD29300135660 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		EC2441BC238DD49E00135660 /* EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject.swift; sourceTree = "<group>"; };
 		EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentObject.swift; sourceTree = "<group>"; };
+		EC25395A248C134D00540102 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		EC30A37B2370D5FC00D40848 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
 		EC38159023A5291E00F643A5 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC533AC82378453F007EA560 /* CoordinateSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSpace.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				ECC7DFD02378358D007B0AF5 /* ModifierContent.swift */,
 				ECF2EB4A24098A0600BD5E67 /* ConditionalContent.swift */,
 				ECF2EB5524099E4500BD5E67 /* VariadicView.swift */,
+				EC25395A248C134D00540102 /* ScrollView.swift */,
 				EC533ACE2378469F007EA560 /* GeometryReader.swift */,
 				EC9F94D62370C53700E418F9 /* ForEach.swift */,
 				EC10027C23786B1900AD8BF2 /* Shape.swift */,
@@ -608,6 +611,7 @@
 				EC907C2A23F81A7100FF48E7 /* LayoutAlgorithms.Frame.swift in Sources */,
 				ECE406D2238ACB4800F7B020 /* MutableCollection+Extensions.swift in Sources */,
 				EC77FD0423E8B44D00EE3D1C /* Slider.swift in Sources */,
+				EC25395B248C134D00540102 /* ScrollView.swift in Sources */,
 				EC5C60062408662800A7C0A5 /* ViewModifiers.LayoutPriority.swift in Sources */,
 				EC77761D2484EE9200778788 /* CGFloat.swift in Sources */,
 				EC907C1723F80A8000FF48E7 /* ContentGeometry.swift in Sources */,
