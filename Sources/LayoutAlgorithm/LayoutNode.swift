@@ -25,7 +25,7 @@ public protocol LayoutNode {
     var isSpacer: Bool { get }
     var layoutPriority: Double { get }
 
-    func layoutSize(fitting targetSize: CGSize) -> CGSize
+    func layoutSize(fitting targetSize: CGSize, pass: LayoutPass) -> CGSize
 }
 
 extension LayoutNode {
@@ -47,9 +47,9 @@ private struct AxisFlippedLayoutNode: LayoutNode {
         layoutNode.layoutPriority
     }
 
-    func layoutSize(fitting targetSize: CGSize) -> CGSize {
+    func layoutSize(fitting targetSize: CGSize, pass: LayoutPass) -> CGSize {
         let targetSize = CGSize(width: targetSize.height, height: targetSize.width)
-        let size = layoutNode.layoutSize(fitting: targetSize)
+        let size = layoutNode.layoutSize(fitting: targetSize, pass: pass)
         return CGSize(width: size.height, height: size.width)
     }
 }

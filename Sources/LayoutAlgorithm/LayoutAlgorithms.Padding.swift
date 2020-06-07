@@ -22,7 +22,7 @@
 
 extension LayoutAlgorithms {
 
-    public struct Padding: LayoutAlgorithm {
+    public class Padding: LayoutAlgorithm {
 
         public let padding: ViewModifiers.Padding
 
@@ -34,6 +34,8 @@ extension LayoutAlgorithms {
 
         private let defaultPadding: CGFloat
 
+        private var cache = GeometryCache()
+
         public init(padding: ViewModifiers.Padding, node: LayoutNode, defaultPadding: CGFloat, screenScale: CGFloat = 2) {
             self.padding = padding
             self.node = node
@@ -42,7 +44,11 @@ extension LayoutAlgorithms {
         }
 
         /// Calculate the stack geometry fitting `targetSize` and aligned by `alignment`.
-        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize, pass: LayoutPass) -> ContentGeometry {
+
+            if let geometry = cache.geometry(for: pass, size: targetSize) {
+                return geometry
+            }
 
             let insets = EdgeInsets(
                 top: padding.top ?? defaultPadding,
@@ -58,14 +64,16 @@ extension LayoutAlgorithms {
                 height: targetSize.height - CGFloat(insets.top + insets.bottom)
             )
 
-            let nodeSize = node.layoutSize(fitting: rect.size)
+            let nodeSize = node.layoutSize(fitting: rect.size, pass: pass)
 
             let idealSize = CGSize(
                 width: nodeSize.width + CGFloat(insets.leading + insets.trailing),
                 height: nodeSize.height + CGFloat(insets.top + insets.bottom)
             )
 
-            return ContentGeometry(idealSize: idealSize, frames: [rect])
+            let geometry = ContentGeometry(idealSize: idealSize, frames: [rect])
+            cache.update(pass: pass, size: targetSize, geometry: geometry)
+            return geometry
         }
     }
 }

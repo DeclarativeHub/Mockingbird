@@ -22,10 +22,12 @@
 
 extension LayoutAlgorithms {
 
-    public struct ZStack: LayoutAlgorithm {
+    public class ZStack: LayoutAlgorithm {
 
         public let nodes: [LayoutNode]
         public let layout: Layouts.ZStack
+
+        private var cache = GeometryCache()
 
         public init(nodes: [LayoutNode], layout: Layouts.ZStack) {
             self.nodes = nodes
@@ -33,10 +35,14 @@ extension LayoutAlgorithms {
         }
 
         /// Calculate the stack geometry fitting `targetSize`.
-        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize, pass: LayoutPass) -> ContentGeometry {
+            if let geometry = cache.geometry(for: pass, size: targetSize) {
+                return geometry
+            }
+
             var idealSize: CGSize = .zero
             let frames = nodes.map { (node) -> CGRect in
-                let size = node.layoutSize(fitting: targetSize)
+                let size = node.layoutSize(fitting: targetSize, pass: pass)
                 var alignedBounds = CGRect(x: 0, y: 0, width: size.width, height: size.height)
                 switch layout.alignment.horizontal {
                 case .leading:
@@ -59,7 +65,10 @@ extension LayoutAlgorithms {
                 idealSize = CGSize(width: max(idealSize.width, size.width), height: max(idealSize.height, size.height))
                 return alignedBounds
             }
-            return ContentGeometry(idealSize: idealSize, frames: frames)
+
+            let geometry = ContentGeometry(idealSize: idealSize, frames: frames)
+            cache.update(pass: pass, size: targetSize, geometry: geometry)
+            return geometry
         }
     }
 }

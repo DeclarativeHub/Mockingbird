@@ -35,9 +35,10 @@ extension LayoutAlgorithms {
             )
         }
 
-        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize, pass: LayoutPass) -> ContentGeometry {
             hStackLayout.contentLayout(
-                fittingSize: CGSize(width: targetSize.height, height: targetSize.width)
+                fittingSize: CGSize(width: targetSize.height, height: targetSize.width),
+                pass: pass
             ).flipped()
         }
     }

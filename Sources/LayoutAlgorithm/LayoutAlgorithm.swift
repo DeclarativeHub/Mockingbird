@@ -23,5 +23,5 @@
 public protocol LayoutAlgorithm {
 
     /// Calculate the stack geometry fitting `targetSize`.
-    func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry
+    func contentLayout(fittingSize targetSize: CGSize, pass: LayoutPass) -> ContentGeometry
 }

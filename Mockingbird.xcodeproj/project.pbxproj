@@ -16,6 +16,8 @@
 		EC2441BB238DD29300135660 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BA238DD29300135660 /* State.swift */; };
 		EC2441BD238DD49E00135660 /* EnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441BC238DD49E00135660 /* EnvironmentObject.swift */; };
 		EC25395B248C134D00540102 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25395A248C134D00540102 /* ScrollView.swift */; };
+		EC253966248CF81200540102 /* LayoutPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC253965248CF81200540102 /* LayoutPass.swift */; };
+		EC253969248CFBD300540102 /* GeometryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC253967248CFB8E00540102 /* GeometryCache.swift */; };
 		EC30A37C2370D5FC00D40848 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC30A37B2370D5FC00D40848 /* Never.swift */; };
 		EC38159123A5291E00F643A5 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38159023A5291E00F643A5 /* Renderer.swift */; };
 		EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC533AC82378453F007EA560 /* CoordinateSpace.swift */; };
@@ -139,6 +141,8 @@
 		EC2441BC238DD49E00135660 /* EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject.swift; sourceTree = "<group>"; };
 		EC2441BE238DD67C00135660 /* ViewModifiers.EnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.EnvironmentObject.swift; sourceTree = "<group>"; };
 		EC25395A248C134D00540102 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		EC253965248CF81200540102 /* LayoutPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutPass.swift; sourceTree = "<group>"; };
+		EC253967248CFB8E00540102 /* GeometryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryCache.swift; sourceTree = "<group>"; };
 		EC30A37B2370D5FC00D40848 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
 		EC38159023A5291E00F643A5 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC533AC82378453F007EA560 /* CoordinateSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSpace.swift; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 				ECEBB5BF238154EB006230B7 /* Axis.swift */,
 				EC90E6D92378204100A9B7E0 /* ViewBuilder.swift */,
 				EC907C1623F80A8000FF48E7 /* ContentGeometry.swift */,
+				EC253967248CFB8E00540102 /* GeometryCache.swift */,
 				ECB3316324843D8800893516 /* ContentMode.swift */,
 				EC533AC82378453F007EA560 /* CoordinateSpace.swift */,
 				EC533ACA237845B2007EA560 /* GeometryProxy.swift */,
@@ -351,6 +356,7 @@
 				EC2441B8238DD1B900135660 /* Animation.swift */,
 				EC38159023A5291E00F643A5 /* Renderer.swift */,
 				ECA5D6FB2389C14F00239A89 /* Context.swift */,
+				EC253965248CF81200540102 /* LayoutPass.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -579,10 +585,12 @@
 				EC5C600B2408662800A7C0A5 /* ViewModifiers.Offset.swift in Sources */,
 				EC2441B7238DD17100135660 /* Binding.swift in Sources */,
 				ECF2EB5424099BBB00BD5E67 /* Layouts.HStack.swift in Sources */,
+				EC253966248CF81200540102 /* LayoutPass.swift in Sources */,
 				EC533AC92378453F007EA560 /* CoordinateSpace.swift in Sources */,
 				EC9F94D12370C1DB00E418F9 /* Spacer.swift in Sources */,
 				ECF2EB522409903E00BD5E67 /* Layouts.VStack.swift in Sources */,
 				EC7776242484F92200778788 /* CGAffineTransform.swift in Sources */,
+				EC253969248CFBD300540102 /* GeometryCache.swift in Sources */,
 				EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
 				ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */,

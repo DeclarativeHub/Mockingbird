@@ -39,7 +39,7 @@ extension LayoutAlgorithms {
         }
 
         /// Calculate the stack geometry fitting `targetSize` and aligned by `alignment`.
-        public func contentLayout(fittingSize targetSize: CGSize) -> ContentGeometry {
+        public func contentLayout(fittingSize targetSize: CGSize, pass: LayoutPass) -> ContentGeometry {
             var idealSize = targetSize
 
             if let minWidth = modifer.minWidth {
@@ -55,7 +55,7 @@ extension LayoutAlgorithms {
                 idealSize.height = min(idealSize.height, maxHeight)
             }
 
-            var size = node.layoutSize(fitting: idealSize)
+            var size = node.layoutSize(fitting: idealSize, pass: pass)
             size.width = clamp(idealSize.width, min: modifer.minWidth ?? size.width, max: modifer.maxWidth ?? size.width)
             size.height = clamp(idealSize.height, min: modifer.minHeight ?? size.height, max: modifer.maxHeight ?? size.height)
 
