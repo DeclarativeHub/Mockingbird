@@ -79,3 +79,10 @@ public struct ObservedObject<ObjectType>: ObservedObjectProperty where ObjectTyp
         return wrappedValue.objectWillChange.eraseType().toSignal()
     }
 }
+
+extension Property {
+
+    public var binding: Binding<Value> {
+        return Binding(get: { self.value }, set: { self.value = $0 })
+    }
+}
