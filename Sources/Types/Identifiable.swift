@@ -20,39 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public struct ForEach<Data, ID, Content>: View
-where Data: RandomAccessCollection, ID: Hashable, Content: View {
+public protocol Identifiable {
 
-    public typealias Body = Swift.Never
-
-    public var data: Data
-    public var content: (Data.Element) -> Content
-    public var idGenerator: (Data.Element) -> ID
-
-    @inlinable
-    public init(_ data: Data, id: KeyPath<Data.Element, ID>, @ViewBuilder content: @escaping (Data.Element) -> Content) {
-        self.data = data
-        self.content = content
-        self.idGenerator = { $0[keyPath: id] }
-    }
+    associatedtype ID: Hashable
+    var id: Self.ID { get }
 }
 
-extension ForEach where ID == Data.Element.ID, Data.Element: Identifiable {
+extension Identifiable where Self: AnyObject {
 
-    @inlinable
-    public init(_ data: Data, @ViewBuilder content: @escaping (Data.Element) -> Content) {
-        self.data = data
-        self.content = content
-        self.idGenerator = { $0.id }
-    }
-}
-
-extension ForEach where Data == Range<Int>, ID == Int {
-
-    @inlinable
-    public init(_ data: Range<Int>, @ViewBuilder content: @escaping (Int) -> Content) {
-        self.data = data
-        self.content = content
-        self.idGenerator = { $0 }
+    public var id: ObjectIdentifier {
+        ObjectIdentifier(self)
     }
 }

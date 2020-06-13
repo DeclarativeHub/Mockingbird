@@ -103,6 +103,8 @@
 		ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA7240AB54C00BD5E67 /* Layout.swift */; };
 		ECF2EBAA240AB96E00BD5E67 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */; };
 		ECF7E47024953F0D003ACEBC /* ViewModifiers.Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF7E46F24953F0D003ACEBC /* ViewModifiers.Animation.swift */; };
+		ECF7E47424955C46003ACEBC /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF7E47324955C46003ACEBC /* List.swift */; };
+		ECF7E476249560B8003ACEBC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF7E475249560B8003ACEBC /* Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +229,8 @@
 		ECF2EBA7240AB54C00BD5E67 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 		ECF7E46F24953F0D003ACEBC /* ViewModifiers.Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Animation.swift; sourceTree = "<group>"; };
+		ECF7E47324955C46003ACEBC /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		ECF7E475249560B8003ACEBC /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +348,7 @@
 				EC533AC82378453F007EA560 /* CoordinateSpace.swift */,
 				EC533ACA237845B2007EA560 /* GeometryProxy.swift */,
 				EC9F94C92370BFA700E418F9 /* Alignment.swift */,
+				ECF7E475249560B8003ACEBC /* Identifiable.swift */,
 				EC90E6D42377525600A9B7E0 /* EdgeInsets.swift */,
 				EC1CAAC723A6A6DC0073C826 /* Edge.swift */,
 				EC77761C2484EE9200778788 /* CGFloat.swift */,
@@ -389,6 +394,7 @@
 				EC533ACE2378469F007EA560 /* GeometryReader.swift */,
 				EC9F94D62370C53700E418F9 /* ForEach.swift */,
 				EC10027C23786B1900AD8BF2 /* Shape.swift */,
+				ECF7E47324955C46003ACEBC /* List.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 				EC9F94C52370BEBA00E418F9 /* Text.swift in Sources */,
 				EC7776192484ED1D00778788 /* CGSize.swift in Sources */,
 				ECF2EB5024098FF600BD5E67 /* Layouts.swift in Sources */,
+				ECF7E476249560B8003ACEBC /* Identifiable.swift in Sources */,
 				ECA5D6FC2389C14F00239A89 /* Context.swift in Sources */,
 				EC9F94CA2370BFA700E418F9 /* Alignment.swift in Sources */,
 				EC2441B9238DD1B900135660 /* Animation.swift in Sources */,
@@ -596,6 +603,7 @@
 				EC253969248CFBD300540102 /* GeometryCache.swift in Sources */,
 				EC1CAAC823A6A6DC0073C826 /* Edge.swift in Sources */,
 				EC9F94CC2370C12000E418F9 /* HStack.swift in Sources */,
+				ECF7E47424955C46003ACEBC /* List.swift in Sources */,
 				ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */,
 				ECB5EC6E246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift in Sources */,
 				EC2441BB238DD29300135660 /* State.swift in Sources */,
