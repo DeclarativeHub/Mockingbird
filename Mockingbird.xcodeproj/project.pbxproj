@@ -102,6 +102,7 @@
 		ECF2EBA6240AB3DA00BD5E67 /* LayoutAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */; };
 		ECF2EBA8240AB54C00BD5E67 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA7240AB54C00BD5E67 /* Layout.swift */; };
 		ECF2EBAA240AB96E00BD5E67 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */; };
+		ECF7E47024953F0D003ACEBC /* ViewModifiers.Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF7E46F24953F0D003ACEBC /* ViewModifiers.Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 		ECF2EBA5240AB3DA00BD5E67 /* LayoutAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAlgorithms.swift; sourceTree = "<group>"; };
 		ECF2EBA7240AB54C00BD5E67 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		ECF2EBA9240AB96E00BD5E67 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
+		ECF7E46F24953F0D003ACEBC /* ViewModifiers.Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +415,7 @@
 				EC1CAAC923A6A93D0073C826 /* ViewModifiers.EdgesIgnoringSafeArea.swift */,
 				ECB5EC6D246FD71A00095509 /* ViewModifiers.EnvironmentValue.swift */,
 				ECB3316B2484462300893516 /* ViewModifiers.Sheet.swift */,
+				ECF7E46F24953F0D003ACEBC /* ViewModifiers.Animation.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				EC5C60092408662800A7C0A5 /* ViewModifiers.Background.swift in Sources */,
 				EC7469E1239C3423009A4102 /* Gesture.swift in Sources */,
 				EC907C2B23F81A7100FF48E7 /* LayoutAlgorithms.FlexFrame.swift in Sources */,
+				ECF7E47024953F0D003ACEBC /* ViewModifiers.Animation.swift in Sources */,
 				ECEBB5C0238154EB006230B7 /* Axis.swift in Sources */,
 				ECF2EB4E24098FD200BD5E67 /* Layouts.ZStack.swift in Sources */,
 				EC5C60022408662800A7C0A5 /* ViewModifiers.swift in Sources */,
