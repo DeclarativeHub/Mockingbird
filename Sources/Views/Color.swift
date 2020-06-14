@@ -27,29 +27,29 @@ public struct Color: View, Hashable {
     public typealias Body = Swift.Never
 
     public enum Storage: Hashable {
-        case rgba(red: Double, green: Double, blue: Double, alpha: Double)
+        case rgba(red: Double, green: Double, blue: Double, opacity: Double)
         case asset(name: String, bundle: Bundle?)
     }
 
     public let storage: Storage
 
     @inlinable
-    public init(red: Double, green: Double, blue: Double, alpha: Double) {
-        self.storage = .rgba(red: red, green: green, blue: blue, alpha: alpha)
+    public init(red: Double, green: Double, blue: Double, opacity: Double) {
+        self.storage = .rgba(red: red, green: green, blue: blue, opacity: opacity)
     }
     @inlinable
 
     public init(white: Double, opacity: Double) {
-        self.init(red: white, green: white, blue: white, alpha: opacity)
+        self.init(red: white, green: white, blue: white, opacity: opacity)
     }
 
     @inlinable
-    public init(rgb: Int32, alpha: Double = 1.0) {
+    public init(rgb: Int32, opacity: Double = 1.0) {
         self.init(
             red: Double((rgb >> 16) & 0xff) / 255.0,
             green: Double((rgb >> 8) & 0xff) / 255.0,
             blue: Double(rgb & 0xff) / 255.0,
-            alpha: Double(alpha)
+            opacity: Double(opacity)
         )
     }
 
@@ -58,33 +58,33 @@ public struct Color: View, Hashable {
         self.storage = .asset(name: name, bundle: bundle)
     }
 
-    public static let clear: Color = .init(red: 0, green: 0, blue: 0, alpha: 0)
+    public static let clear: Color = .init(red: 0, green: 0, blue: 0, opacity: 0)
 
-    public static let black: Color = .init(red: 0, green: 0, blue: 0, alpha: 1)
+    public static let black: Color = .init(red: 0, green: 0, blue: 0, opacity: 1)
 
-    public static let white: Color = .init(red: 1, green: 1, blue: 1, alpha: 1)
+    public static let white: Color = .init(red: 1, green: 1, blue: 1, opacity: 1)
 
-    public static let gray: Color = .init(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
+    public static let gray: Color = .init(red: 0.75, green: 0.75, blue: 0.75, opacity: 1)
 
-    public static let red: Color = .init(red: 1, green: 0, blue: 0, alpha: 1)
+    public static let red: Color = .init(red: 1, green: 0, blue: 0, opacity: 1)
 
-    public static let green: Color = .init(red: 0, green: 1, blue: 0, alpha: 1)
+    public static let green: Color = .init(red: 0, green: 1, blue: 0, opacity: 1)
 
-    public static let blue: Color = .init(red: 0, green: 0, blue: 1, alpha: 1)
+    public static let blue: Color = .init(red: 0, green: 0, blue: 1, opacity: 1)
 
-    public static let orange: Color = .init(red: 1, green: 0.5, blue: 0, alpha: 1)
+    public static let orange: Color = .init(red: 1, green: 0.5, blue: 0, opacity: 1)
 
-    public static let yellow: Color = .init(red: 1, green: 1, blue: 0, alpha: 1)
+    public static let yellow: Color = .init(red: 1, green: 1, blue: 0, opacity: 1)
 
-    public static let pink: Color = .init(red: 1, green: 0, blue: 1, alpha: 1)
+    public static let pink: Color = .init(red: 1, green: 0, blue: 1, opacity: 1)
 
-    public static let purple: Color = .init(red: 1, green: 0, blue: 1, alpha: 1)
+    public static let purple: Color = .init(red: 1, green: 0, blue: 1, opacity: 1)
 
     @inlinable
-    public func opacity(_ alpha: Double) -> Color {
+    public func opacity(_ opacity: Double) -> Color {
         switch storage {
-        case .rgba(let red, let green, let blue, let oldAlpha):
-            return Color(red: red, green: green, blue: blue, alpha: oldAlpha * alpha)
+        case .rgba(let red, let green, let blue, let oldOpacity):
+            return Color(red: red, green: green, blue: blue, opacity: oldOpacity * opacity)
         default:
             return self // TODO
         }
